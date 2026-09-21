@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Posada Rossy | Hospedaje en Uyuni</title>
+<meta name="description" content="Hospedaje económico en Uyuni, Bolivia. Habitaciones abrigadas, WiFi gratis y ducha caliente las 24 horas. Desde 60 Bs.">
+<meta name="theme-color" content="#0f2547">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JRFC960VC3"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-JRFC960VC3');
+</script>
+<style>
+:root{
+  --navy:#0f2547; --navy-2:#1a3565; --navy-3:#0a1a33;
+  --gold:#c9a24b; --gold-2:#e2c479; --gold-soft:#f7efd9;
+  --white:#fff; --cream:#fbf8f1; --ink:#1c2a44; --muted:#5b6780;
+  --wa:#25d366; --wa-dark:#1da851;
+  --radius:20px; --shadow:0 10px 30px rgba(15,37,71,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px;-webkit-text-size-adjust:100%}
+img,svg{max-width:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;color:var(--navy)}
+h2{font-size:clamp(1.7rem,5vw,2.3rem);text-align:center;margin-bottom:12px}
+.lead{text-align:center;color:var(--muted);max-width:620px;margin:0 auto 36px}
+.eyebrow{display:block;text-align:center;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;font-size:.78rem;font-weight:700;margin-bottom:8px}
+.gold-line{width:56px;height:3px;background:var(--gold);border-radius:3px;margin:0 auto 20px}
+
+/* Top bar */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(15,37,71,.96);backdrop-filter:blur(8px);color:#fff}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Georgia,serif;font-weight:700;font-size:1.05rem}
+.brand svg{width:38px;height:38px}
+.lang{display:flex;border:1.5px solid var(--gold);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:#fff;font:inherit;font-size:.85rem;font-weight:700;padding:7px 14px;cursor:pointer;min-width:44px}
+.lang button[aria-pressed="true"]{background:var(--gold);color:var(--navy)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--wa);color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem;padding:16px 28px;border-radius:999px;box-shadow:0 8px 20px rgba(37,211,102,.35);transition:transform .15s,background .15s;text-align:center}
+.btn:hover{background:var(--wa-dark);transform:translateY(-2px)}
+.btn svg{width:24px;height:24px;flex:none}
+.btn.big{font-size:1.15rem;padding:18px 32px}
+.btn.gold{background:var(--gold);color:var(--navy);box-shadow:0 8px 20px rgba(201,162,75,.35)}
+.btn.gold:hover{background:var(--gold-2)}
+
+/* Hero */
+.hero{background:radial-gradient(circle at 80% 10%,var(--navy-2),var(--navy) 55%,var(--navy-3));color:#fff;text-align:center;padding:48px 0 72px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:40px;background:var(--cream);clip-path:ellipse(60% 100% at 50% 100%)}
+.hero .logo{width:120px;height:120px;margin:0 auto 14px;display:block}
+.hero h1{color:#fff;font-size:clamp(2rem,8vw,3.2rem);margin-bottom:6px}
+.hero .sub{color:var(--gold-2);letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;font-weight:700;margin-bottom:18px}
+.hero .slogan{font-family:Georgia,serif;font-style:italic;font-size:clamp(1.3rem,5vw,1.9rem);margin-bottom:22px}
+.hero .campaign{display:inline-block;background:rgba(201,162,75,.16);border:1.5px solid var(--gold);color:var(--gold-2);padding:10px 22px;border-radius:999px;font-weight:700;margin-bottom:28px}
+.hero .cta{display:flex;flex-direction:column;align-items:center;gap:10px}
+.hero .cta small{color:#cdd6e8}
+.stars{position:absolute;inset:0;pointer-events:none;opacity:.5}
+
+/* Photo placeholders */
+.photo{background:repeating-linear-gradient(45deg,#f1ead8,#f1ead8 12px,#f7f1e2 12px,#f7f1e2 24px);border:2px dashed var(--gold);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--muted);font-weight:600;min-height:170px;text-align:center;padding:16px}
+.photo svg{width:38px;height:38px;color:var(--gold)}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:32px}
+.photos .pic:first-child{grid-column:1/-1}
+.pic{display:block;width:100%;padding:0;border:0;background:var(--gold-soft);border-radius:var(--radius);overflow:hidden;cursor:zoom-in;box-shadow:var(--shadow);transition:transform .2s}
+.pic:hover{transform:scale(1.02)}
+.pic img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.photos .pic:first-child img{aspect-ratio:16/10}
+.pic.map{margin-top:16px}
+.pic.map img{aspect-ratio:16/10}
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(6,14,30,.92);display:none;align-items:center;justify-content:center;padding:16px;cursor:zoom-out}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:12px;object-fit:contain}
+.lightbox .x{position:absolute;top:12px;right:14px;width:44px;height:44px;border-radius:50%;border:0;background:var(--gold);color:var(--navy);font-size:1.6rem;font-weight:700;cursor:pointer}
+
+/* Prices */
+.prices{background:var(--white)}
+.price-grid{display:grid;gap:16px;grid-template-columns:1fr 1fr;max-width:640px;margin:0 auto 24px}
+.price{background:var(--cream);border:2px solid var(--gold-soft);border-radius:var(--radius);padding:24px 14px;text-align:center;box-shadow:var(--shadow)}
+.price.hl{background:var(--navy);border-color:var(--gold);color:#fff}
+.price.hl .who,.price.hl .from{color:var(--gold-2)}
+.price .who{font-weight:700;color:var(--navy)}
+.price .from{font-size:.85rem;color:var(--muted)}
+.price .amt{font-family:Georgia,serif;font-size:2.6rem;font-weight:700;line-height:1.1;margin:6px 0}
+.price .amt span{font-size:1.1rem}
+.times{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.times div{background:var(--gold-soft);border-radius:999px;padding:10px 20px;font-weight:600;display:flex;gap:8px;align-items:center}
+.times svg{width:20px;height:20px;color:var(--navy)}
+.center{text-align:center;margin-top:28px}
+
+/* Services */
+.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.svc{background:var(--white);border-radius:var(--radius);padding:20px 14px;text-align:center;box-shadow:var(--shadow)}
+.svc .ic{width:56px;height:56px;border-radius:50%;background:var(--navy);display:grid;place-items:center;margin:0 auto 12px}
+.svc .ic svg{width:30px;height:30px;color:var(--gold-2)}
+.svc p{font-weight:600;color:var(--navy);font-size:.98rem;line-height:1.35}
+
+/* Transparency */
+.clear{background:var(--gold-soft)}
+.clear-box{max-width:720px;margin:0 auto;background:var(--white);border:2px solid var(--gold);border-radius:var(--radius);padding:30px 24px;box-shadow:var(--shadow);text-align:center}
+.clear-box h2{margin-bottom:10px}
+.clear-box ul{list-style:none;display:grid;gap:10px;margin:18px 0;text-align:left}
+.clear-box li{display:flex;gap:12px;align-items:flex-start;background:var(--cream);border-radius:14px;padding:12px 14px}
+.clear-box li svg{width:26px;height:26px;color:var(--gold);flex:none;margin-top:2px}
+.clear-box .ok{color:var(--muted);font-size:.95rem}
+
+/* Why */
+.why{background:var(--navy);color:#fff;text-align:center}
+.why h2{color:#fff}
+.why p{max-width:680px;margin:0 auto;font-family:Georgia,serif;font-size:clamp(1.15rem,4vw,1.45rem);line-height:1.7}
+.why p b{color:var(--gold-2)}
+.llama-wrap{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bottom:24px}
+.llama-wrap svg{width:170px;height:auto}
+.bubble{background:var(--white);color:var(--navy);border-radius:18px;padding:10px 18px;font-weight:600;font-size:.95rem;position:relative;max-width:300px}
+.bubble::after{content:"";position:absolute;bottom:-9px;left:50%;margin-left:-9px;border:9px solid transparent;border-top-color:var(--white);border-bottom:0}
+
+/* Location */
+.addr{max-width:560px;margin:0 auto;background:var(--white);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);display:flex;gap:16px;align-items:center}
+.addr svg{width:42px;height:42px;color:var(--gold);flex:none}
+.addr strong{color:var(--navy)}
+.map{margin-top:16px;min-height:200px}
+
+/* Reviews */
+.reviews{background:var(--white);text-align:center}
+.reviews .stars-row{color:var(--gold);font-size:2rem;letter-spacing:6px;margin-bottom:10px}
+
+/* Footer */
+footer{background:var(--navy-3);color:#cdd6e8;text-align:center;padding:44px 0 110px}
+footer svg.logo{width:70px;height:70px;margin-bottom:8px}
+footer .name{font-family:Georgia,serif;color:#fff;font-size:1.3rem;font-weight:700}
+footer .slogan{color:var(--gold-2);font-style:italic;font-family:Georgia,serif;margin:6px 0 20px}
+footer .links{display:flex;flex-direction:column;gap:8px;align-items:center}
+footer a{color:#fff;text-decoration:none;font-weight:600;padding:6px 10px}
+footer a:hover{color:var(--gold-2)}
+footer small{display:block;margin-top:22px;opacity:.6}
+
+/* Floating WhatsApp */
+.float{position:fixed;right:16px;bottom:16px;z-index:60;width:62px;height:62px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:pulse 2.4s infinite}
+.float svg{width:34px;height:34px;color:#fff}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5),0 8px 24px rgba(0,0,0,.3)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0),0 8px 24px rgba(0,0,0,.3)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0),0 8px 24px rgba(0,0,0,.3)}}
+
+@media(min-width:720px){
+  .services-grid{grid-template-columns:repeat(4,1fr)}
+  .photos{grid-template-columns:repeat(3,1fr)}
+  .photos .pic:first-child{grid-column:auto}
+  .photos .pic:first-child img{aspect-ratio:4/3}
+  .hero .cta{flex-direction:column}
+  footer .links{flex-direction:row;justify-content:center;gap:24px}
+}
+@media(prefers-reduced-motion:reduce){.float{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- SVG symbols -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="logo" viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="56" fill="#0f2547" stroke="#c9a24b" stroke-width="4"/>
+      <circle cx="60" cy="60" r="48" fill="none" stroke="#c9a24b" stroke-width="1" opacity=".6"/>
+      <path d="M36 40 L60 20 L84 40" fill="none" stroke="#e2c479" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 27 l2.4 5 5.4.6-4 3.7 1.1 5.4-4.9-2.7-4.9 2.7 1.1-5.4-4-3.7 5.4-.6z" fill="#c9a24b" transform="translate(0 2) scale(1)"/>
+      <text x="60" y="84" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="40" fill="#fff" letter-spacing="1">PR</text>
+      <path d="M38 92 H82" stroke="#c9a24b" stroke-width="2.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.12c-.25.69-1.44 1.32-1.98 1.37-.5.05-.97.24-3.27-.68-2.77-1.1-4.55-3.94-4.69-4.12-.13-.19-1.12-1.49-1.12-2.85 0-1.35.71-2.02.96-2.29.25-.28.55-.35.73-.35h.52c.17 0 .39-.06.61.47.22.55.75 1.9.82 2.04.07.14.11.3.02.48-.09.19-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.89 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.7-.82.89-1.1.19-.28.37-.23.63-.14.26.09 1.64.77 1.92.91.28.14.47.21.54.32.07.12.07.66-.18 1.35z"/></symbol>
+    <symbol id="camera" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h3l2-3h8l2 3h3v11H3z"/><circle cx="12" cy="13" r="3.5"/></g></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></g></symbol>
+  </defs>
+</svg>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Posada Rossy"><svg><use href="#logo"/></svg><span>Posada Rossy</span></a>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- 1. Portada -->
+<section class="hero" id="inicio">
+  <svg class="stars" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="#e2c479"><circle cx="40" cy="40" r="1.6"/><circle cx="120" cy="90" r="1.2"/><circle cx="330" cy="50" r="1.8"/><circle cx="260" cy="130" r="1.2"/><circle cx="370" cy="180" r="1.4"/><circle cx="60" cy="200" r="1.3"/><circle cx="200" cy="30" r="1.1"/><circle cx="300" cy="250" r="1.3"/></g>
+  </svg>
+  <div class="wrap" style="position:relative">
+    <svg class="logo" role="img" aria-label="Logo Posada Rossy"><use href="#logo"/></svg>
+    <h1>Posada Rossy</h1>
+    <div class="sub" data-i18n="sub">Hospedaje en Uyuni</div>
+    <p class="slogan" data-i18n="slogan">Descansa, disfruta y vive Uyuni.</p>
+    <div class="campaign" data-i18n="campaign">Tu descanso en Uyuni desde 60 Bs</div>
+    <div class="cta">
+      <a class="btn big wa-link" href="#" target="_blank" rel="noopener"><svg><use href="#wa"/></svg><span data-i18n="cta1">Consulta disponibilidad por WhatsApp</span></a>
+      <small data-i18n="ctaNote">Respondemos directamente, sin intermediarios.</small>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Precios -->
+<section class="prices" id="precios">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="pricesEyebrow">Precios claros</span>
+    <h2 data-i18n="pricesTitle">Tarifas por noche</h2>
+    <div class="gold-line"></div>
+    <div class="price-grid">
+      <div class="price">
+        <div class="who" data-i18n="p1">1 persona</div>
+        <div class="from" data-i18n="from">desde</div>
+        <div class="amt">60 <span>Bs</span></div>
+      </div>
+      <div class="price hl">
+        <div class="who" data-i18n="p2">Pareja</div>
+        <div class="from" data-i18n="from">desde</div>
+        <div class="amt">100 <span>Bs</span></div>
+      </div>
+    </div>
+    <div class="times">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="checkin">Check-in: 15:00</span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="checkout">Check-out: 12:00</span></div>
+    </div>
+    <div class="center"><a class="btn gold wa-link" href="#" target="_blank" rel="noopener"><svg><use href="#wa"/></svg><span data-i18n="cta2">Consulta disponibilidad</span></a></div>
+    <div class="photos">
+      <button type="button" class="pic" data-full="fotos/habitacion.jpg.png"><img src="fotos/habitacion.jpg.png" alt="Foto de la habitación" data-i18n-alt="photoRoom" loading="lazy" decoding="async"></button>
+      <button type="button" class="pic" data-full="fotos/cama.jpg.png"><img src="fotos/cama.jpg.png" alt="Foto de la cama" data-i18n-alt="photoBed" loading="lazy" decoding="async"></button>
+      <button type="button" class="pic" data-full="fotos/area-comun.jpg.png"><img src="fotos/area-comun.jpg.png" alt="Foto del área común" data-i18n-alt="photoCommon" loading="lazy" decoding="async"></button>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Servicios -->
+<section id="servicios">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="svcEyebrow">Lo que encuentras</span>
+    <h2 data-i18n="svcTitle">Servicios</h2>
+    <div class="gold-line"></div>
+    <div class="services-grid">
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19V6M3 15h18v4M21 15v-3a3 3 0 0 0-3-3h-7v6"/><circle cx="7" cy="11.5" r="1.8"/></svg></div><p data-i18n="s1">Habitaciones cómodas y abrigadas</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.6 16a5 5 0 0 1 6.8 0"/><circle cx="12" cy="19.2" r=".9" fill="currentColor"/></svg></div><p data-i18n="s2">WiFi gratuito y veloz</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12V6a3 3 0 0 1 5.5-1.7"/><path d="M3 12h18"/><path d="M8 15v2M12 15v3M16 15v2"/></svg></div><p data-i18n="s3">Ducha caliente las 24 horas</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v2a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6zM6 11V5h5v6"/><path d="M8 19v2M16 19v2"/></svg></div><p data-i18n="s4">Baños compartidos</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h16v7a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3zM2 10h20M9 6c0-1 1-1 1-2M14 6c0-1 1-1 1-2"/></svg></div><p data-i18n="s5">Cocinas compartidas</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#wa"/></svg></div><p data-i18n="s6">Atención directa por WhatsApp</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg></div><p data-i18n="s7">Información turística básica</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 3l9 8M5 10v10h14V10"/><path d="M12 17.5s-3-1.8-3-3.8a1.7 1.7 0 0 1 3-1 1.7 1.7 0 0 1 3 1c0 2-3 3.8-3 3.8z"/></svg></div><p data-i18n="s8">Ambiente familiar</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Transparencia -->
+<section class="clear" id="transparencia">
+  <div class="wrap">
+    <div class="clear-box">
+      <span class="eyebrow" data-i18n="clearEyebrow">Sin sorpresas</span>
+      <h2 data-i18n="clearTitle">Te lo contamos claro antes de reservar</h2>
+      <div class="gold-line"></div>
+      <ul>
+        <li><svg><use href="#check"/></svg><span data-i18n="c1"><b>Baños compartidos</b> con ducha caliente las 24 horas.</span></li>
+        <li><svg><use href="#check"/></svg><span data-i18n="c2"><b>Cocinas compartidas</b> para que prepares tu comida y ahorres.</span></li>
+      </ul>
+      <p class="ok" data-i18n="c3">Por eso podemos ofrecerte precios justos, en un ambiente limpio, familiar y con atención directa. Si tienes dudas, escríbenos y te respondemos con gusto.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Por qué elegirnos -->
+<section class="why" id="porque">
+  <div class="wrap">
+    <div class="llama-wrap">
+      <div class="bubble" data-i18n="llama">¡Hola! Soy Rossy, tu llamita viajera. Te esperamos.</div>
+      <!-- Rossy, la llamita -->
+      <svg viewBox="0 0 200 230" role="img" aria-label="Rossy, la llamita viajera">
+        <!-- patas -->
+        <g fill="#f3e6cf"><rect x="62" y="160" width="14" height="52" rx="7"/><rect x="88" y="160" width="14" height="52" rx="7"/><rect x="118" y="160" width="14" height="52" rx="7"/><rect x="144" y="160" width="14" height="52" rx="7"/></g>
+        <g fill="#c9a24b"><rect x="62" y="205" width="14" height="8" rx="4"/><rect x="88" y="205" width="14" height="8" rx="4"/><rect x="118" y="205" width="14" height="8" rx="4"/><rect x="144" y="205" width="14" height="8" rx="4"/></g>
+        <!-- cuerpo -->
+        <ellipse cx="110" cy="145" rx="56" ry="38" fill="#fbf1de"/>
+        <circle cx="90" cy="130" r="14" fill="#f3e6cf"/><circle cx="118" cy="122" r="16" fill="#f3e6cf"/><circle cx="140" cy="138" r="13" fill="#f3e6cf"/>
+        <!-- manta -->
+        <path d="M78 128 Q110 112 148 128 L150 152 Q112 164 76 152z" fill="#c9a24b"/>
+        <path d="M78 140 Q112 126 149 140" stroke="#0f2547" stroke-width="4" fill="none"/>
+        <path d="M77 149 Q112 136 150 149" stroke="#fff" stroke-width="2.5" fill="none"/>
+        <!-- cuello -->
+        <path d="M58 138 Q46 100 54 62 L82 62 Q78 100 90 130z" fill="#fbf1de"/>
+        <!-- bufanda -->
+        <path d="M50 92 Q68 102 86 92 L88 106 Q68 116 48 106z" fill="#0f2547"/>
+        <path d="M50 99 Q68 109 88 99" stroke="#c9a24b" stroke-width="3" fill="none"/>
+        <path d="M80 104 L88 128 L76 126 L72 108z" fill="#0f2547"/>
+        <!-- cabeza -->
+        <ellipse cx="68" cy="52" rx="28" ry="24" fill="#fbf1de"/>
+        <ellipse cx="46" cy="60" rx="15" ry="11" fill="#f3e6cf"/>
+        <!-- orejas -->
+        <path d="M54 34 L46 4 Q60 8 66 32z" fill="#fbf1de"/><path d="M56 30 L50 12 Q58 16 61 30z" fill="#f4b9a8"/>
+        <path d="M76 32 L84 4 Q92 12 90 34z" fill="#fbf1de"/><path d="M78 30 L83 13 Q87 18 86 30z" fill="#f4b9a8"/>
+        <!-- flequillo -->
+        <path d="M50 34 Q62 22 84 34 Q72 30 66 40 Q60 30 50 34z" fill="#f3e6cf"/>
+        <!-- cara -->
+        <circle cx="64" cy="50" r="4.2" fill="#0f2547"/><circle cx="65.3" cy="48.7" r="1.3" fill="#fff"/>
+        <circle cx="86" cy="50" r="4.2" fill="#0f2547"/><circle cx="87.3" cy="48.7" r="1.3" fill="#fff"/>
+        <circle cx="56" cy="60" r="5" fill="#f4b9a8" opacity=".7"/><circle cx="92" cy="60" r="5" fill="#f4b9a8" opacity=".7"/>
+        <ellipse cx="42" cy="62" rx="3.4" ry="2.6" fill="#0f2547"/>
+        <path d="M42 66 Q48 74 58 68" stroke="#0f2547" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <!-- cola -->
+        <circle cx="168" cy="132" r="8" fill="#f3e6cf"/>
+        <!-- mochila -->
+        <rect x="128" y="112" width="26" height="30" rx="8" fill="#0f2547" stroke="#c9a24b" stroke-width="2.5"/>
+        <rect x="134" y="124" width="14" height="10" rx="3" fill="none" stroke="#c9a24b" stroke-width="2"/>
+      </svg>
+    </div>
+    <span class="eyebrow" data-i18n="whyEyebrow">Por qué elegirnos</span>
+    <h2 data-i18n="whyTitle">Más que una cama</h2>
+    <div class="gold-line"></div>
+    <p data-i18n="whyText">No vendemos solo una cama: vendemos <b>el descanso después del Salar</b>, <b>la ducha caliente después del frío</b>, <b>el WiFi para seguir conectado</b>, <b>la cocina para ahorrar</b> y <b>la tranquilidad antes de seguir tu viaje</b>.</p>
+    <div class="center"><a class="btn gold wa-link" href="#" target="_blank" rel="noopener"><svg><use href="#wa"/></svg><span data-i18n="cta3">Escríbenos tu fecha de llegada</span></a></div>
+  </div>
+</section>
+
+<!-- 6. Ubicación -->
+<section id="ubicacion">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="locEyebrow">Cómo llegar</span>
+    <h2 data-i18n="locTitle">Ubicación</h2>
+    <div class="gold-line"></div>
+    <div class="addr">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      <div><strong data-i18n="addr1">Calle Fernando Alonso, entre Sucre y Camacho</strong><br><span data-i18n="addr2">Uyuni, Potosí, Bolivia</span></div>
+    </div>
+    <div class="center" style="margin:20px 0 4px"><a class="btn gold big" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Posada+Rossy+Calle+Fernando+Alonso+Uyuni+Bolivia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span data-i18n="mapBtn">Ver en Google Maps</span></a></div>
+    <button type="button" class="pic map" data-full="fotos/fachada.jpg.png"><img src="fotos/fachada.jpg.png" alt="Foto de la fachada" data-i18n-alt="photoFront" loading="lazy" decoding="async"></button>
+  </div>
+</section>
+
+<!-- 7. Opiniones -->
+<section class="reviews" id="opiniones">
+  <div class="wrap">
+    <div class="stars-row" aria-hidden="true">★★★★★</div>
+    <span class="eyebrow" data-i18n="revEyebrow">Opiniones</span>
+    <h2 data-i18n="revTitle">Tu opinión nos ayuda a mejorar</h2>
+    <p class="lead" data-i18n="revText">Si tu estadía fue buena, cuéntaselo a otros viajeros. Toma solo un minuto y nos ayuda muchísimo.</p>
+    <a class="btn gold big" href="https://g.page/r/CYkkB-zJurknEBM/review" target="_blank" rel="noopener" data-i18n="revBtn">Déjanos tu reseña en Google</a>
+  </div>
+</section>
+</main>
+
+<!-- 8. Pie -->
+<footer>
+  <div class="wrap">
+    <svg class="logo" aria-hidden="true"><use href="#logo"/></svg>
+    <div class="name">Posada Rossy</div>
+    <div class="slogan" data-i18n="slogan">Descansa, disfruta y vive Uyuni.</div>
+    <div class="links">
+      <a href="https://wa.me/59174256578" target="_blank" rel="noopener">WhatsApp: +591 74256578</a>
+      <a href="https://www.facebook.com/posadarrossyuyuni" target="_blank" rel="noopener">Facebook: posadarrossyuyuni</a>
+    </div>
+    <small>© Posada Rossy · Uyuni, Bolivia</small>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true"><button type="button" class="x" aria-label="Cerrar / Close">&times;</button><img alt=""></div>
+
+<a class="float wa-link" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script>
+(function(){
+  var T={
+    es:{
+      msg:"Hola, quiero consultar disponibilidad en Posada Rossy. Mi fecha de llegada es:",
+      sub:"Hospedaje en Uyuni",slogan:"Descansa, disfruta y vive Uyuni.",campaign:"Tu descanso en Uyuni desde 60 Bs",
+      cta1:"Consulta disponibilidad por WhatsApp",ctaNote:"Respondemos directamente, sin intermediarios.",
+      pricesEyebrow:"Precios claros",pricesTitle:"Tarifas por noche",p1:"1 persona",p2:"Pareja",from:"desde",
+      checkin:"Check-in: 15:00",checkout:"Check-out: 12:00",cta2:"Consulta disponibilidad",
+      photoRoom:"Foto de la habitación",photoBed:"Foto de la cama",photoCommon:"Foto del área común",photoFront:"Foto de la fachada",
+      svcEyebrow:"Lo que encuentras",svcTitle:"Servicios",
+      s1:"Habitaciones cómodas y abrigadas",s2:"WiFi gratuito y veloz",s3:"Ducha caliente las 24 horas",s4:"Baños compartidos",
+      s5:"Cocinas compartidas",s6:"Atención directa por WhatsApp",s7:"Información turística básica",s8:"Ambiente familiar",
+      clearEyebrow:"Sin sorpresas",clearTitle:"Te lo contamos claro antes de reservar",
+      c1:"<b>Baños compartidos</b> con ducha caliente las 24 horas.",
+      c2:"<b>Cocinas compartidas</b> para que prepares tu comida y ahorres.",
+      c3:"Por eso podemos ofrecerte precios justos, en un ambiente limpio, familiar y con atención directa. Si tienes dudas, escríbenos y te respondemos con gusto.",
+      llama:"¡Hola! Soy Rossy, tu llamita viajera. Te esperamos.",
+      whyEyebrow:"Por qué elegirnos",whyTitle:"Más que una cama",
+      whyText:"No vendemos solo una cama: vendemos <b>el descanso después del Salar</b>, <b>la ducha caliente después del frío</b>, <b>el WiFi para seguir conectado</b>, <b>la cocina para ahorrar</b> y <b>la tranquilidad antes de seguir tu viaje</b>.",
+      cta3:"Escríbenos tu fecha de llegada",
+      locEyebrow:"Cómo llegar",locTitle:"Ubicación",addr1:"Calle Fernando Alonso, entre Sucre y Camacho",addr2:"Uyuni, Potosí, Bolivia",mapBtn:"Ver en Google Maps",
+      revEyebrow:"Opiniones",revTitle:"Tu opinión nos ayuda a mejorar",
+      revText:"Si tu estadía fue buena, cuéntaselo a otros viajeros. Toma solo un minuto y nos ayuda muchísimo.",revBtn:"Déjanos tu reseña en Google"
+    },
+    en:{
+      msg:"Hello, I would like to check availability at Posada Rossy. My arrival date is:",
+      sub:"Guesthouse in Uyuni",slogan:"Rest, enjoy and live Uyuni.",campaign:"Your rest in Uyuni from 60 Bs",
+      cta1:"Check availability on WhatsApp",ctaNote:"We reply directly, no middlemen.",
+      pricesEyebrow:"Clear prices",pricesTitle:"Rates per night",p1:"1 person",p2:"Couple",from:"from",
+      checkin:"Check-in: 3:00 PM",checkout:"Check-out: 12:00 PM",cta2:"Check availability",
+      photoRoom:"Room photo",photoBed:"Bed photo",photoCommon:"Common area photo",photoFront:"Front of the house photo",
+      svcEyebrow:"What you'll find",svcTitle:"Services",
+      s1:"Comfortable, warm rooms",s2:"Free, fast WiFi",s3:"Hot shower 24 hours",s4:"Shared bathrooms",
+      s5:"Shared kitchens",s6:"Direct service via WhatsApp",s7:"Basic tourist information",s8:"Family atmosphere",
+      clearEyebrow:"No surprises",clearTitle:"We tell you clearly before you book",
+      c1:"<b>Shared bathrooms</b> with hot shower 24 hours a day.",
+      c2:"<b>Shared kitchens</b> so you can cook your own meals and save.",
+      c3:"That's how we offer fair prices in a clean, family-run place with direct attention. If you have any questions, message us and we'll gladly answer.",
+      llama:"Hi! I'm Rossy, your travelling llama. We're waiting for you.",
+      whyEyebrow:"Why choose us",whyTitle:"More than a bed",
+      whyText:"We don't just sell a bed: we sell <b>rest after the Salt Flats</b>, <b>a hot shower after the cold</b>, <b>WiFi to stay connected</b>, <b>a kitchen to save money</b> and <b>peace of mind before you continue your trip</b>.",
+      cta3:"Tell us your arrival date",
+      locEyebrow:"How to get here",locTitle:"Location",addr1:"Calle Fernando Alonso, between Sucre and Camacho",addr2:"Uyuni, Potosí, Bolivia",mapBtn:"View on Google Maps",
+      revEyebrow:"Reviews",revTitle:"Your opinion helps us improve",
+      revText:"If you enjoyed your stay, tell other travellers. It takes just a minute and helps us a lot.",revBtn:"Leave us a Google review"
+    }
+  };
+  var lang="es";
+  try{var s=localStorage.getItem("rossy-lang");if(s==="es"||s==="en")lang=s;else if(/^en/i.test(navigator.language))lang="en";}catch(e){}
+  function apply(l){
+    lang=l;var d=T[l];
+    document.documentElement.lang=l;
+    document.querySelectorAll("[data-i18n]").forEach(function(el){var v=d[el.getAttribute("data-i18n")];if(v!=null)el.innerHTML=v;});
+    document.querySelectorAll("[data-i18n-alt]").forEach(function(el){el.alt=d[el.getAttribute("data-i18n-alt")];});
+    var url="https://wa.me/59174256578?text="+encodeURIComponent(d.msg);
+    document.querySelectorAll(".wa-link").forEach(function(a){a.href=url;});
+    document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.lang===l);});
+    try{localStorage.setItem("rossy-lang",l);}catch(e){}
+  }
+  document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){apply(b.dataset.lang);});});
+  var lb=document.getElementById("lightbox"),lbi=lb.querySelector("img");
+  document.querySelectorAll(".pic").forEach(function(b){b.addEventListener("click",function(){var i=b.querySelector("img");lbi.src=b.dataset.full;lbi.alt=i.alt;lb.classList.add("open");});});
+  lb.addEventListener("click",function(){lb.classList.remove("open");});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")lb.classList.remove("open");});
+  document.querySelectorAll(".wa-link").forEach(function(a){a.addEventListener("click",function(){
+    if(typeof gtag==="function")gtag("event","reserva_whatsapp");
+  });});
+  apply(lang);
+})();
+</script>
+</body>
+</html>
