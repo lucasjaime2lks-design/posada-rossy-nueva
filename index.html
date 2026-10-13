@@ -165,6 +165,18 @@ section{padding:clamp(72px,10vw,128px) 0}
 .dos-btn{display:flex;flex-wrap:wrap;gap:12px}
 .btn-linea{background:transparent;color:var(--piedra);box-shadow:inset 0 0 0 1.5px var(--piedra)}
 @media (hover:hover){.btn-linea:hover{background:var(--sal2)}}
+.opiniones{padding-top:0}
+.opiniones h2{font-size:clamp(28px,4vw,44px);margin-bottom:8px}
+.op-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:32px;border-top:1.5px solid var(--piedra)}
+.op{margin:0;padding:28px 28px 28px 0;border-bottom:1px solid var(--linea);display:flex;flex-direction:column;gap:14px}
+.op:nth-child(even){padding:28px 0 28px 28px;border-left:1px solid var(--linea)}
+.op-est{color:var(--flamenco);letter-spacing:2px;font-size:18px;line-height:1}
+.op blockquote{margin:0;font-size:clamp(18px,1.9vw,21px);line-height:1.5;font-weight:500;color:var(--piedra)}
+.op-dest{font-size:14px;color:var(--gris);margin:0}
+.op figcaption{margin-top:auto;font-size:14px;color:var(--gris)}
+.op figcaption strong{color:var(--piedra);font-weight:700}
+.op-nota{font-size:13px;color:var(--gris);margin-top:16px}
+@media (max-width:760px){.op-grid{grid-template-columns:1fr}.op,.op:nth-child(even){padding:24px 0;border-left:0}}
 .resenas{margin-top:clamp(56px,8vw,96px);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;border-top:1.5px solid var(--piedra);border-bottom:1px solid var(--linea);padding:32px 0}
 .resenas h2{font-size:clamp(26px,3.4vw,38px);margin-bottom:8px}
 .preguntas{margin-top:clamp(56px,8vw,96px);max-width:820px}
@@ -297,6 +309,7 @@ footer{background:var(--piedra);color:rgba(255,255,255,.72);padding:48px 0 32px;
     <a href="#precios" data-t="nPrecios">Precios</a>
     <a href="#claro" data-t="nClaro">Antes de reservar</a>
     <a href="#servicios" data-t="nServ">Servicios</a>
+    <a href="#opiniones" data-t="nOpin">Opiniones</a>
     <a href="#ubicacion" data-t="nUbi">Cómo llegar</a>
   </nav>
   <div class="der">
@@ -311,6 +324,7 @@ footer{background:var(--piedra);color:rgba(255,255,255,.72);padding:48px 0 32px;
   <a class="item" href="#precios" onclick="menu(false)" data-t="nPrecios">Precios</a>
   <a class="item" href="#claro" onclick="menu(false)" data-t="nClaro">Antes de reservar</a>
   <a class="item" href="#servicios" onclick="menu(false)" data-t="nServ">Servicios</a>
+  <a class="item" href="#opiniones" onclick="menu(false)" data-t="nOpin">Opiniones</a>
   <a class="item" href="#ubicacion" onclick="menu(false)" data-t="nUbi">Cómo llegar</a>
   <div style="flex:1"></div>
   <a class="btn btn-rosa wa" data-m="general" href="#" target="_blank" rel="noopener" data-t="hReservar">Reservar por WhatsApp</a>
@@ -407,6 +421,27 @@ footer{background:var(--piedra);color:rgba(255,255,255,.72);padding:48px 0 32px;
   <p data-t="masTexto" data-html="1">No vendemos solo una cama. Vendemos <em>el descanso después del Salar</em>, la ducha caliente después del frío y la tranquilidad antes de seguir tu viaje.</p>
 </div></section>
 
+<section class="opiniones" id="opiniones" aria-labelledby="t-opin"><div class="wrap">
+  <h2 id="t-opin" data-t="oTitulo">Lo que dicen nuestros huéspedes</h2>
+  <p class="muted" data-t="oSub">Reseñas reales de huéspedes que se quedaron con nosotros, publicadas en Airbnb.</p>
+  <div class="op-grid">
+    <figure class="op"><div class="op-est" aria-label="5 de 5 estrellas">★★★★★</div>
+      <blockquote data-t="o1">“Gracias a este lugar pasamos 5 días maravillosos en Uyuni. El dueño es muuuy amable, le agradecemos toda la ayuda.”</blockquote>
+      <figcaption><strong>Maksim</strong> · <span data-t="o1m">Airbnb · septiembre 2026</span></figcaption></figure>
+    <figure class="op"><div class="op-est" aria-label="5 de 5 estrellas">★★★★★</div>
+      <blockquote data-t="o4">“¡El costo-beneficio es bueno! No esperes una casa de huéspedes, sino más bien un hostel con habitaciones privadas. El baño tiene agua caliente, y eso fue muy bueno.”</blockquote>
+      <figcaption><strong>Carolina</strong> · <span data-t="o4m">Airbnb · junio 2026 · traducido del portugués</span></figcaption></figure>
+    <figure class="op"><div class="op-est" aria-label="4 de 5 estrellas">★★★★<span style="opacity:.25">★</span></div>
+      <blockquote data-t="o2">“¡¡Alojamiento perfecto para una noche en Uyuni!!”</blockquote>
+      <p class="op-dest" data-t="o2d">Destacó: el anfitrión respondía rápido · horario de llegada flexible · sábanas y muebles impecables</p>
+      <figcaption><strong>Cléo</strong> · <span data-t="o2m">Airbnb · julio 2026 · traducido del francés</span></figcaption></figure>
+    <figure class="op"><div class="op-est" aria-label="5 de 5 estrellas">★★★★★</div>
+      <blockquote data-t="o3">“Agradable estancia en casa de Jaime Lucas. ¡Muchas gracias! ☺️”</blockquote>
+      <figcaption><strong data-t="o3n">Huésped de Airbnb</strong> · <span data-t="o3m">julio 2026 · traducido del francés</span></figcaption></figure>
+  </div>
+  <p class="op-nota" data-t="oNota">Las traducciones son las que muestra Airbnb.</p>
+</div></section>
+
 <section id="ubicacion" aria-labelledby="t-ubi" style="padding-top:0"><div class="wrap">
   <div class="ubicacion">
     <div class="mapa"><iframe title="Mapa de Posada Rossy en Uyuni" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Posada+Rossy,+Calle+Fernando+Alonso,+Uyuni,+Bolivia&z=16&output=embed"></iframe></div>
@@ -460,7 +495,7 @@ footer{background:var(--piedra);color:rgba(255,255,255,.72);padding:48px 0 32px;
 const WHATSAPP="59174256578";
 
 const T={
-es:{nPrecios:"Precios",nClaro:"Antes de reservar",nServ:"Servicios",nUbi:"Cómo llegar",nReservar:"Reservar",nMenu:"Menú",nCerrar:"Cerrar",vPausa:"Pausar video",vSeguir:"Reanudar video",tipWa:"Escribir por WhatsApp",
+es:{nOpin:"Opiniones",nPrecios:"Precios",nClaro:"Antes de reservar",nServ:"Servicios",nUbi:"Cómo llegar",nReservar:"Reservar",nMenu:"Menú",nCerrar:"Cerrar",vPausa:"Pausar video",vSeguir:"Reanudar video",tipWa:"Escribir por WhatsApp",
 hSub:"Hospedaje familiar en Uyuni. Descansa después del Salar <b>desde 60 Bs la noche</b>.",hReservar:"Reservar por WhatsApp",hVer:"Ver precios y fotos",
 fLlegada:"Llegada",fSalida:"Salida",fPersonas:"Personas",fBtn:"Consultar por WhatsApp",
 bTitulo:"Descansa, disfruta y vive Uyuni",bTexto:"Somos un hospedaje familiar en el centro de Uyuni. Habitaciones abrigadas, ducha caliente a cualquier hora y atención directa por WhatsApp, sin intermediarios.",bFirma:"Te esperamos. Rossy, tu llamita viajera.",
@@ -473,7 +508,7 @@ vCierre:"Así podemos ofrecerte precios justos, en un ambiente limpio y familiar
 sTitulo:"Servicios del hospedaje",s1:"Habitaciones cómodas",s1d:"y abrigadas para el frío de Uyuni",s2:"WiFi gratis",s2d:"para seguir conectado",s3:"Ducha caliente",s3d:"las 24 horas",s4:"Cocina compartida",s4d:"equipada para cocinar",s5:"Atención directa",s5d:"por WhatsApp",s6:"Información turística",s6d:"para planear tu visita",s7:"Ambiente familiar",s7d:"tranquilo y seguro",s8:"En el centro",s8d:"entre Sucre y Camacho",
 masTexto:"No vendemos solo una cama. Vendemos <em>el descanso después del Salar</em>, la ducha caliente después del frío y la tranquilidad antes de seguir tu viaje.",
 uTitulo:"Cómo llegar a Posada Rossy",uDir:"Dirección",uDirV:"Calle Fernando Alonso, entre Sucre y Camacho. Uyuni, Potosí, Bolivia.",uIn:"Entrada",uOut:"Salida",uMaps:"Abrir en Google Maps",uBtn:"Pedir la ubicación por WhatsApp",
-rTitulo:"¿Te quedaste con nosotros?",rTexto:"Cuéntale a otros viajeros cómo te fue. Toma un minuto y nos ayuda muchísimo.",rBtn:"Dejar una reseña en Google",
+oTitulo:"Lo que dicen nuestros huéspedes",oSub:"Reseñas reales de huéspedes que se quedaron con nosotros, publicadas en Airbnb.",o1:"“Gracias a este lugar pasamos 5 días maravillosos en Uyuni. El dueño es muuuy amable, le agradecemos toda la ayuda.”",o1m:"Airbnb · septiembre 2026",o2:"“¡¡Alojamiento perfecto para una noche en Uyuni!!”",o2d:"Destacó: el anfitrión respondía rápido · horario de llegada flexible · sábanas y muebles impecables",o2m:"Airbnb · julio 2026 · traducido del francés",o3:"“Agradable estancia en casa de Jaime Lucas. ¡Muchas gracias! ☺️”",o3n:"Huésped de Airbnb",o3m:"julio 2026 · traducido del francés",o4:"“¡El costo-beneficio es bueno! No esperes una casa de huéspedes, sino más bien un hostel con habitaciones privadas. El baño tiene agua caliente, y eso fue muy bueno.”",o4m:"Airbnb · junio 2026 · traducido del portugués",oNota:"Las traducciones son las que muestra Airbnb.",rTitulo:"¿Te quedaste con nosotros?",rTexto:"Cuéntale a otros viajeros cómo te fue. Toma un minuto y nos ayuda muchísimo.",rBtn:"Dejar una reseña en Google",
 qTitulo:"Preguntas antes de viajar",q1:"¿Cómo reservo?",a1:"Escríbenos por WhatsApp con tu fecha de llegada, de salida y cuántas personas son. Te confirmamos si hay lugar.",
 q2:"¿Los baños son privados?",a2:"No, los baños son compartidos y tienen ducha caliente las 24 horas. Así mantenemos precios justos.",
 q3:"¿Puedo cocinar?",a3:"Sí. Hay una cocina compartida para que prepares tu comida y ahorres durante el viaje.",
@@ -482,7 +517,7 @@ q5:"¿A qué hora puedo entrar y salir?",a5:"La entrada es desde las 15:00 y la 
 xTitulo:"¿Cuándo llegas a Uyuni?",xTexto:"Escríbenos tu fecha de llegada y te respondemos directo.",fTexto:"Hospedaje familiar en Uyuni, Potosí, Bolivia.",
 mGeneral:"Hola Posada Rossy, vi su página web y quiero consultar disponibilidad.",mPrecio:"Hola Posada Rossy, quiero consultar precio y disponibilidad.",mUbi:"Hola, ¿me pueden enviar la ubicación de Posada Rossy?",
 mFechas:"Hola Posada Rossy, quiero consultar disponibilidad.\nLlegada: {a}\nSalida: {b}\nPersonas: {p}",errFechas:"La salida es antes de la llegada. Elige una fecha de salida posterior."},
-en:{nPrecios:"Prices",nClaro:"Before you book",nServ:"Amenities",nUbi:"Getting here",nReservar:"Book",nMenu:"Menu",nCerrar:"Close",vPausa:"Pause video",vSeguir:"Play video",tipWa:"Message us on WhatsApp",
+en:{nOpin:"Reviews",nPrecios:"Prices",nClaro:"Before you book",nServ:"Amenities",nUbi:"Getting here",nReservar:"Book",nMenu:"Menu",nCerrar:"Close",vPausa:"Pause video",vSeguir:"Play video",tipWa:"Message us on WhatsApp",
 hSub:"A family guesthouse in Uyuni. Rest after the Salt Flat <b>from 60 Bs a night</b>.",hReservar:"Book on WhatsApp",hVer:"See prices and photos",
 fLlegada:"Check-in",fSalida:"Check-out",fPersonas:"Guests",fBtn:"Ask on WhatsApp",
 bTitulo:"Rest, enjoy and live Uyuni",bTexto:"We are a family guesthouse in central Uyuni. Warm rooms, hot showers at any hour and direct service on WhatsApp, with no middlemen.",bFirma:"We look forward to seeing you. Rossy, your travelling llama.",
@@ -495,7 +530,7 @@ vCierre:"That's how we keep prices fair, in a clean and family atmosphere. Any q
 sTitulo:"Guesthouse amenities",s1:"Comfortable rooms",s1d:"warm for Uyuni's cold nights",s2:"Free WiFi",s2d:"to stay connected",s3:"Hot shower",s3d:"24 hours a day",s4:"Shared kitchen",s4d:"equipped for cooking",s5:"Direct service",s5d:"on WhatsApp",s6:"Tourist information",s6d:"to plan your visit",s7:"Family atmosphere",s7d:"quiet and safe",s8:"Central location",s8d:"between Sucre and Camacho",
 masTexto:"We don't just sell a bed. We sell <em>rest after the Salt Flat</em>, a hot shower after the cold and peace of mind before your next stop.",
 uTitulo:"Getting to Posada Rossy",uDir:"Address",uDirV:"Fernando Alonso Street, between Sucre and Camacho. Uyuni, Potosí, Bolivia.",uIn:"Check-in",uOut:"Check-out",uMaps:"Open in Google Maps",uBtn:"Ask for directions on WhatsApp",
-rTitulo:"Did you stay with us?",rTexto:"Tell other travellers how it went. It takes a minute and helps us a lot.",rBtn:"Leave a Google review",
+oTitulo:"What our guests say",oSub:"Real reviews from guests who stayed with us, posted on Airbnb.",o1:"“Thanks to this place we spent 5 wonderful days in Uyuni. The owner is sooo kind, we are grateful for all the help.”",o1m:"Airbnb · September 2026 · translated from Spanish",o2:"“Perfect place to stay for one night in Uyuni!!”",o2d:"Highlighted: quick-responding host · flexible check-in time · spotless sheets and furniture",o2m:"Airbnb · July 2026 · translated from French",o3:"“Pleasant stay at Jaime Lucas's place. Thank you very much! ☺️”",o3n:"Airbnb guest",o3m:"July 2026 · translated from French",o4:"“Good value for money! Don't expect a guesthouse, it's more like a hostel with private rooms. The bathroom has hot water, and that was great.”",o4m:"Airbnb · June 2026 · translated from Portuguese",oNota:"English versions are translations of the reviews shown on Airbnb.",rTitulo:"Did you stay with us?",rTexto:"Tell other travellers how it went. It takes a minute and helps us a lot.",rBtn:"Leave a Google review",
 qTitulo:"Questions before your trip",q1:"How do I book?",a1:"Message us on WhatsApp with your check-in and check-out dates and number of guests. We'll confirm availability.",
 q2:"Are bathrooms private?",a2:"No, bathrooms are shared and have hot showers 24 hours a day. That's how we keep prices fair.",
 q3:"Can I cook?",a3:"Yes. There's a shared kitchen so you can cook your own meals and save on your trip.",
