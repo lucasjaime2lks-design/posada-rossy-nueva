@@ -4,13 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <style>:root{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0}[hidden]{display:none!important}</style>
-<title>Posada Rossy</title>
+<title>Posada Rossy · Hospedaje en Uyuni desde 80 Bs | Tours al Salar</title>
+<meta name="theme-color" content="#0a1333">
 <meta name="description" content="Posada Rossy, hospedaje familiar en Uyuni. Individual 80 Bs y pareja 120 Bs por noche. Ducha caliente 24 h, WiFi y cocina compartida. Reserva directa por WhatsApp.">
 <meta property="og:title" content="Posada Rossy · Hospedaje en Uyuni">
 <meta property="og:description" content="Individual 80 Bs, pareja 120 Bs por noche. Reserva directa por WhatsApp.">
 <meta property="og:image" content="https://www.rossyuyuni.com/fotos/fachada-900.jpg">
 <meta property="og:url" content="https://www.rossyuyuni.com/">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="es_BO">
+<meta property="og:site_name" content="Posada Rossy">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://www.rossyuyuni.com/">
 <link rel="icon" href="fotos/logo-96.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -204,8 +208,8 @@ nav a:hover::after{transform:scaleX(1)}
 .tile.wide{grid-column:span 2}
 .tile img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease), filter .4s}
 .tile:hover img,.tile:focus-visible img{transform:scale(1.07)}
-.tile figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 14px;color:#fff;font-size:.9rem;font-weight:600;background:linear-gradient(180deg,transparent,rgba(10,19,51,.78));transform:translateY(6px);transition:transform .35s var(--ease)}
-.tile:hover figcaption{transform:none}
+.tile .cap{display:block;position:absolute;left:0;right:0;bottom:0;padding:34px 16px 14px;color:#fff;font-size:.9rem;font-weight:600;background:linear-gradient(180deg,transparent,rgba(10,19,51,.78));transform:translateY(6px);transition:transform .35s var(--ease)}
+.tile:hover .cap{transform:none}
 .tile .chip{position:absolute;top:12px;left:12px;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:rgba(255,255,255,.92);color:var(--navy);padding:4px 10px;border-radius:999px}
 .tile[hidden]{display:none}
 .g-note{margin-top:18px;font-size:.92rem;color:var(--muted)}
@@ -367,6 +371,8 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
 .wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:ping 2.8s ease-out infinite}
 @keyframes ping{0%{transform:scale(1);opacity:.7}80%,100%{transform:scale(1.6);opacity:0}}
 .wa-float:hover{transform:scale(1.07)}
+.wa-float.off{opacity:0;transform:scale(.6);pointer-events:none;visibility:hidden}
+.wa-float{transition:transform .25s var(--ease), opacity .3s, visibility .3s}
 .wa-float svg{width:30px;height:30px}
 
 @media (prefers-reduced-motion:reduce){
@@ -375,6 +381,9 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
   .rv.pre{transform:none;opacity:1}
 }
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LodgingBusiness","name":"Posada Rossy","description":"Hospedaje familiar en Uyuni con ducha caliente 24 h, WiFi y cocina compartida. Tours al Salar de Uyuni.","url":"https://www.rossyuyuni.com/","image":["https://www.rossyuyuni.com/fotos/fachada-900.jpg","https://www.rossyuyuni.com/fotos/hab-wiphala-1-1400.jpg","https://www.rossyuyuni.com/fotos/hab-roja-2-1400.jpg"],"logo":"https://www.rossyuyuni.com/fotos/logo-320.jpg","telephone":"+59174256578","priceRange":"80–120 Bs","currenciesAccepted":"BOB","checkinTime":"15:00","checkoutTime":"12:00","address":{"@type":"PostalAddress","streetAddress":"Calle Fernando Alonso, entre Sucre y Camacho","addressLocality":"Uyuni","addressRegion":"Potosí","addressCountry":"BO"},"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"WiFi gratis","value":true},{"@type":"LocationFeatureSpecification","name":"Agua caliente 24 horas","value":true},{"@type":"LocationFeatureSpecification","name":"Cocina compartida","value":true}],"hasMap":"https://share.google/DSJWHsci904OV4xo0"}
+</script>
 </head>
 <body>
 
@@ -533,7 +542,7 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
 
   <div class="showcase">
     <section class="expand">
-      <div class="expand-media"><img src="fotos/hab-wiphala-1-1400.jpg" width="1400" height="1050" loading="lazy" alt="Habitación con cama de dos plazas y cama de una plaza, con la wiphala en la pared" data-es-alt="Habitación con cama de dos plazas y cama de una plaza, con la wiphala en la pared" data-en-alt="Room with a double and a single bed, with the wiphala flag on the wall"></div>
+      <div class="expand-media"><img src="fotos/hab-wiphala-1-1400.jpg" srcset="fotos/hab-wiphala-1-700.jpg 700w, fotos/hab-wiphala-1-1400.jpg 1400w" sizes="100vw" width="1400" height="1050" loading="lazy" alt="Habitación con cama de dos plazas y cama de una plaza, con la wiphala en la pared" data-es-alt="Habitación con cama de dos plazas y cama de una plaza, con la wiphala en la pared" data-en-alt="Room with a double and a single bed, with the wiphala flag on the wall"></div>
       <div class="wrap expand-cap">
         <span class="num" data-es="01 · Habitaciones" data-en="01 · Rooms">01 · Habitaciones</span>
         <h2 data-es-html="Camas <em>abrigadas</em> para las noches del altiplano" data-en-html="<em>Warm</em> beds for cold highland nights">Camas <em>abrigadas</em> para las noches del altiplano</h2>
@@ -541,7 +550,7 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
       </div>
     </section>
     <section class="expand">
-      <div class="expand-media"><img src="fotos/hab-roja-2-1400.jpg" width="1400" height="1050" loading="lazy" alt="Habitación con dos camas de dos plazas, velador y lámpara" data-es-alt="Habitación con dos camas de dos plazas, velador y lámpara" data-en-alt="Room with two double beds, nightstand and lamp"></div>
+      <div class="expand-media"><img src="fotos/hab-roja-2-1400.jpg" srcset="fotos/hab-roja-2-700.jpg 700w, fotos/hab-roja-2-1400.jpg 1400w" sizes="100vw" width="1400" height="1050" loading="lazy" alt="Habitación con dos camas de dos plazas, velador y lámpara" data-es-alt="Habitación con dos camas de dos plazas, velador y lámpara" data-en-alt="Room with two double beds, nightstand and lamp"></div>
       <div class="wrap expand-cap">
         <span class="num" data-es="02 · Para dos o para grupos" data-en="02 · For two or for groups">02 · Para dos o para grupos</span>
         <h2 data-es-html="Espacio para <em>viajar juntos</em>" data-en-html="Room to <em>travel together</em>">Espacio para <em>viajar juntos</em></h2>
@@ -549,7 +558,7 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
       </div>
     </section>
     <section class="expand">
-      <div class="expand-media"><img src="fotos/bano-1-1400.jpg" width="1400" height="1050" loading="lazy" alt="Baño compartido con lavamanos, espejo y repisa" data-es-alt="Baño compartido con lavamanos, espejo y repisa" data-en-alt="Shared bathroom with sink, mirror and shelf"></div>
+      <div class="expand-media"><img src="fotos/bano-1-1400.jpg" srcset="fotos/bano-1-700.jpg 700w, fotos/bano-1-1400.jpg 1400w" sizes="100vw" width="1400" height="1050" loading="lazy" alt="Baño compartido con lavamanos, espejo y repisa" data-es-alt="Baño compartido con lavamanos, espejo y repisa" data-en-alt="Shared bathroom with sink, mirror and shelf"></div>
       <div class="wrap expand-cap">
         <span class="num" data-es="03 · Baño compartido" data-en="03 · Shared bathroom">03 · Baño compartido</span>
         <h2 data-es-html="Agua caliente <em>las 24 horas</em>" data-en-html="Hot water <em>24 hours a day</em>">Agua caliente <em>las 24 horas</em></h2>
@@ -579,52 +588,52 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
         <button type="button" class="tile big rv" data-cat="hab" data-full="fotos/hab-wiphala-1-1400.jpg">
           <img src="fotos/hab-wiphala-1-700.jpg" srcset="fotos/hab-wiphala-1-700.jpg 700w, fotos/hab-wiphala-1-1400.jpg 1400w" sizes="(max-width:520px) 100vw, 50vw" width="700" height="525" loading="lazy" alt="">
           <span class="chip" data-es="Habitación" data-en="Room">Habitación</span>
-          <figcaption data-es="Cama de dos plazas y cama de una plaza, con la wiphala en la pared" data-en="Double bed and single bed, with the wiphala flag on the wall">Cama de dos plazas y cama de una plaza, con la wiphala en la pared</figcaption>
+          <span class="cap" data-es="Cama de dos plazas y cama de una plaza, con la wiphala en la pared" data-en="Double bed and single bed, with the wiphala flag on the wall">Cama de dos plazas y cama de una plaza, con la wiphala en la pared</span>
         </button>
         <button type="button" class="tile rv" data-cat="hab" data-full="fotos/hab-wiphala-2-1400.jpg">
           <img src="fotos/hab-wiphala-2-700.jpg" width="700" height="525" loading="lazy" alt="">
           <span class="chip" data-es="Habitación" data-en="Room">Habitación</span>
-          <figcaption data-es="La misma habitación, con sofá, televisor y toallas" data-en="Same room, with sofa, TV and towels">La misma habitación, con sofá, televisor y toallas</figcaption>
+          <span class="cap" data-es="La misma habitación, con sofá, televisor y toallas" data-en="Same room, with sofa, TV and towels">La misma habitación, con sofá, televisor y toallas</span>
         </button>
         <button type="button" class="tile rv" data-cat="bano" data-full="fotos/bano-1-1400.jpg">
           <img src="fotos/bano-1-700.jpg" width="700" height="525" loading="lazy" alt="">
           <span class="chip" data-es="Baño" data-en="Bathroom">Baño</span>
-          <figcaption data-es="Baño compartido con lavamanos, espejo y repisa" data-en="Shared bathroom with sink, mirror and shelf">Baño compartido con lavamanos, espejo y repisa</figcaption>
+          <span class="cap" data-es="Baño compartido con lavamanos, espejo y repisa" data-en="Shared bathroom with sink, mirror and shelf">Baño compartido con lavamanos, espejo y repisa</span>
         </button>
         <button type="button" class="tile wide rv" data-cat="hab" data-full="fotos/hab-roja-2-1400.jpg">
           <img src="fotos/hab-roja-2-700.jpg" srcset="fotos/hab-roja-2-700.jpg 700w, fotos/hab-roja-2-1400.jpg 1400w" sizes="(max-width:520px) 100vw, 50vw" width="700" height="525" loading="lazy" alt="">
           <span class="chip" data-es="Habitación" data-en="Room">Habitación</span>
-          <figcaption data-es="Dos camas de dos plazas con velador y lámpara" data-en="Two double beds with nightstand and lamp">Dos camas de dos plazas con velador y lámpara</figcaption>
+          <span class="cap" data-es="Dos camas de dos plazas con velador y lámpara" data-en="Two double beds with nightstand and lamp">Dos camas de dos plazas con velador y lámpara</span>
         </button>
         <button type="button" class="tile rv" data-cat="hab" data-full="fotos/hab-roja-1-1400.jpg">
           <img src="fotos/hab-roja-1-700.jpg" width="700" height="525" loading="lazy" alt="">
           <span class="chip" data-es="Habitación" data-en="Room">Habitación</span>
-          <figcaption data-es="Vista lateral, con escritorio y silla" data-en="Side view, with desk and chair">Vista lateral, con escritorio y silla</figcaption>
+          <span class="cap" data-es="Vista lateral, con escritorio y silla" data-en="Side view, with desk and chair">Vista lateral, con escritorio y silla</span>
         </button>
         <button type="button" class="tile rv" data-cat="hab" data-full="fotos/hab-azul-2-1400.jpg">
           <img src="fotos/hab-azul-2-700.jpg" width="700" height="525" loading="lazy" alt="">
           <span class="chip" data-es="Habitación" data-en="Room">Habitación</span>
-          <figcaption data-es="Habitación amplia con dos camas de dos plazas" data-en="Spacious room with two double beds">Habitación amplia con dos camas de dos plazas</figcaption>
+          <span class="cap" data-es="Habitación amplia con dos camas de dos plazas" data-en="Spacious room with two double beds">Habitación amplia con dos camas de dos plazas</span>
         </button>
         <button type="button" class="tile wide rv" data-cat="cocina" data-full="fotos/cocina-1400.jpg">
           <img src="fotos/cocina-700.jpg" srcset="fotos/cocina-700.jpg 700w, fotos/cocina-1400.jpg 1400w" sizes="(max-width:520px) 100vw, 50vw" width="700" height="446" loading="lazy" alt="">
           <span class="chip" data-es="Cocina" data-en="Kitchen">Cocina</span>
-          <figcaption data-es="Cocina compartida con mesón, utensilios y mesas" data-en="Shared kitchen with counter, utensils and tables">Cocina compartida con mesón, utensilios y mesas</figcaption>
+          <span class="cap" data-es="Cocina compartida con mesón, utensilios y mesas" data-en="Shared kitchen with counter, utensils and tables">Cocina compartida con mesón, utensilios y mesas</span>
         </button>
         <button type="button" class="tile rv" data-cat="hab" data-full="fotos/hab-azul-1-1400.jpg">
           <img src="fotos/hab-azul-1-700.jpg" width="700" height="525" loading="lazy" alt="">
           <span class="chip" data-es="Habitación" data-en="Room">Habitación</span>
-          <figcaption data-es="La misma habitación, con sofá para descansar" data-en="Same room, with a sofa to relax">La misma habitación, con sofá para descansar</figcaption>
+          <span class="cap" data-es="La misma habitación, con sofá para descansar" data-en="Same room, with a sofa to relax">La misma habitación, con sofá para descansar</span>
         </button>
         <button type="button" class="tile rv" data-cat="fachada" data-full="fotos/fachada-900.jpg">
           <img src="fotos/fachada-600.jpg" width="600" height="800" loading="lazy" alt="">
           <span class="chip" data-es="Fachada" data-en="Front">Fachada</span>
-          <figcaption data-es="La entrada, con el letrero Posada Rossy en la vereda" data-en="The entrance, with the Posada Rossy sign on the sidewalk">La entrada, con el letrero Posada Rossy en la vereda</figcaption>
+          <span class="cap" data-es="La entrada, con el letrero Posada Rossy en la vereda" data-en="The entrance, with the Posada Rossy sign on the sidewalk">La entrada, con el letrero Posada Rossy en la vereda</span>
         </button>
         <button type="button" class="tile rv" data-cat="bano" data-full="fotos/bano-2-1400.jpg">
           <img src="fotos/bano-2-700.jpg" width="700" height="525" loading="lazy" alt="">
           <span class="chip" data-es="Baño" data-en="Bathroom">Baño</span>
-          <figcaption data-es="Baño compartido y calefón a gas para el agua caliente" data-en="Shared bathroom and gas water heater for hot water">Baño compartido y calefón a gas para el agua caliente</figcaption>
+          <span class="cap" data-es="Baño compartido y calefón a gas para el agua caliente" data-en="Shared bathroom and gas water heater for hot water">Baño compartido y calefón a gas para el agua caliente</span>
         </button>
       </div>
       <p class="g-note" data-es="Las habitaciones varían en número y tipo de camas. Escríbenos y te mandamos fotos de la que te toca." data-en="Rooms vary in number and type of beds. Message us and we'll send photos of yours.">Las habitaciones varían en número y tipo de camas. Escríbenos y te mandamos fotos de la que te toca.</p>
@@ -685,23 +694,23 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
       </div>
       <div class="rev-track" tabindex="0" aria-label="Reseñas">
         <article class="rev rv">
-          <div class="stars" aria-label="5 de 5 estrellas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <div class="stars" role="img" aria-label="5 de 5 estrellas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
           <blockquote data-es="“Gracias a este lugar pasamos 5 días maravillosos en Uyuni. El dueño es muuuy amable, le agradecemos toda la ayuda.”" data-en="“Thanks to this place we spent 5 wonderful days in Uyuni. The owner is sooo kind, we are grateful for all the help.”">“Gracias a este lugar pasamos 5 días maravillosos en Uyuni. El dueño es muuuy amable, le agradecemos toda la ayuda.”</blockquote>
           <footer><b>Maksim</b> · Airbnb · <span data-es="septiembre 2026" data-en="September 2026">septiembre 2026</span></footer>
         </article>
         <article class="rev rv">
-          <div class="stars" aria-label="5 de 5 estrellas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <div class="stars" role="img" aria-label="5 de 5 estrellas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
           <blockquote data-es="“¡El costo-beneficio es bueno! No esperes una casa de huéspedes, sino más bien un hostel con habitaciones privadas. El baño tiene agua caliente, y eso fue muy bueno.”" data-en="“Good value for money! Don't expect a guesthouse, it's more like a hostel with private rooms. The bathroom has hot water, and that was great.”">“¡El costo-beneficio es bueno! No esperes una casa de huéspedes, sino más bien un hostel con habitaciones privadas. El baño tiene agua caliente, y eso fue muy bueno.”</blockquote>
           <footer><b>Carolina</b> · Airbnb · <span data-es="junio 2026 · traducido del portugués" data-en="June 2026 · translated from Portuguese">junio 2026 · traducido del portugués</span></footer>
         </article>
         <article class="rev rv">
-          <div class="stars" aria-label="5 de 5 estrellas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <div class="stars" role="img" aria-label="5 de 5 estrellas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
           <blockquote data-es="“¡¡Alojamiento perfecto para una noche en Uyuni!!”" data-en="“Perfect place to stay for one night in Uyuni!!”">“¡¡Alojamiento perfecto para una noche en Uyuni!!”</blockquote>
           <p class="hl" data-es="Destacó: el anfitrión respondía rápido · horario de llegada flexible · sábanas y muebles impecables" data-en="Highlighted: quick-responding host · flexible check-in time · spotless sheets and furniture">Destacó: el anfitrión respondía rápido · horario de llegada flexible · sábanas y muebles impecables</p>
           <footer><b>Cléo</b> · Airbnb · <span data-es="julio 2026 · traducido del francés" data-en="July 2026 · translated from French">julio 2026 · traducido del francés</span></footer>
         </article>
         <article class="rev rv">
-          <div class="stars" aria-label="5 de 5 estrellas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <div class="stars" role="img" aria-label="5 de 5 estrellas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
           <blockquote data-es="“Agradable estancia en casa de Jaime Lucas. ¡Muchas gracias! ☺️”" data-en="“Pleasant stay at Jaime Lucas's place. Thank you very much! ☺️”">“Agradable estancia en casa de Jaime Lucas. ¡Muchas gracias! ☺️”</blockquote>
           <footer><b data-es="Huésped de Airbnb" data-en="Airbnb guest">Huésped de Airbnb</b> · <span data-es="julio 2026 · traducido del francés" data-en="July 2026 · translated from French">julio 2026 · traducido del francés</span></footer>
         </article>
@@ -902,6 +911,7 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
   };
   function wa(t){ return "https://wa.me/" + NUM + "?text=" + encodeURIComponent(t); }
 
+  var menu = document.getElementById("menu"), mbtn = document.getElementById("menu-btn");
   /* Idioma */
   function setLang(l){
     lang = l; document.documentElement.lang = l;
@@ -916,6 +926,9 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
     document.getElementById("lang-en").setAttribute("aria-pressed", l==="en");
     document.querySelectorAll("[data-set-lang]").forEach(function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-set-lang")===l); });
     badge(); estimate();
+    mbtn.setAttribute("aria-label", menu.classList.contains("open") ? (l==="en"?"Close menu":"Cerrar menú") : (l==="en"?"Open menu":"Abrir menú"));
+    document.querySelector(".wa-float").setAttribute("aria-label", l==="en" ? "Message us on WhatsApp" : "Escribir por WhatsApp");
+    document.querySelectorAll(".stars").forEach(function(x){ x.setAttribute("aria-label", l==="en" ? "5 out of 5 stars" : "5 de 5 estrellas"); });
     try{ localStorage.setItem("rossy-lang", l); }catch(e){}
   }
   function badge(){
@@ -949,7 +962,6 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
   document.getElementById("quick").addEventListener("submit", function(e){ e.preventDefault(); });
 
   /* Menú móvil */
-  var menu = document.getElementById("menu"), mbtn = document.getElementById("menu-btn");
   function setMenu(open){
     document.documentElement.classList.toggle("menu-open", open);
     mbtn.setAttribute("aria-expanded", open);
@@ -1058,9 +1070,9 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
   function visible(){ return tiles.filter(function(t){ return !t.hidden; }); }
   function show(i){
     var v = visible(); idx = (i + v.length) % v.length; var t = v[idx];
-    img.src = t.getAttribute("data-full"); img.alt = t.querySelector("figcaption").textContent;
+    img.src = t.getAttribute("data-full"); img.alt = t.querySelector(".cap").textContent;
     img.style.animation = "none"; void img.offsetWidth; img.style.animation = "";
-    cap.innerHTML = "<span>" + (idx+1) + " / " + v.length + "</span>" + t.querySelector("figcaption").textContent;
+    cap.innerHTML = "<span>" + (idx+1) + " / " + v.length + "</span>" + t.querySelector(".cap").textContent;
   }
   tiles.forEach(function(t){
     t.addEventListener("click", function(){ show(visible().indexOf(t)); if (lb.showModal) lb.showModal(); else lb.setAttribute("open",""); });
@@ -1073,6 +1085,12 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
   var sx = null;
   lb.addEventListener("touchstart", function(e){ sx = e.touches[0].clientX; }, {passive:true});
   lb.addEventListener("touchend", function(e){ if (sx===null) return; var dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 50) show(idx + (dx<0?1:-1)); sx = null; });
+
+  /* Botón flotante de WhatsApp: oculto en la portada para no tapar el formulario */
+  var waf = document.querySelector(".wa-float"), hero = document.querySelector(".hero");
+  if ("IntersectionObserver" in window){
+    new IntersectionObserver(function(es){ waf.classList.toggle("off", es[0].isIntersecting); }, {threshold:.25}).observe(hero);
+  }
 
   /* Copiar número */
   document.getElementById("copy").addEventListener("click", function(){
