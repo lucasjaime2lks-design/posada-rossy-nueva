@@ -17,9 +17,11 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://www.rossyuyuni.com/">
 <link rel="icon" href="fotos/logo-96.jpg">
+<link rel="preload" as="image" href="fotos/salar-espejo-1000.webp" imagesrcset="fotos/salar-espejo-1000.webp 1000w, fotos/salar-espejo-2000.webp 2000w" imagesizes="100vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Figtree:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Figtree:wght@400;500;600;700&display=swap"></noscript>
 <style>
 /* Layout: foto del Salar a sangre con reserva rápida → tarifas → galería en mosaico con visor → tarde en Uyuni → servicios → reseñas → franja Incahuasi → ubicación → preguntas → cierre navy.
    Identidad tomada del logo: azul noche + oro. Una sola apariencia, colores fijos. */
@@ -192,6 +194,7 @@ nav a:hover::after{transform:scaleX(1)}
 .expand-cap p{margin-top:12px;color:#dfe4f2;max-width:48ch;font-size:1.05rem}
 .progress{position:fixed;left:0;top:env(safe-area-inset-top,0px);height:2px;width:100%;background:linear-gradient(90deg,var(--gold-hi),var(--gold));transform-origin:left;transform:scaleX(0);z-index:26;pointer-events:none}
 .no-gsap .expand-media{clip-path:none}
+@media (max-width:760px){.expand{height:78svh;min-height:460px}}
 .no-gsap .expand-media img,.reduce .expand-media img{transform:none}
 
 /* Galería */
@@ -402,7 +405,7 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
 <header id="top">
   <div class="wrap bar">
     <a class="brand" href="#inicio" aria-label="Posada Rossy, inicio">
-      <img src="fotos/logo-96.jpg" width="44" height="44" alt="">
+      <img src="fotos/logo-96.webp" width="44" height="44" alt="">
       <span><b>Posada Rossy</b><small data-es="Hospedaje en Uyuni" data-en="Guesthouse in Uyuni">Hospedaje en Uyuni</small></span>
     </a>
     <nav aria-label="Principal">
@@ -451,7 +454,7 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
 <main id="main">
   <section class="hero" id="inicio">
     <div class="hero-bg">
-      <img src="fotos/salar-espejo-2000.jpg" srcset="fotos/salar-espejo-1000.jpg 1000w, fotos/salar-espejo-2000.jpg 2000w" sizes="100vw" width="2000" height="1333" fetchpriority="high" alt="Viajeros tomados de la mano sobre el espejo del Salar de Uyuni al atardecer" data-es-alt="Viajeros tomados de la mano sobre el espejo del Salar de Uyuni al atardecer" data-en-alt="Travellers holding hands on the Uyuni Salt Flats mirror at sunset">
+      <img src="fotos/salar-espejo-2000.webp" srcset="fotos/salar-espejo-1000.webp 1000w, fotos/salar-espejo-2000.webp 2000w" sizes="100vw" width="2000" height="1333" fetchpriority="high" alt="Viajeros tomados de la mano sobre el espejo del Salar de Uyuni al atardecer" data-es-alt="Viajeros tomados de la mano sobre el espejo del Salar de Uyuni al atardecer" data-en-alt="Travellers holding hands on the Uyuni Salt Flats mirror at sunset">
     </div>
     <div class="wrap">
       <div class="hero-text">
@@ -542,7 +545,7 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
 
   <div class="showcase">
     <section class="expand">
-      <div class="expand-media"><img src="fotos/hab-wiphala-1-1400.jpg" srcset="fotos/hab-wiphala-1-700.jpg 700w, fotos/hab-wiphala-1-1400.jpg 1400w" sizes="100vw" width="1400" height="1050" loading="lazy" alt="Habitación con cama de dos plazas y cama de una plaza, con la wiphala en la pared" data-es-alt="Habitación con cama de dos plazas y cama de una plaza, con la wiphala en la pared" data-en-alt="Room with a double and a single bed, with the wiphala flag on the wall"></div>
+      <div class="expand-media"><img src="fotos/hab-wiphala-1-1400.webp" srcset="fotos/hab-wiphala-1-700.webp 700w, fotos/hab-wiphala-1-1400.webp 1400w" sizes="100vw" width="1400" height="1050" loading="lazy" decoding="async" alt="Habitación con cama de dos plazas y cama de una plaza, con la wiphala en la pared" data-es-alt="Habitación con cama de dos plazas y cama de una plaza, con la wiphala en la pared" data-en-alt="Room with a double and a single bed, with the wiphala flag on the wall"></div>
       <div class="wrap expand-cap">
         <span class="num" data-es="01 · Habitaciones" data-en="01 · Rooms">01 · Habitaciones</span>
         <h2 data-es-html="Camas <em>abrigadas</em> para las noches del altiplano" data-en-html="<em>Warm</em> beds for cold highland nights">Camas <em>abrigadas</em> para las noches del altiplano</h2>
@@ -550,7 +553,7 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
       </div>
     </section>
     <section class="expand">
-      <div class="expand-media"><img src="fotos/hab-roja-2-1400.jpg" srcset="fotos/hab-roja-2-700.jpg 700w, fotos/hab-roja-2-1400.jpg 1400w" sizes="100vw" width="1400" height="1050" loading="lazy" alt="Habitación con dos camas de dos plazas, velador y lámpara" data-es-alt="Habitación con dos camas de dos plazas, velador y lámpara" data-en-alt="Room with two double beds, nightstand and lamp"></div>
+      <div class="expand-media"><img src="fotos/hab-roja-2-1400.webp" srcset="fotos/hab-roja-2-700.webp 700w, fotos/hab-roja-2-1400.webp 1400w" sizes="100vw" width="1400" height="1050" loading="lazy" decoding="async" alt="Habitación con dos camas de dos plazas, velador y lámpara" data-es-alt="Habitación con dos camas de dos plazas, velador y lámpara" data-en-alt="Room with two double beds, nightstand and lamp"></div>
       <div class="wrap expand-cap">
         <span class="num" data-es="02 · Para dos o para grupos" data-en="02 · For two or for groups">02 · Para dos o para grupos</span>
         <h2 data-es-html="Espacio para <em>viajar juntos</em>" data-en-html="Room to <em>travel together</em>">Espacio para <em>viajar juntos</em></h2>
@@ -558,7 +561,7 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
       </div>
     </section>
     <section class="expand">
-      <div class="expand-media"><img src="fotos/bano-1-1400.jpg" srcset="fotos/bano-1-700.jpg 700w, fotos/bano-1-1400.jpg 1400w" sizes="100vw" width="1400" height="1050" loading="lazy" alt="Baño compartido con lavamanos, espejo y repisa" data-es-alt="Baño compartido con lavamanos, espejo y repisa" data-en-alt="Shared bathroom with sink, mirror and shelf"></div>
+      <div class="expand-media"><img src="fotos/bano-1-1400.webp" srcset="fotos/bano-1-700.webp 700w, fotos/bano-1-1400.webp 1400w" sizes="100vw" width="1400" height="1050" loading="lazy" decoding="async" alt="Baño compartido con lavamanos, espejo y repisa" data-es-alt="Baño compartido con lavamanos, espejo y repisa" data-en-alt="Shared bathroom with sink, mirror and shelf"></div>
       <div class="wrap expand-cap">
         <span class="num" data-es="03 · Baño compartido" data-en="03 · Shared bathroom">03 · Baño compartido</span>
         <h2 data-es-html="Agua caliente <em>las 24 horas</em>" data-en-html="Hot water <em>24 hours a day</em>">Agua caliente <em>las 24 horas</em></h2>
@@ -585,53 +588,53 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
       </div>
 
       <div class="grid" id="grid">
-        <button type="button" class="tile big rv" data-cat="hab" data-full="fotos/hab-wiphala-1-1400.jpg">
-          <img src="fotos/hab-wiphala-1-700.jpg" srcset="fotos/hab-wiphala-1-700.jpg 700w, fotos/hab-wiphala-1-1400.jpg 1400w" sizes="(max-width:520px) 100vw, 50vw" width="700" height="525" loading="lazy" alt="">
+        <button type="button" class="tile big rv" data-cat="hab" data-full="fotos/hab-wiphala-1-1400.webp">
+          <img src="fotos/hab-wiphala-1-700.webp" srcset="fotos/hab-wiphala-1-700.webp 700w, fotos/hab-wiphala-1-1400.webp 1400w" sizes="(max-width:520px) 100vw, 50vw" width="700" height="525" loading="lazy" decoding="async" alt="">
           <span class="chip" data-es="Habitación" data-en="Room">Habitación</span>
           <span class="cap" data-es="Cama de dos plazas y cama de una plaza, con la wiphala en la pared" data-en="Double bed and single bed, with the wiphala flag on the wall">Cama de dos plazas y cama de una plaza, con la wiphala en la pared</span>
         </button>
-        <button type="button" class="tile rv" data-cat="hab" data-full="fotos/hab-wiphala-2-1400.jpg">
-          <img src="fotos/hab-wiphala-2-700.jpg" width="700" height="525" loading="lazy" alt="">
+        <button type="button" class="tile rv" data-cat="hab" data-full="fotos/hab-wiphala-2-1400.webp">
+          <img src="fotos/hab-wiphala-2-700.webp" width="700" height="525" loading="lazy" decoding="async" alt="">
           <span class="chip" data-es="Habitación" data-en="Room">Habitación</span>
           <span class="cap" data-es="La misma habitación, con sofá, televisor y toallas" data-en="Same room, with sofa, TV and towels">La misma habitación, con sofá, televisor y toallas</span>
         </button>
-        <button type="button" class="tile rv" data-cat="bano" data-full="fotos/bano-1-1400.jpg">
-          <img src="fotos/bano-1-700.jpg" width="700" height="525" loading="lazy" alt="">
+        <button type="button" class="tile rv" data-cat="bano" data-full="fotos/bano-1-1400.webp">
+          <img src="fotos/bano-1-700.webp" width="700" height="525" loading="lazy" decoding="async" alt="">
           <span class="chip" data-es="Baño" data-en="Bathroom">Baño</span>
           <span class="cap" data-es="Baño compartido con lavamanos, espejo y repisa" data-en="Shared bathroom with sink, mirror and shelf">Baño compartido con lavamanos, espejo y repisa</span>
         </button>
-        <button type="button" class="tile wide rv" data-cat="hab" data-full="fotos/hab-roja-2-1400.jpg">
-          <img src="fotos/hab-roja-2-700.jpg" srcset="fotos/hab-roja-2-700.jpg 700w, fotos/hab-roja-2-1400.jpg 1400w" sizes="(max-width:520px) 100vw, 50vw" width="700" height="525" loading="lazy" alt="">
+        <button type="button" class="tile wide rv" data-cat="hab" data-full="fotos/hab-roja-2-1400.webp">
+          <img src="fotos/hab-roja-2-700.webp" srcset="fotos/hab-roja-2-700.webp 700w, fotos/hab-roja-2-1400.webp 1400w" sizes="(max-width:520px) 100vw, 50vw" width="700" height="525" loading="lazy" decoding="async" alt="">
           <span class="chip" data-es="Habitación" data-en="Room">Habitación</span>
           <span class="cap" data-es="Dos camas de dos plazas con velador y lámpara" data-en="Two double beds with nightstand and lamp">Dos camas de dos plazas con velador y lámpara</span>
         </button>
-        <button type="button" class="tile rv" data-cat="hab" data-full="fotos/hab-roja-1-1400.jpg">
-          <img src="fotos/hab-roja-1-700.jpg" width="700" height="525" loading="lazy" alt="">
+        <button type="button" class="tile rv" data-cat="hab" data-full="fotos/hab-roja-1-1400.webp">
+          <img src="fotos/hab-roja-1-700.webp" width="700" height="525" loading="lazy" decoding="async" alt="">
           <span class="chip" data-es="Habitación" data-en="Room">Habitación</span>
           <span class="cap" data-es="Vista lateral, con escritorio y silla" data-en="Side view, with desk and chair">Vista lateral, con escritorio y silla</span>
         </button>
-        <button type="button" class="tile rv" data-cat="hab" data-full="fotos/hab-azul-2-1400.jpg">
-          <img src="fotos/hab-azul-2-700.jpg" width="700" height="525" loading="lazy" alt="">
+        <button type="button" class="tile rv" data-cat="hab" data-full="fotos/hab-azul-2-1400.webp">
+          <img src="fotos/hab-azul-2-700.webp" width="700" height="525" loading="lazy" decoding="async" alt="">
           <span class="chip" data-es="Habitación" data-en="Room">Habitación</span>
           <span class="cap" data-es="Habitación amplia con dos camas de dos plazas" data-en="Spacious room with two double beds">Habitación amplia con dos camas de dos plazas</span>
         </button>
-        <button type="button" class="tile wide rv" data-cat="cocina" data-full="fotos/cocina-1400.jpg">
-          <img src="fotos/cocina-700.jpg" srcset="fotos/cocina-700.jpg 700w, fotos/cocina-1400.jpg 1400w" sizes="(max-width:520px) 100vw, 50vw" width="700" height="446" loading="lazy" alt="">
+        <button type="button" class="tile wide rv" data-cat="cocina" data-full="fotos/cocina-1400.webp">
+          <img src="fotos/cocina-700.webp" srcset="fotos/cocina-700.webp 700w, fotos/cocina-1400.webp 1400w" sizes="(max-width:520px) 100vw, 50vw" width="700" height="446" loading="lazy" decoding="async" alt="">
           <span class="chip" data-es="Cocina" data-en="Kitchen">Cocina</span>
           <span class="cap" data-es="Cocina compartida con mesón, utensilios y mesas" data-en="Shared kitchen with counter, utensils and tables">Cocina compartida con mesón, utensilios y mesas</span>
         </button>
-        <button type="button" class="tile rv" data-cat="hab" data-full="fotos/hab-azul-1-1400.jpg">
-          <img src="fotos/hab-azul-1-700.jpg" width="700" height="525" loading="lazy" alt="">
+        <button type="button" class="tile rv" data-cat="hab" data-full="fotos/hab-azul-1-1400.webp">
+          <img src="fotos/hab-azul-1-700.webp" width="700" height="525" loading="lazy" decoding="async" alt="">
           <span class="chip" data-es="Habitación" data-en="Room">Habitación</span>
           <span class="cap" data-es="La misma habitación, con sofá para descansar" data-en="Same room, with a sofa to relax">La misma habitación, con sofá para descansar</span>
         </button>
-        <button type="button" class="tile rv" data-cat="fachada" data-full="fotos/fachada-900.jpg">
-          <img src="fotos/fachada-600.jpg" width="600" height="800" loading="lazy" alt="">
+        <button type="button" class="tile rv" data-cat="fachada" data-full="fotos/fachada-900.webp">
+          <img src="fotos/fachada-600.webp" width="600" height="800" loading="lazy" decoding="async" alt="">
           <span class="chip" data-es="Fachada" data-en="Front">Fachada</span>
           <span class="cap" data-es="La entrada, con el letrero Posada Rossy en la vereda" data-en="The entrance, with the Posada Rossy sign on the sidewalk">La entrada, con el letrero Posada Rossy en la vereda</span>
         </button>
-        <button type="button" class="tile rv" data-cat="bano" data-full="fotos/bano-2-1400.jpg">
-          <img src="fotos/bano-2-700.jpg" width="700" height="525" loading="lazy" alt="">
+        <button type="button" class="tile rv" data-cat="bano" data-full="fotos/bano-2-1400.webp">
+          <img src="fotos/bano-2-700.webp" width="700" height="525" loading="lazy" decoding="async" alt="">
           <span class="chip" data-es="Baño" data-en="Bathroom">Baño</span>
           <span class="cap" data-es="Baño compartido y calefón a gas para el agua caliente" data-en="Shared bathroom and gas water heater for hot water">Baño compartido y calefón a gas para el agua caliente</span>
         </button>
@@ -643,7 +646,7 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
   <section class="evening">
     <div class="evening-grid">
       <figure>
-        <img src="fotos/salar-atardecer-1000.jpg" srcset="fotos/salar-atardecer-1000.jpg 1000w, fotos/salar-atardecer-2000.jpg 2000w" sizes="(max-width:880px) 100vw, 50vw" width="1000" height="667" loading="lazy" alt="Viajera sentada sobre la sal del Salar mirando la puesta de sol" data-es-alt="Viajera sentada sobre la sal del Salar mirando la puesta de sol" data-en-alt="Traveller sitting on the salt crust watching the sunset">
+        <img src="fotos/salar-atardecer-1000.webp" srcset="fotos/salar-atardecer-1000.webp 1000w, fotos/salar-atardecer-2000.webp 2000w" sizes="(max-width:880px) 100vw, 50vw" width="1000" height="667" loading="lazy" decoding="async" alt="Viajera sentada sobre la sal del Salar mirando la puesta de sol" data-es-alt="Viajera sentada sobre la sal del Salar mirando la puesta de sol" data-en-alt="Traveller sitting on the salt crust watching the sunset">
       </figure>
       <div class="evening-text">
         <p class="kicker" data-es="Tu tarde en Uyuni" data-en="Your evening in Uyuni">Tu tarde en Uyuni</p>
@@ -723,7 +726,7 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
   </section>
 
   <section class="band" aria-labelledby="primera-vez">
-    <div class="bg" id="parallax"><img src="fotos/incahuasi-2000.jpg" srcset="fotos/incahuasi-1000.jpg 1000w, fotos/incahuasi-2000.jpg 2000w" sizes="100vw" width="2000" height="1125" loading="lazy" alt="Cactus gigantes de la Isla Incahuasi con el Salar de Uyuni al fondo" data-es-alt="Cactus gigantes de la Isla Incahuasi con el Salar de Uyuni al fondo" data-en-alt="Giant cacti on Incahuasi Island with the Uyuni Salt Flats behind"></div>
+    <div class="bg" id="parallax"><img src="fotos/incahuasi-2000.webp" srcset="fotos/incahuasi-1000.webp 1000w, fotos/incahuasi-2000.webp 2000w" sizes="100vw" width="2000" height="1125" loading="lazy" decoding="async" alt="Cactus gigantes de la Isla Incahuasi con el Salar de Uyuni al fondo" data-es-alt="Cactus gigantes de la Isla Incahuasi con el Salar de Uyuni al fondo" data-en-alt="Giant cacti on Incahuasi Island with the Uyuni Salt Flats behind"></div>
     <div class="wrap">
       <div class="band-text">
         <p class="kicker" data-es="Isla Incahuasi · Salar de Uyuni" data-en="Incahuasi Island · Uyuni Salt Flats">Isla Incahuasi · Salar de Uyuni</p>
@@ -788,7 +791,7 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
       </div>
       <div class="loc-media rv">
         <figure class="facade">
-          <img src="fotos/fachada-900.jpg" srcset="fotos/fachada-600.jpg 600w, fotos/fachada-900.jpg 900w" sizes="(max-width:880px) 100vw, 520px" width="900" height="1200" loading="lazy" alt="Fachada de Posada Rossy: edificio de ladrillo con azulejos azules y letrero Posada Rossy en la vereda" data-es-alt="Fachada de Posada Rossy: edificio de ladrillo con azulejos azules y letrero Posada Rossy en la vereda" data-en-alt="Posada Rossy front: brick building with blue tiles and a Posada Rossy sign on the sidewalk">
+          <img src="fotos/fachada-900.webp" srcset="fotos/fachada-600.webp 600w, fotos/fachada-900.webp 900w" sizes="(max-width:880px) 100vw, 520px" width="900" height="1200" loading="lazy" decoding="async" alt="Fachada de Posada Rossy: edificio de ladrillo con azulejos azules y letrero Posada Rossy en la vereda" data-es-alt="Fachada de Posada Rossy: edificio de ladrillo con azulejos azules y letrero Posada Rossy en la vereda" data-en-alt="Posada Rossy front: brick building with blue tiles and a Posada Rossy sign on the sidewalk">
           <figcaption data-es="Busca el edificio de ladrillo con azulejos azules y el letrero «Posada Rossy» en la vereda." data-en="Look for the brick building with blue tiles and the “Posada Rossy” sign on the sidewalk.">Busca el edificio de ladrillo con azulejos azules y el letrero «Posada Rossy» en la vereda.</figcaption>
         </figure>
       <figure class="mapcard">
@@ -849,7 +852,7 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
         <p data-es="Escríbenos tu fecha de llegada y cuántas personas son. Te confirmamos disponibilidad por WhatsApp." data-en="Send us your arrival date and how many people. We'll confirm availability on WhatsApp.">Escríbenos tu fecha de llegada y cuántas personas son. Te confirmamos disponibilidad por WhatsApp.</p>
         <a class="btn btn-gold wa" href="https://wa.me/59174256578" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-es="Escribir mi fecha de llegada" data-en="Send my arrival date">Escribir mi fecha de llegada</span></a>
       </div>
-      <img class="final-logo" src="fotos/logo-320.jpg" width="320" height="320" loading="lazy" alt="Logo de Posada Rossy, hospedaje en Uyuni">
+      <img class="final-logo" src="fotos/logo-320.webp" width="320" height="320" loading="lazy" decoding="async" alt="Logo de Posada Rossy, hospedaje en Uyuni">
     </div>
   </section>
 </main>
@@ -857,7 +860,7 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
 <footer class="site">
   <div class="wrap foot">
     <div style="display:flex;align-items:center;gap:12px">
-      <img src="fotos/logo-96.jpg" width="40" height="40" alt="" style="border-radius:50%">
+      <img src="fotos/logo-96.webp" width="40" height="40" alt="" style="border-radius:50%">
       <div><b style="color:#fff">Posada Rossy</b><br><span data-es="Descansa, disfruta y vive Uyuni." data-en="Rest, enjoy and live Uyuni.">Descansa, disfruta y vive Uyuni.</span></div>
     </div>
     <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px">
@@ -993,8 +996,11 @@ footer.site{background:var(--night);color:#aab3cc;padding-block:36px;font-size:.
       gsap.to(".hero-bg", {yPercent:22, scale:1.08, ease:"none", scrollTrigger:{trigger:".hero", start:"top top", end:"bottom top", scrub:true}});
       gsap.to(".hero-text", {yPercent:-18, ease:"none", scrollTrigger:{trigger:".hero", start:"top top", end:"bottom top", scrub:true}});
       // Fotos que se expanden a pantalla completa (sección fijada)
+      var big = matchMedia("(min-width:761px)").matches;
       gsap.utils.toArray(".expand").forEach(function(sec){
-        var tl = gsap.timeline({scrollTrigger:{trigger:sec, start:"top top", end:"+=90%", pin:true, scrub:1}});
+        var tl = gsap.timeline({scrollTrigger: big
+          ? {trigger:sec, start:"top top", end:"+=90%", pin:true, scrub:1}
+          : {trigger:sec, start:"top 85%", end:"bottom 60%", scrub:1}});
         tl.to(sec.querySelector(".expand-media"), {clipPath:"inset(0% 0% 0% 0% round 0px)", ease:"power2.inOut"}, 0)
           .to(sec.querySelector(".expand-media img"), {scale:1, ease:"power2.inOut"}, 0)
           .from(sec.querySelector(".expand-cap"), {y:90, ease:"power2.out"}, .2);
