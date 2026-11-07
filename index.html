@@ -276,6 +276,7 @@ dialog.lb::backdrop{background:rgba(6,10,26,.94);backdrop-filter:blur(6px)}
 .rev{scroll-snap-align:start;background:var(--salt);border-radius:20px;padding:26px;display:grid;gap:14px;align-content:start;border:1px solid var(--line)}
 .stars{display:flex;gap:3px;color:var(--gold)}
 .stars svg{width:18px;height:18px}
+.rev .score{display:inline-flex;align-items:baseline;gap:6px;font-size:.9rem;color:var(--muted)}.rev .score b{display:inline-block;background:#003580;color:#fff;font-size:1rem;padding:4px 9px;border-radius:8px 8px 8px 0}
 .rev blockquote{margin:0;font-family:var(--display);font-size:1.18rem;line-height:1.4;font-weight:500}
 .rev .hl{font-size:.88rem;color:var(--muted)}
 .rev footer{font-size:.86rem;color:var(--muted);margin-top:auto}
@@ -707,13 +708,19 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
       <div class="sec-head rv">
         <p class="kicker" data-es="Opiniones" data-en="Reviews">Opiniones</p>
         <h2 data-es-html="Lo que dicen <em>nuestros huéspedes</em>" data-en-html="What <em>our guests say</em>">Lo que dicen <em>nuestros huéspedes</em></h2>
-        <p data-es="Reseñas reales publicadas en Airbnb." data-en="Real reviews posted on Airbnb.">Reseñas reales publicadas en Airbnb.</p>
+        <p data-es="Reseñas reales publicadas en Airbnb y Booking." data-en="Real reviews posted on Airbnb and Booking.">Reseñas reales publicadas en Airbnb y Booking.</p>
       </div>
       <div class="rev-track" tabindex="0" aria-label="Reseñas">
         <article class="rev rv">
           <div class="stars" role="img" aria-label="5 de 5 estrellas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
           <blockquote data-es="“Gracias a este lugar pasamos 5 días maravillosos en Uyuni. El dueño es muuuy amable, le agradecemos toda la ayuda.”" data-en="“Thanks to this place we spent 5 wonderful days in Uyuni. The owner is sooo kind, we are grateful for all the help.”">“Gracias a este lugar pasamos 5 días maravillosos en Uyuni. El dueño es muuuy amable, le agradecemos toda la ayuda.”</blockquote>
           <footer><b>Maksim</b> · Airbnb · <span data-es="septiembre 2026" data-en="September 2026">septiembre 2026</span></footer>
+        </article>
+        <article class="rev rv">
+          <div class="score" role="img" aria-label="9,0 de 10 en Booking"><b>9,0</b><span data-es="/ 10 en Booking" data-en="/ 10 on Booking">/ 10 en Booking</span></div>
+          <blockquote data-es="“Me alojé allí durante 3 noches. Y como persona que prefiere una habitación privada, este lugar era perfecto para mí.”" data-en="“I stayed there for 3 nights. As someone who prefers a private room, this place was perfect for me.”">“Me alojé allí durante 3 noches. Y como persona que prefiere una habitación privada, este lugar era perfecto para mí.”</blockquote>
+          <p class="hl" data-es="Le gustó: buen precio para una habitación privada · ambiente tranquilo" data-en="Liked: good price for a private room · quiet atmosphere">Le gustó: buen precio para una habitación privada · ambiente tranquilo</p>
+          <footer><b>Kotaro</b> · Booking · <span data-es="marzo 2026 · traducido del inglés" data-en="March 2026">marzo 2026 · traducido del inglés</span></footer>
         </article>
         <article class="rev rv">
           <div class="stars" role="img" aria-label="5 de 5 estrellas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
@@ -725,6 +732,11 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
           <blockquote data-es="“¡¡Alojamiento perfecto para una noche en Uyuni!!”" data-en="“Perfect place to stay for one night in Uyuni!!”">“¡¡Alojamiento perfecto para una noche en Uyuni!!”</blockquote>
           <p class="hl" data-es="Destacó: el anfitrión respondía rápido · horario de llegada flexible · sábanas y muebles impecables" data-en="Highlighted: quick-responding host · flexible check-in time · spotless sheets and furniture">Destacó: el anfitrión respondía rápido · horario de llegada flexible · sábanas y muebles impecables</p>
           <footer><b>Cléo</b> · Airbnb · <span data-es="julio 2026 · traducido del francés" data-en="July 2026 · translated from French">julio 2026 · traducido del francés</span></footer>
+        </article>
+        <article class="rev rv">
+          <div class="score" role="img" aria-label="9,0 de 10 en Booking"><b>9,0</b><span data-es="/ 10 en Booking" data-en="/ 10 on Booking">/ 10 en Booking</span></div>
+          <blockquote data-es="“Muy buen personal, muy amable.”" data-en="“Very good staff, very kind.”">“Muy buen personal, muy amable.”</blockquote>
+          <footer><b>Léo</b> · Booking · <span data-es="marzo 2026 · traducido del francés" data-en="March 2026 · translated from French">marzo 2026 · traducido del francés</span></footer>
         </article>
         <article class="rev rv">
           <div class="stars" role="img" aria-label="5 de 5 estrellas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
@@ -788,7 +800,7 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
           <a class="link-wa wa" data-msg="t_sunrise" href="https://wa.me/59174256578" target="_blank" rel="noopener" data-es="Reservar este tour →" data-en="Book this tour →">Reservar este tour →</a>
         </article>
       </div>
-      <p class="tour-note" data-es="Tours compartidos o privados. Entre enero y abril, por las lluvias, el recorrido puede cambiar. Pregúntanos el precio para grupos." data-en="Shared or private tours. From January to April, because of the rains, the route may change. Ask us for group prices.">Tours compartidos o privados. Entre enero y abril, por las lluvias, el recorrido puede cambiar. Pregúntanos el precio para grupos.</p>
+      <p class="tour-note" data-es="Tours operados por Charito Cielo Tours, operadora de turismo receptivo de Uyuni. Compartidos o privados. Entre enero y abril, por las lluvias, el recorrido puede cambiar. Pregúntanos el precio para grupos." data-en="Tours operated by Charito Cielo Tours, an inbound tour operator in Uyuni. Shared or private. From January to April, because of the rains, the route may change. Ask us for group prices.">Tours operados por Charito Cielo Tours, operadora de turismo receptivo de Uyuni. Compartidos o privados. Entre enero y abril, por las lluvias, el recorrido puede cambiar. Pregúntanos el precio para grupos.</p>
     </div>
   </section>
 
