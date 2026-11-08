@@ -8,4 +8,9 @@
     <image:image><image:loc>https://www.rossyuyuni.com/fotos/hab-roja-2-1400.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.rossyuyuni.com/fotos/bano-1-1400.jpg</image:loc></image:image>
   </url>
+  <url>
+    <loc>https://www.rossyuyuni.com/tours/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <image:image><image:loc>https://www.rossyuyuni.com/tours/img/og-tours.jpg</image:loc></image:image>
+  </url>
 </urlset>

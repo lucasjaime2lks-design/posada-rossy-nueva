@@ -1,0 +1,999 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tours al Salar de Uyuni desde 300 Bs · Posada Rossy</title>
+<meta name="description" content="Full Day, 3 días a Laguna Colorada, atardecer con estrellas y amanecer en el Salar de Uyuni. Reserva por WhatsApp y paga al iniciar el tour. Guía en inglés disponible.">
+<link rel="canonical" href="https://www.rossyuyuni.com/tours/">
+<link rel="icon" href="/fotos/logo-96.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Posada Rossy">
+<meta property="og:title" content="Tours al Salar de Uyuni · Posada Rossy">
+<meta property="og:description" content="Full Day, 3 días, atardecer y estrellas. Reserva por WhatsApp y paga al iniciar el tour.">
+<meta property="og:url" content="https://www.rossyuyuni.com/tours/">
+<meta property="og:image" content="https://www.rossyuyuni.com/tours/img/og-tours.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#16264B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: horizonte del salar arriba; luego tours en grilla, reserva en dos columnas (formulario + resumen), información en bandas. */
+:root{
+  --salt:#F3F6F8; --surface:#FFFFFF; --ink:#13213D; --muted:#4A5770; --line:#D8E0EA;
+  --sky:#16264B; --sky-2:#2B3F75; --on-sky:#F3F6FB; --on-sky-muted:#C3CEE3;
+  --flamingo:#C9365E; --flamingo-soft:#FBE4EB; --laguna:#1C7A72; --laguna-soft:#DDF1EE;
+  --gold:#F2B54A; --wa:#128C4A;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --r:14px; --maxw:1160px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --salt:#0C1322; --surface:#131E36; --ink:#E9EFF7; --muted:#A7B4CA; --line:#26375C;
+  --sky:#0A1430; --sky-2:#1D2E5C; --on-sky:#F3F6FB; --on-sky-muted:#B9C6DD;
+  --flamingo:#F06C90; --flamingo-soft:#3A1B2A; --laguna:#4CC1B4; --laguna-soft:#123533;
+  --gold:#F5C46B; --wa:#25B864; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --salt:#0C1322; --surface:#131E36; --ink:#E9EFF7; --muted:#A7B4CA; --line:#26375C;
+  --sky:#0A1430; --sky-2:#1D2E5C; --on-sky:#F3F6FB; --on-sky-muted:#B9C6DD;
+  --flamingo:#F06C90; --flamingo-soft:#3A1B2A; --laguna:#4CC1B4; --laguna-soft:#123533;
+  --gold:#F5C46B; --wa:#25B864; color-scheme:dark}
+
+html,body{margin:0}
+[hidden]{display:none!important}
+*{box-sizing:border-box}
+img{height:auto;max-width:100%}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--salt);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+body.en [lang="es"], body:not(.en) [lang="en"]{display:none!important}
+a{color:var(--flamingo)}
+h1,h2,h3{font-family:var(--display);line-height:1;margin:0;text-wrap:balance;letter-spacing:.005em}
+h2{font-size:clamp(40px,6vw,64px);text-transform:uppercase;font-weight:800}
+h3{font-size:30px;text-transform:uppercase;font-weight:800}
+p{margin:0}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--flamingo)}
+.lead{color:var(--muted);max-width:62ch;font-size:18px}
+section{padding-block:72px}
+.sec-head{display:flex;flex-direction:column;gap:12px;margin-bottom:36px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
+
+/* Header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--sky)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--sky);color:var(--on-sky);border-bottom:1px solid rgba(255,255,255,.08)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{display:flex;flex-direction:column;line-height:1;text-decoration:none;color:var(--on-sky)}
+.brand b{font-family:var(--display);font-size:26px;font-weight:900;text-transform:uppercase;letter-spacing:.02em}
+.brand small{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-sky-muted);margin-top:4px}
+.nav{display:flex;align-items:center;gap:22px}
+.nav a.l{color:var(--on-sky-muted);text-decoration:none;font-weight:600;font-size:15px}
+.nav a.l:hover{color:var(--on-sky)}
+.lang{display:flex;border:1px solid rgba(255,255,255,.25);border-radius:999px;overflow:hidden}
+.lang button{background:transparent;color:var(--on-sky-muted);border:0;font:600 13px var(--mono);padding:8px 12px;min-height:40px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--on-sky);color:var(--sky)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;font:700 16px var(--body);text-decoration:none;border:0;cursor:pointer;transition:transform .15s ease, background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-pri{background:var(--flamingo);color:#fff}
+.btn-ghost{background:transparent;color:var(--on-sky);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+@media (max-width:860px){.nav a.l{display:none}}
+@media (max-width:420px){.top .btn-pri{display:none}}
+
+/* Hero: horizonte del salar */
+.hero{position:relative;color:#F3F6FB;overflow:hidden;background:#141A33}
+.hero-media{position:absolute;inset:-6% 0 0 0;will-change:transform}
+.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 58%;animation:kb 16s cubic-bezier(.2,.6,.2,1) both}
+@keyframes kb{from{transform:scale(1.14)}to{transform:scale(1)}}
+.hero .inner > *{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero .inner > *:nth-child(2){animation-delay:.12s}.hero .inner > *:nth-child(3){animation-delay:.24s}.hero .inner > *:nth-child(4){animation-delay:.36s}
+@keyframes rise{from{transform:translateY(26px);opacity:.15}to{transform:none;opacity:1}}
+.facts .fact{animation:rise .8s .45s cubic-bezier(.2,.7,.2,1) both}
+/* Aparición al hacer scroll: parte visible, solo se desplaza */
+.rv{transition:transform .9s cubic-bezier(.2,.7,.2,1),opacity .9s ease;transition-delay:var(--d,0s)}
+.rv.pre{transform:translateY(46px) scale(.985);opacity:.35}
+/* Encabezado al bajar */
+.top{transition:box-shadow .3s ease,background .3s ease}
+.top.scrolled{box-shadow:0 8px 28px rgba(5,10,30,.35)}
+.top .wrap{transition:padding .3s ease}
+.top.scrolled .wrap{padding-block:8px}
+/* Tarjetas */
+.tour{transition:transform .35s ease,box-shadow .35s ease}
+.tour:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(19,33,61,.14)}
+.tour .art img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.tour:hover .art img{transform:scale(1.06)}
+.persp figure img,.luz-row img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.persp figure:hover img,.luz-row figure:hover img{transform:scale(1.05)}
+/* Cielo estrellado animado */
+.luz{position:relative;overflow:hidden}
+.luz canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.luz .wrap{position:relative;z-index:1}
+/* Botón flotante */
+.fab::after{content:"";position:absolute;inset:0;border-radius:999px;box-shadow:0 0 0 0 rgba(37,184,100,.55);animation:ring 2.8s ease-out infinite}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(37,184,100,.5)}70%,100%{box-shadow:0 0 0 16px rgba(37,184,100,0)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,14,34,.82) 0%,rgba(8,14,34,.55) 45%,rgba(8,14,34,.15) 75%,rgba(8,14,34,.45) 100%)}
+.hero .wrap{position:relative;z-index:1}
+.hero .inner{position:relative;padding-block:84px 220px;display:flex;flex-direction:column;gap:22px;max-width:780px}
+.hero .credit{position:absolute;right:max(16px,env(safe-area-inset-right,0px));bottom:14px;z-index:1;font:500 12px var(--mono);color:#E6EBF5;opacity:.85;letter-spacing:.06em}
+@media (max-width:600px){.hero .inner{padding-block:56px 160px}}
+.hero .coords{font-family:var(--mono);font-size:13px;letter-spacing:.14em;color:#F7D9A6;text-transform:uppercase}
+.hero h1{font-size:clamp(58px,11vw,128px);font-weight:900;text-transform:uppercase;line-height:.88;color:#fff}
+.hero p.sub{font-size:20px;max-width:46ch;color:#E6EBF5}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.facts{background:var(--surface);border-bottom:1px solid var(--line)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.fact{padding:22px 18px;display:flex;flex-direction:column;gap:2px;border-left:1px solid var(--line)}
+.fact:first-child{border-left:0;padding-left:0}
+.fact b{font-family:var(--display);font-size:30px;font-weight:800;line-height:1.05}
+.fact span{color:var(--muted);font-size:14px}
+@media (max-width:760px){.facts .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}.fact{border-left:0;padding-left:0;border-top:1px solid var(--line)}.fact:nth-child(-n+2){border-top:0}}
+
+/* Tours */
+.tours{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+@media (max-width:820px){.tours{grid-template-columns:1fr}}
+.tour{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.tour .art{height:240px;position:relative;background:var(--sky)}
+.tour .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* Fotos de perspectiva */
+.persp{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.persp figure{margin:0;position:relative;border-radius:12px;overflow:hidden;background:var(--line)}
+.persp figure img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/3}
+.persp figure:nth-child(1){grid-column:span 3;grid-row:span 2}
+.persp figure:nth-child(1) img{aspect-ratio:auto;min-height:100%}
+.persp figure:nth-child(2),.persp figure:nth-child(3){grid-column:span 3}
+.persp figure:nth-child(4),.persp figure:nth-child(5){grid-column:span 3}
+@media (max-width:700px){.persp{grid-template-columns:1fr 1fr}.persp figure,.persp figure:nth-child(n){grid-column:span 1;grid-row:auto}.persp figure:nth-child(1){grid-column:span 2}.persp figure:nth-child(1) img{aspect-ratio:4/3}}
+figcaption.tag{position:absolute;left:10px;bottom:10px;background:rgba(10,18,40,.75);color:#fff;font:500 12px var(--mono);letter-spacing:.06em;padding:5px 9px;border-radius:6px}
+
+/* Pintura con luz */
+.luz{background:#070B1C;color:#F3F6FB}
+.luz .eyebrow{color:var(--gold)}
+.luz .lead{color:#B9C6DD}
+.luz-row{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(220px,1fr);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+.luz-row figure{margin:0;scroll-snap-align:start;border-radius:12px;overflow:hidden;position:relative}
+.luz-row img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;display:block}
+@media (max-width:700px){.luz-row{grid-auto-columns:72%}}
+
+/* Galería */
+.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:190px;gap:12px}
+.gal button{all:unset;cursor:zoom-in;position:relative;border-radius:12px;overflow:hidden;background:var(--line)}
+.gal button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.gal img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.gal button:hover img{transform:scale(1.04)}
+.gal .tall{grid-row:span 2}
+.gal .wide{grid-column:span 2}
+.gal .full{grid-column:1/-1}
+.gal span.cap{position:absolute;left:0;right:0;bottom:0;padding:22px 12px 10px;background:linear-gradient(transparent,rgba(8,14,34,.78));color:#fff;font-weight:600;font-size:15px;display:flex;justify-content:space-between;gap:8px}
+.gal span.cap em{font:normal 500 12px var(--mono);opacity:.85;white-space:nowrap}
+@media (max-width:820px){.gal{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:160px}}
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(1100px,94vw);width:100%}
+dialog.lb::backdrop{background:rgba(5,9,22,.9)}
+dialog.lb figure{margin:0;display:flex;flex-direction:column;gap:10px}
+dialog.lb img{width:100%;max-height:78vh;object-fit:contain;border-radius:10px}
+dialog.lb figcaption{color:#fff;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:10px}
+dialog.lb .lb-btns{display:flex;gap:8px}
+dialog.lb button{min-width:48px;min-height:48px;border-radius:999px;border:1.5px solid rgba(255,255,255,.4);background:transparent;color:#fff;font:700 18px var(--body);cursor:pointer}
+.tour .art .when{position:absolute;left:16px;top:16px;font:500 13px var(--mono);background:rgba(10,18,40,.72);color:#fff;padding:6px 10px;border-radius:6px;letter-spacing:.06em}
+.tour .body{padding:24px;display:flex;flex-direction:column;gap:14px;flex:1}
+.tour .dur{font:500 13px var(--mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.route{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px}
+.route li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding-bottom:6px;font-size:16px}
+.route li em{font:normal 400 13px var(--mono);color:var(--muted);white-space:nowrap}
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:auto}
+.price{background:var(--salt);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:2px}
+.price small{font-size:13px;color:var(--muted)}
+.price b{font-family:var(--display);font-size:32px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.price span{font:500 13px var(--mono);color:var(--muted)}
+.tour .acts{display:flex;gap:10px;flex-wrap:wrap}
+
+/* Pasos */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;counter-reset:s;list-style:none;padding:0;margin:0}
+@media (max-width:820px){.steps{grid-template-columns:1fr}}
+.steps li{counter-increment:s;display:flex;flex-direction:column;gap:8px;padding-top:18px;border-top:3px solid var(--ink)}
+.steps li::before{content:"Paso " counter(s);font:500 13px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--flamingo)}
+body.en .steps li::before{content:"Step " counter(s)}
+.steps li b{font-family:var(--display);font-size:28px;text-transform:uppercase;line-height:1.05}
+.steps li p{color:var(--muted)}
+.paybox{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px}
+.chip{display:inline-flex;align-items:center;gap:8px;background:var(--laguna-soft);color:var(--ink);border-radius:999px;padding:10px 16px;font-weight:600;font-size:15px}
+.chip svg{flex:none}
+
+/* Reserva */
+.book{background:var(--sky);color:var(--on-sky)}
+.book .eyebrow{color:var(--gold)}
+.book .lead{color:var(--on-sky-muted)}
+.book-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:900px){.book-grid{grid-template-columns:1fr}}
+.form{background:var(--surface);color:var(--ink);border-radius:var(--r);padding:26px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.form .full{grid-column:1/-1}
+@media (max-width:520px){.form{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field label,.field legend{font-weight:700;font-size:14px}
+.field input,.field select{width:100%;min-width:0;max-width:100%;display:block;min-height:48px;border:1.5px solid var(--line);border-radius:10px;background:var(--salt);color:var(--ink);font:500 16px var(--body);padding:0 12px}
+.field input:focus,.field select:focus{border-color:var(--flamingo);outline:none}
+.field .hint{font-size:13px;color:var(--muted)}
+fieldset.field{border:0;padding:0;margin:0}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.seg label{display:flex;align-items:center;justify-content:center;min-height:48px;border:1.5px solid var(--line);border-radius:10px;cursor:pointer;font-weight:600;font-size:15px;background:var(--salt);text-align:center;padding:0 8px}
+.seg label{position:relative}
+.seg input,.field .seg input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px;min-height:0;padding:0;border:0;left:0;top:0}
+.seg input:checked + span{color:var(--flamingo)}
+.seg label:has(input:checked){border-color:var(--flamingo);background:var(--flamingo-soft)}
+.seg label:has(input:focus-visible){outline:3px solid var(--gold);outline-offset:2px}
+.stepper{display:flex;align-items:center;gap:8px}
+.stepper button{width:48px;height:48px;border-radius:10px;border:1.5px solid var(--line);background:var(--salt);color:var(--ink);font:700 22px var(--body);cursor:pointer}
+.stepper output{min-width:48px;text-align:center;font-family:var(--display);font-size:34px;font-weight:800;font-variant-numeric:tabular-nums}
+.summary{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:16px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 88px)}
+@media (max-width:900px){.summary{position:static}}
+.summary .total{display:flex;flex-direction:column;gap:2px}
+.summary .total small{font:500 13px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--on-sky-muted)}
+.summary .total b{font-family:var(--display);font-size:64px;font-weight:900;line-height:1;font-variant-numeric:tabular-nums}
+.summary .total span{color:var(--on-sky-muted);font-variant-numeric:tabular-nums}
+.msg{background:rgba(0,0,0,.25);border-radius:10px;padding:14px;font:14px/1.5 var(--mono);white-space:pre-wrap;color:#E6EBF5;max-height:260px;overflow:auto;margin:0}
+.summary .row{display:flex;flex-wrap:wrap;gap:10px}
+.summary .note{font-size:14px;color:var(--on-sky-muted)}
+.summary .num{font:500 15px var(--mono);color:var(--on-sky)}
+.status{font-size:14px;color:var(--gold);min-height:1.4em}
+
+/* Tarifas */
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:620px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);font-size:16px}
+th{font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--salt)}
+td.n{font-weight:700;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.rates{display:flex;flex-direction:column;gap:28px}
+.rates h3{font-size:26px;margin-bottom:12px}
+.small{font-size:14px;color:var(--muted)}
+
+/* Info */
+.info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+@media (max-width:820px){.info-grid{grid-template-columns:1fr}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:14px}
+.ticks{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.ticks li{display:flex;gap:10px;align-items:flex-start}
+.ticks li svg{flex:none;margin-top:4px}
+.fees li{justify-content:space-between;border-bottom:1px dashed var(--line);padding-bottom:8px}
+.fees b{white-space:nowrap;font-variant-numeric:tabular-nums}
+.season{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+@media (max-width:820px){.season{grid-template-columns:1fr}}
+.season .panel .months{font:500 13px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--laguna)}
+.alt{display:flex;flex-wrap:wrap;gap:10px}
+.alt span{font:500 14px var(--mono);background:var(--salt);border:1px solid var(--line);border-radius:8px;padding:8px 12px}
+
+/* Posada */
+.posada{background:var(--laguna-soft)}
+.posada .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:32px;align-items:center}
+@media (max-width:820px){.posada .wrap{grid-template-columns:1fr}}
+.rooms{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.room{background:var(--surface);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:2px}
+.room b{font-family:var(--display);font-size:40px;font-weight:800;line-height:1}
+.room span{color:var(--muted);font-size:14px}
+
+/* FAQ */
+.faq{display:flex;flex-direction:column;gap:10px;max-width:860px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:0 20px}
+.faq summary{cursor:pointer;list-style:none;font-weight:700;font-size:18px;padding:18px 0;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:500 22px var(--mono);color:var(--flamingo)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding-bottom:18px;color:var(--muted)}
+
+.aliados{background:var(--surface);border-top:1px solid var(--line)}
+.partners{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.partners{grid-template-columns:1fr}}
+.partner{min-height:120px;border:1px solid var(--line);border-radius:var(--r);background:var(--salt);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:18px;text-align:center}
+.partner b{font-family:var(--display);font-size:28px;font-weight:800;text-transform:uppercase;line-height:1.05}
+.partner span{font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.partner.logo{border:0;padding:14px 22px}
+.partner.logo img{width:100%;max-width:280px;height:auto;display:block}
+footer{background:var(--sky);color:var(--on-sky-muted);font-size:15px}
+footer .wrap{padding-block:40px 110px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+footer b{color:var(--on-sky);font-family:var(--display);font-size:24px;text-transform:uppercase}
+footer a{color:var(--on-sky)}
+
+.fab{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:25;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 20 20"><path d="M5 5l10 10M15 5L5 15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.6 8.2c.3-.6.6-.6.9-.6h.6c.2 0 .4 0 .6.5l.8 1.9c.1.2 0 .4-.1.6l-.5.6c-.1.2-.2.3 0 .6.5.9 1.3 1.7 2.3 2.2.3.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.4.4 0 .5-.2 1.2-.8 1.5-.6.4-1.8.6-3.6-.3-2-1-3.4-2.8-3.9-3.7-.5-.9-.7-2.2-.3-2.9Z" fill="currentColor"/></symbol>
+  <symbol id="i-cash" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-qr" viewBox="0 0 24 24"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h2v2h-2zM18 14h2v2h-2zM14 18h2v2h-2zM18 18h2v2h-2z" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.4" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio"><b>Posada Rossy</b><small><span lang="es">Tours · Uyuni, Bolivia</span><span lang="en">Tours · Uyuni, Bolivia</span></small></a>
+    <nav class="nav" aria-label="Principal">
+      <a class="l" href="#tours"><span lang="es">Tours</span><span lang="en">Tours</span></a>
+      <a class="l" href="#fotos"><span lang="es">Fotos</span><span lang="en">Photos</span></a>
+      <a class="l" href="#tarifas"><span lang="es">Tarifas</span><span lang="en">Rates</span></a>
+      <a class="l" href="#info"><span lang="es">Información</span><span lang="en">Good to know</span></a>
+      <a class="l" href="#faq"><span lang="es">Preguntas</span><span lang="en">FAQ</span></a>
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" id="lang-es" aria-pressed="true">ES</button>
+        <button type="button" id="lang-en" aria-pressed="false">EN</button>
+      </div>
+      <a class="btn btn-pri" href="#reservar"><span lang="es">Reservar</span><span lang="en">Book</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero" style="padding-block:0">
+  <div class="hero-media"><img width="1600" height="1068" src="img/hero.webp" alt="Viajeros caminando sobre el efecto espejo del salar frente al volcán Tunupa" fetchpriority="high"></div>
+  <span class="credit" aria-hidden="true"><span lang="es">Efecto espejo frente al volcán Tunupa</span><span lang="en">Mirror effect by Tunupa volcano</span></span>
+  <div class="wrap">
+    <div class="inner">
+      <span class="coords">20°08′S · 67°29′W · 3.656 m</span>
+      <h1><span lang="es">Tours al Salar de Uyuni</span><span lang="en">Uyuni Salt Flat Tours</span></h1>
+      <p class="sub"><span lang="es">Reserva por WhatsApp y paga al iniciar el tour, en efectivo. Sin adelantos y sin pagos por internet. Te recogemos en tu alojamiento.</span><span lang="en">Book on WhatsApp and pay in cash when your tour starts. No deposits, no online payments. We pick you up at your hotel.</span></p>
+      <div class="ctas">
+        <a class="btn btn-pri" href="#reservar"><span lang="es">Arma tu reserva</span><span lang="en">Plan your booking</span></a>
+        <a class="btn btn-ghost" href="#tours"><span lang="es">Ver los tours</span><span lang="en">See the tours</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="facts">
+  <div class="wrap">
+    <div class="fact"><b>10.582 km²</b><span lang="es">El salar más grande del mundo</span><span lang="en">The world's largest salt flat</span></div>
+    <div class="fact"><b>10:30</b><span lang="es">Salida diaria de los tours de día</span><span lang="en">Daily departure for day tours</span></div>
+    <div class="fact"><b><span lang="es">Recojo</span><span lang="en">Pickup</span></b><span lang="es">En tu alojamiento en Uyuni</span><span lang="en">At your hotel in Uyuni</span></div>
+    <div class="fact"><b>ES · EN</b><span lang="es">Guía en inglés disponible</span><span lang="en">English-speaking guide available</span></div>
+  </div>
+</div>
+
+<section id="tours">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span lang="es">Nuestros tours</span><span lang="en">Our tours</span></span>
+      <h2><span lang="es">Elige cómo vivir el salar</span><span lang="en">Choose how to see the salt flat</span></h2>
+      <p class="lead"><span lang="es">Cuatro salidas, en grupo compartido o en privado. Precios por persona; las entradas a parques e islas se pagan aparte, en efectivo.</span><span lang="en">Four departures, shared or private. Prices are per person; park and island entrance fees are paid separately, in cash.</span></p>
+    </div>
+    <div class="tours">
+
+      <article class="tour">
+        <div class="art">
+          <img width="1200" height="675" src="img/fullday.webp" alt="Viajeros saltando sobre el Salar de Uyuni en el tour Full Day" loading="lazy">
+          <span class="when"><span lang="es">10:30 · Día completo</span><span lang="en">10:30 · Full day</span></span>
+        </div>
+        <div class="body">
+          <span class="dur"><span lang="es">1 día</span><span lang="en">1 day</span></span>
+          <h3>Full Day <span lang="es">Salar de Uyuni</span><span lang="en">Salt Flat</span></h3>
+          <ul class="route">
+            <li><span lang="es">Cementerio de Trenes</span><span lang="en">Train Cemetery</span></li>
+            <li><span lang="es">Colchani, pueblo de la sal</span><span lang="en">Colchani salt village</span></li>
+            <li><span lang="es">Ojos del Salar</span><span lang="en">Salt "eyes" springs</span></li>
+            <li><span lang="es">Monumento Dakar y Plaza de Banderas</span><span lang="en">Dakar monument and flags</span></li>
+            <li><span lang="es">Fotos de perspectiva en el salar</span><span lang="en">Perspective photos on the salt</span></li>
+            <li><span lang="es">Isla Incahuasi y sus cactus (opcional)</span><span lang="en">Incahuasi Island cacti (optional)</span><em>3.656 m</em></li>
+          </ul>
+          <div class="prices">
+            <div class="price"><small lang="es">Sin isla</small><small lang="en">Without island</small><b>US$ 40</b><span>300 Bs</span></div>
+            <div class="price"><small lang="es">Con Isla Incahuasi</small><small lang="en">With Incahuasi</small><b>US$ 50</b><span>380 Bs</span></div>
+            <div class="price"><small lang="es">Con guía en inglés</small><small lang="en">English guide</small><b>US$ 70</b><span>500 Bs</span></div>
+          </div>
+          <div class="acts"><button class="btn btn-pri pick" type="button" data-tour="fullday"><span lang="es">Reservar este tour</span><span lang="en">Book this tour</span></button></div>
+        </div>
+      </article>
+
+      <article class="tour">
+        <div class="art">
+          <img width="1200" height="675" src="img/tres-dias.webp" alt="Laguna Verde y volcán Licancabur en el tour de 3 días" loading="lazy">
+          <span class="when"><span lang="es">10:30 · 3 días / 2 noches</span><span lang="en">10:30 · 3 days / 2 nights</span></span>
+        </div>
+        <div class="body">
+          <span class="dur"><span lang="es">3 días</span><span lang="en">3 days</span></span>
+          <h3><span lang="es">Salar y Lagunas de Colores</span><span lang="en">Salt Flat &amp; Coloured Lagoons</span></h3>
+          <ul class="route">
+            <li><span lang="es">Día 1 · Salar e Isla Incahuasi</span><span lang="en">Day 1 · Salt flat &amp; Incahuasi</span><em>3.656 m</em></li>
+            <li><span lang="es">Día 2 · Lagunas altiplánicas y Árbol de Piedra</span><span lang="en">Day 2 · High lagoons &amp; Stone Tree</span><em>4.000 m</em></li>
+            <li><span lang="es">Día 2 · Laguna Colorada y sus flamencos</span><span lang="en">Day 2 · Laguna Colorada flamingos</span><em>4.278 m</em></li>
+            <li><span lang="es">Día 3 · Géiseres Sol de Mañana</span><span lang="en">Day 3 · Sol de Mañana geysers</span><em>4.850 m</em></li>
+            <li><span lang="es">Día 3 · Termas de Polques y regreso</span><span lang="en">Day 3 · Polques hot springs &amp; return</span></li>
+          </ul>
+          <div class="prices">
+            <div class="price"><small lang="es">Chofer en español</small><small lang="en">Spanish-speaking driver</small><b>US$ 210</b><span>1.800 Bs</span></div>
+            <div class="price"><small lang="es">Guía en inglés</small><small lang="en">English guide</small><b>US$ 250</b><span>2.000 Bs</span></div>
+          </div>
+          <div class="acts"><button class="btn btn-pri pick" type="button" data-tour="tres"><span lang="es">Reservar este tour</span><span lang="en">Book this tour</span></button></div>
+        </div>
+      </article>
+
+      <article class="tour">
+        <div class="art">
+          <img width="1200" height="800" src="img/atardecer.webp" alt="Vehículo 4x4 sobre el salar inundado al atardecer" loading="lazy">
+          <span class="when">16:30 – 20:00</span>
+        </div>
+        <div class="body">
+          <span class="dur"><span lang="es">3 horas y media</span><span lang="en">3.5 hours</span></span>
+          <h3><span lang="es">Atardecer con estrellas</span><span lang="en">Sunset &amp; Stargazing</span></h3>
+          <ul class="route">
+            <li><span lang="es">El sol cayendo sobre el salar</span><span lang="en">Sunset over the salt flat</span></li>
+            <li><span lang="es">Efecto espejo en época de lluvias</span><span lang="en">Mirror effect in the rainy season</span></li>
+            <li><span lang="es">Cielo estrellado y Vía Láctea</span><span lang="en">Starry sky and the Milky Way</span></li>
+          </ul>
+          <div class="prices">
+            <div class="price"><small lang="es">Por persona</small><small lang="en">Per person</small><b>US$ 45</b><span>400 Bs</span></div>
+          </div>
+          <div class="acts"><button class="btn btn-pri pick" type="button" data-tour="atardecer"><span lang="es">Reservar este tour</span><span lang="en">Book this tour</span></button></div>
+        </div>
+      </article>
+
+      <article class="tour">
+        <div class="art">
+          <img width="900" height="1200" src="img/estrellas.webp" alt="Viajero con círculos de luz de colores en la noche del salar" loading="lazy" style="object-position:center 70%">
+          <span class="when">03:30 – 07:00</span>
+        </div>
+        <div class="body">
+          <span class="dur"><span lang="es">3 horas y media</span><span lang="en">3.5 hours</span></span>
+          <h3><span lang="es">Estrellas y amanecer</span><span lang="en">Stars &amp; Sunrise</span></h3>
+          <ul class="route">
+            <li><span lang="es">Cielo de madrugada sin luz de la ciudad</span><span lang="en">Pre-dawn sky with no city light</span></li>
+            <li><span lang="es">La Vía Láctea reflejada en el agua</span><span lang="en">The Milky Way reflected on the water</span></li>
+            <li><span lang="es">Fotos pintando con luz</span><span lang="en">Light-painting photos</span></li>
+            <li><span lang="es">Amanecer sobre el salar</span><span lang="en">Sunrise over the salt flat</span></li>
+          </ul>
+          <div class="prices">
+            <div class="price"><small lang="es">Por persona</small><small lang="en">Per person</small><b>US$ 45</b><span>400 Bs</span></div>
+          </div>
+          <div class="acts"><button class="btn btn-pri pick" type="button" data-tour="amanecer"><span lang="es">Reservar este tour</span><span lang="en">Book this tour</span></button></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="fotos" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span lang="es">Fotos reales de nuestros tours</span><span lang="en">Real photos from our tours</span></span>
+      <h2><span lang="es">Las fotos que te llevas</span><span lang="en">The photos you take home</span></h2>
+      <p class="lead"><span lang="es">En el salar blanco no hay referencias de distancia, por eso se pueden hacer fotos de perspectiva: un dinosaurio gigante, una botella del tamaño de un edificio o tu grupo saltando sobre el infinito.</span><span lang="en">The white flat has no sense of distance, so you can play with perspective: a giant dinosaur, a bottle as tall as a building, or your group jumping over the infinite.</span></p>
+    </div>
+    <div class="persp">
+      <figure><img width="1000" height="750" src="img/persp-dinos.webp" alt="Grupo de viajeros con dinosaurios gigantes en una foto de perspectiva" loading="lazy"><figcaption class="tag"><span lang="es">Perspectiva</span><span lang="en">Perspective</span></figcaption></figure>
+      <figure><img width="1000" height="750" src="img/persp-godzilla.webp" alt="Viajera enfrentando a un monstruo gigante en el salar" loading="lazy"></figure>
+      <figure><img width="1000" height="750" src="img/persp-botellas.webp" alt="Viajeros junto a botellas gigantes en el salar" loading="lazy"></figure>
+      <figure><img width="1000" height="562" src="img/persp-saltos.webp" alt="Grupo saltando sobre el salar blanco" loading="lazy"></figure>
+      <figure><img width="1000" height="562" src="img/persp-estrella.webp" alt="Viajeros acostados formando una estrella sobre la sal" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="luz" id="luz">
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span lang="es">De noche en el salar</span><span lang="en">Night on the salt flat</span></span>
+      <h2><span lang="es">Pintamos con luz bajo las estrellas</span><span lang="en">Light painting under the stars</span></h2>
+      <p class="lead"><span lang="es">En los tours de noche usamos luces y fotos de larga exposición. El resultado: corazones, círculos de colores y tu nombre escrito sobre el cielo estrellado.</span><span lang="en">On our night tours we use lights and long-exposure photos. The result: hearts, colour rings and your name written across the starry sky.</span></p>
+    </div>
+    <div class="luz-row" tabindex="0" aria-label="Fotos pintando con luz">
+      <figure><img width="800" height="1067" src="img/luz-corazon.webp" alt="Pareja dentro de un corazón de luz roja" loading="lazy"></figure>
+      <figure><img width="800" height="1067" src="img/luz-grupo.webp" alt="Grupo de viajeros con círculos de luz de colores" loading="lazy"></figure>
+      <figure><img width="800" height="1067" src="img/luz-rosa.webp" alt="Viajero con alas de luz rosada" loading="lazy"></figure>
+      <figure><img width="800" height="1067" src="img/luz-azul.webp" alt="Figura de luz azul reflejada en el agua" loading="lazy"></figure>
+      <figure><img width="800" height="1067" src="img/luz-espiral.webp" alt="Espiral de luz bajo la Vía Láctea" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span lang="es">La ruta</span><span lang="en">The route</span></span>
+      <h2><span lang="es">Lo que vas a ver</span><span lang="en">What you'll see</span></h2>
+      <p class="lead"><span lang="es">Toca una foto para verla en grande.</span><span lang="en">Tap a photo to see it full size.</span></p>
+    </div>
+    <div class="gal" id="gal">
+      <button type="button" class="wide" data-src="img/g-hexagonos.webp"><img width="1000" height="668" src="img/g-hexagonos.webp" alt="Hexágonos de sal con el volcán Tunupa al fondo" loading="lazy"><span class="cap"><span><span lang="es">Hexágonos de sal</span><span lang="en">Salt hexagons</span></span><em>may–nov</em></span></button>
+      <button type="button" class="wide" data-src="img/g-incahuasi.webp"><img width="1000" height="667" src="img/g-incahuasi.webp" alt="Cactus gigantes de la Isla Incahuasi frente al salar" loading="lazy"><span class="cap"><span>Isla Incahuasi</span><em>3.656 m</em></span></button>
+      <button type="button" class="wide" data-src="img/g-colorada.webp"><img width="1000" height="667" src="img/g-colorada.webp" alt="Flamencos en la Laguna Colorada" loading="lazy"><span class="cap"><span>Laguna Colorada</span><em>4.278 m</em></span></button>
+      <button type="button" data-src="img/g-zorro.webp"><img width="900" height="675" src="img/g-zorro.webp" alt="Zorro andino en el desierto" loading="lazy"><span class="cap"><span><span lang="es">Zorro andino</span><span lang="en">Andean fox</span></span></span></button>
+      <button type="button" data-src="img/g-canon.webp"><img width="900" height="675" src="img/g-canon.webp" alt="Viajeros mirando un cañón en la ruta de 3 días" loading="lazy"><span class="cap"><span><span lang="es">Cañones de la ruta</span><span lang="en">Canyons on the route</span></span></span></button>
+      <button type="button" class="wide" data-src="img/g-refugio.webp"><img width="900" height="675" src="img/g-refugio.webp" alt="Atardecer dorado sobre el refugio en el altiplano" loading="lazy"><span class="cap"><span><span lang="es">Atardecer en el refugio</span><span lang="en">Sunset at the refuge</span></span></span></button>
+      <button type="button" class="wide" data-src="img/g-noche.webp"><img width="1000" height="668" src="img/g-noche.webp" alt="Grupo de viajeros bajo la Vía Láctea en el salar" loading="lazy"><span class="cap"><span><span lang="es">Noche de estrellas</span><span lang="en">Starry night</span></span></span></button>
+    </div>
+  </div>
+</section>
+
+<dialog class="lb" id="lb" aria-label="Foto ampliada">
+  <figure>
+    <img id="lb-img" alt="">
+    <figcaption><span id="lb-cap"></span><span class="lb-btns"><button type="button" id="lb-prev" aria-label="Anterior">‹</button><button type="button" id="lb-next" aria-label="Siguiente">›</button><button type="button" id="lb-close" aria-label="Cerrar">✕</button></span></figcaption>
+  </figure>
+</dialog>
+
+<section style="background:var(--surface);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span lang="es">Cómo reservar</span><span lang="en">How to book</span></span>
+      <h2><span lang="es">Reservas sin pagar por adelantado</span><span lang="en">Book now, pay on the day</span></h2>
+    </div>
+    <ol class="steps">
+      <li><b><span lang="es">Arma tu reserva</span><span lang="en">Plan your booking</span></b><p><span lang="es">Elige tour, fecha y número de personas en el formulario. Se crea un mensaje listo para enviar por WhatsApp.</span><span lang="en">Pick your tour, date and group size in the form. It writes a ready-to-send WhatsApp message.</span></p></li>
+      <li><b><span lang="es">Te confirmamos</span><span lang="en">We confirm</span></b><p><span lang="es">Respondemos con el cupo y la hora de recojo en tu alojamiento.</span><span lang="en">We reply with availability and your hotel pickup time.</span></p></li>
+      <li><b><span lang="es">Pagas al iniciar</span><span lang="en">Pay at the start</span></b><p><span lang="es">El día del tour pagas en efectivo, en dólares o bolivianos, antes de salir.</span><span lang="en">On the day, pay in cash, US dollars or bolivianos, before departure.</span></p></li>
+    </ol>
+    <div class="paybox">
+      <span class="chip"><svg width="20" height="20"><use href="#i-cash"/></svg><span lang="es">Efectivo US$ o Bs</span><span lang="en">Cash US$ or Bs</span></span>
+      <span class="chip"><svg width="20" height="20"><use href="#i-qr"/></svg><span lang="es">QR para bancos bolivianos</span><span lang="en">QR for Bolivian bank accounts</span></span>
+      <span class="chip"><svg width="20" height="20"><use href="#i-pin"/></svg><span lang="es">Recojo en tu alojamiento</span><span lang="en">Hotel pickup</span></span>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="reservar">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span lang="es">Reserva</span><span lang="en">Booking</span></span>
+      <h2><span lang="es">Arma tu reserva</span><span lang="en">Plan your booking</span></h2>
+      <p class="lead"><span lang="es">El precio se calcula al momento. Nada se cobra aquí: envías el mensaje y confirmamos por WhatsApp.</span><span lang="en">The price updates as you go. Nothing is charged here: send the message and we confirm on WhatsApp.</span></p>
+    </div>
+    <div class="book-grid">
+      <form class="form" id="bk" novalidate>
+        <div class="field full">
+          <label for="f-tour"><span lang="es">Tour</span><span lang="en">Tour</span></label>
+          <select id="f-tour"></select>
+        </div>
+        <div class="field full">
+          <label for="f-opt"><span lang="es">Opción</span><span lang="en">Option</span></label>
+          <select id="f-opt"></select>
+        </div>
+        <fieldset class="field full">
+          <legend><span lang="es">Modalidad</span><span lang="en">Tour type</span></legend>
+          <div class="seg">
+            <label><input type="radio" name="mode" id="f-shared" value="shared" checked><span><span lang="es">Compartido</span><span lang="en">Shared</span></span></label>
+            <label><input type="radio" name="mode" id="f-private" value="private"><span><span lang="es">Privado</span><span lang="en">Private</span></span></label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="f-date"><span lang="es">Fecha</span><span lang="en">Date</span></label>
+          <input type="date" id="f-date">
+        </div>
+        <div class="field">
+          <span style="font-weight:700;font-size:14px" id="pax-l"><span lang="es">Personas</span><span lang="en">Travellers</span></span>
+          <div class="stepper" role="group" aria-labelledby="pax-l">
+            <button type="button" id="pax-minus" aria-label="−1">−</button>
+            <output id="f-pax" aria-live="polite">2</output>
+            <button type="button" id="pax-plus" aria-label="+1">+</button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-name"><span lang="es">Tu nombre</span><span lang="en">Your name</span></label>
+          <input type="text" id="f-name" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="f-hotel"><span lang="es">Alojamiento en Uyuni</span><span lang="en">Hotel in Uyuni</span></label>
+          <input type="text" id="f-hotel">
+        </div>
+        <p class="field full hint" id="f-hint"></p>
+      </form>
+
+      <aside class="summary" aria-live="polite">
+        <div class="total">
+          <small><span lang="es">Total estimado</span><span lang="en">Estimated total</span></small>
+          <b id="s-usd">US$ 100</b>
+          <span id="s-bs">760 Bs</span>
+        </div>
+        <pre class="msg" id="s-msg"></pre>
+        <div class="row">
+          <a class="btn btn-wa" id="s-wa" href="#" target="_blank" rel="noopener"><svg width="22" height="22"><use href="#i-wa"/></svg><span lang="es">Enviar por WhatsApp</span><span lang="en">Send on WhatsApp</span></a>
+          <button class="btn btn-ghost" type="button" id="s-copy"><span lang="es">Copiar mensaje</span><span lang="en">Copy message</span></button>
+        </div>
+        <p class="status" id="s-status" role="status"></p>
+        <p class="note"><span lang="es">WhatsApp:</span><span lang="en">WhatsApp:</span> <span class="num" id="s-num"></span>. <span lang="es">Las entradas a parques e islas se pagan aparte, en efectivo.</span><span lang="en">Park and island fees are paid separately, in cash.</span></p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="tarifas">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span lang="es">Tarifas 2026</span><span lang="en">2026 rates</span></span>
+      <h2><span lang="es">Precios claros</span><span lang="en">Clear prices</span></h2>
+      <p class="lead"><span lang="es">Compartido: viajas con otros turistas en un 4x4. Privado: el vehículo y el guía son solo para tu grupo; mientras más personas, menos pagas cada uno.</span><span lang="en">Shared: you join other travellers in a 4x4. Private: the vehicle and guide are just for your group; the bigger the group, the less each person pays.</span></p>
+    </div>
+    <div class="rates">
+      <div>
+        <h3><span lang="es">Compartido, por persona</span><span lang="en">Shared, per person</span></h3>
+        <div class="tablebox"><table>
+          <thead><tr><th><span lang="es">Tour</span><span lang="en">Tour</span></th><th><span lang="es">Horario</span><span lang="en">Time</span></th><th>US$</th><th>Bs</th></tr></thead>
+          <tbody>
+            <tr><td>Full Day <span lang="es">sin isla</span><span lang="en">without island</span></td><td>10:30</td><td class="n">40</td><td class="n">300</td></tr>
+            <tr><td>Full Day <span lang="es">con Isla Incahuasi</span><span lang="en">with Incahuasi Island</span></td><td>10:30</td><td class="n">50</td><td class="n">380</td></tr>
+            <tr><td>Full Day <span lang="es">con guía en inglés</span><span lang="en">with English guide</span></td><td>10:30</td><td class="n">70</td><td class="n">500</td></tr>
+            <tr><td><span lang="es">3 días, chofer en español</span><span lang="en">3 days, Spanish-speaking driver</span></td><td>10:30</td><td class="n">210</td><td class="n">1.800</td></tr>
+            <tr><td><span lang="es">3 días, guía en inglés</span><span lang="en">3 days, English guide</span></td><td>10:30</td><td class="n">250</td><td class="n">2.000</td></tr>
+            <tr><td><span lang="es">Atardecer con estrellas</span><span lang="en">Sunset &amp; stargazing</span></td><td>16:30 – 20:00</td><td class="n">45</td><td class="n">400</td></tr>
+            <tr><td><span lang="es">Estrellas y amanecer</span><span lang="en">Stars &amp; sunrise</span></td><td>03:30 – 07:00</td><td class="n">45</td><td class="n">400</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div>
+        <h3><span lang="es">Privado, US$ por persona</span><span lang="en">Private, US$ per person</span></h3>
+        <div class="tablebox"><table>
+          <thead><tr><th><span lang="es">Tour</span><span lang="en">Tour</span></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5–6</th><th><span lang="es">Guía inglés / grupo</span><span lang="en">English guide / group</span></th></tr></thead>
+          <tbody>
+            <tr><td>Full Day</td><td class="n">260</td><td class="n">140</td><td class="n">95</td><td class="n">75</td><td class="n">60</td><td class="n">+80</td></tr>
+            <tr><td><span lang="es">3 días (hostales)</span><span lang="en">3 days (hostels)</span></td><td class="n">1.150</td><td class="n">620</td><td class="n">440</td><td class="n">340</td><td class="n">290</td><td class="n">+110</td></tr>
+            <tr><td><span lang="es">Atardecer con estrellas</span><span lang="en">Sunset &amp; stargazing</span></td><td class="n">180</td><td class="n">100</td><td class="n">70</td><td class="n">70</td><td class="n">55</td><td class="n">+40</td></tr>
+            <tr><td><span lang="es">Estrellas y amanecer</span><span lang="en">Stars &amp; sunrise</span></td><td class="n">180</td><td class="n">100</td><td class="n">70</td><td class="n">70</td><td class="n">55</td><td class="n">+40</td></tr>
+          </tbody>
+        </table></div>
+        <p class="small" style="margin-top:10px"><span lang="es">Grupos de más de 6 personas: escríbenos y cotizamos un segundo vehículo.</span><span lang="en">Groups larger than 6: message us for a second vehicle.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="info" style="background:var(--surface);border-block:1px solid var(--line)">
+  <div class="wrap" style="display:flex;flex-direction:column;gap:48px">
+    <div class="info-grid">
+      <div class="panel">
+        <h3><span lang="es">Qué incluye</span><span lang="en">What's included</span></h3>
+        <ul class="ticks">
+          <li><svg width="18" height="18" style="color:var(--laguna)"><use href="#i-check"/></svg><span><span lang="es">Recojo en tu alojamiento en Uyuni</span><span lang="en">Pickup at your hotel in Uyuni</span></span></li>
+          <li><svg width="18" height="18" style="color:var(--laguna)"><use href="#i-check"/></svg><span><span lang="es">Vehículo 4x4 y conductor-guía</span><span lang="en">4x4 vehicle and driver-guide</span></span></li>
+          <li><svg width="18" height="18" style="color:var(--laguna)"><use href="#i-check"/></svg><span><span lang="es">Almuerzo en el Full Day</span><span lang="en">Lunch on the Full Day tour</span></span></li>
+          <li><svg width="18" height="18" style="color:var(--laguna)"><use href="#i-check"/></svg><span><span lang="es">3 días: comidas, 2 noches de alojamiento y bolsa de dormir</span><span lang="en">3 days: meals, 2 nights' lodging and sleeping bag</span></span></li>
+          <li><svg width="18" height="18" style="color:var(--laguna)"><use href="#i-check"/></svg><span><span lang="es">Botas de goma en época de lluvias</span><span lang="en">Rubber boots in the rainy season</span></span></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3><span lang="es">Entradas aparte (efectivo)</span><span lang="en">Entrance fees (cash)</span></h3>
+        <ul class="ticks fees">
+          <li><span><span lang="es">Isla Incahuasi</span><span lang="en">Incahuasi Island</span></span><b>30 Bs</b></li>
+          <li><span><span lang="es">Reserva Eduardo Avaroa (3 días)</span><span lang="en">Eduardo Avaroa Reserve (3 days)</span></span><b>150 Bs</b></li>
+          <li><span><span lang="es">Termas de Polques (3 días)</span><span lang="en">Polques hot springs (3 days)</span></span><b>30 Bs</b></li>
+          <li><span><span lang="es">Baños en ruta</span><span lang="en">Toilets on the route</span></span><b>≈ 5 Bs</b></li>
+        </ul>
+        <p class="small"><span lang="es">El Full Day con isla ya incluye la entrada a Incahuasi.</span><span lang="en">The Full Day with island already includes the Incahuasi fee.</span></p>
+      </div>
+    </div>
+
+    <div>
+      <div class="sec-head" style="margin-bottom:24px">
+        <span class="eyebrow"><span lang="es">Temporadas</span><span lang="en">Seasons</span></span>
+        <h2><span lang="es">¿Espejo o hexágonos?</span><span lang="en">Mirror or hexagons?</span></h2>
+      </div>
+      <div class="season">
+        <div class="panel">
+          <span class="months"><span lang="es">Diciembre – abril · lluvias</span><span lang="en">December – April · rainy season</span></span>
+          <h3><span lang="es">Efecto espejo</span><span lang="en">Mirror effect</span></h3>
+          <p><span lang="es">Una capa de agua refleja el cielo y el horizonte desaparece. Algunas rutas cambian y la Isla Incahuasi puede quedar sin acceso cuando hay mucha agua.</span><span lang="en">A thin layer of water mirrors the sky and the horizon disappears. Some routes change, and Incahuasi Island may be unreachable when water is high.</span></p>
+        </div>
+        <div class="panel">
+          <span class="months"><span lang="es">Mayo – noviembre · época seca</span><span lang="en">May – November · dry season</span></span>
+          <h3><span lang="es">Hexágonos de sal</span><span lang="en">Salt hexagons</span></h3>
+          <p><span lang="es">El salar se vuelve un piso blanco de hexágonos, ideal para fotos de perspectiva. Cielos muy despejados y noches frías, con temperaturas bajo cero de junio a agosto.</span><span lang="en">The flat turns into a white floor of hexagons, perfect for perspective photos. Very clear skies and cold nights, below freezing from June to August.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-grid">
+      <div class="panel">
+        <h3><span lang="es">Qué llevar</span><span lang="en">What to bring</span></h3>
+        <ul class="ticks">
+          <li><svg width="18" height="18" style="color:var(--laguna)"><use href="#i-check"/></svg><span><span lang="es">Lentes de sol, gorra y bloqueador: la sal refleja mucho sol</span><span lang="en">Sunglasses, hat and sunscreen: the salt reflects strong sun</span></span></li>
+          <li><svg width="18" height="18" style="color:var(--laguna)"><use href="#i-check"/></svg><span><span lang="es">Abrigo, guantes y gorro para la noche y la madrugada</span><span lang="en">Warm jacket, gloves and beanie for night and early morning</span></span></li>
+          <li><svg width="18" height="18" style="color:var(--laguna)"><use href="#i-check"/></svg><span><span lang="es">Efectivo en bolivianos para entradas y baños</span><span lang="en">Cash in bolivianos for fees and toilets</span></span></li>
+          <li><svg width="18" height="18" style="color:var(--laguna)"><use href="#i-check"/></svg><span><span lang="es">Agua, snacks y batería extra para el celular</span><span lang="en">Water, snacks and a power bank</span></span></li>
+          <li><svg width="18" height="18" style="color:var(--laguna)"><use href="#i-check"/></svg><span><span lang="es">Pasaporte si cruzas a Chile</span><span lang="en">Passport if you cross into Chile</span></span></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3><span lang="es">La altura</span><span lang="en">Altitude</span></h3>
+        <p><span lang="es">Uyuni está a 3.656 m y el tour de 3 días sube a casi 5.000 m. Descansa un día antes, toma mucha agua, come liviano y evita el alcohol la noche anterior.</span><span lang="en">Uyuni sits at 3,656 m and the 3-day tour climbs close to 5,000 m. Rest a day before, drink plenty of water, eat light and skip alcohol the night before.</span></p>
+        <div class="alt"><span>Uyuni 3.656 m</span><span>L. Colorada 4.278 m</span><span>Sol de Mañana 4.850 m</span></div>
+        <p class="small"><span lang="es">No recomendado para embarazadas ni personas con problemas cardíacos, hipertensión o asma.</span><span lang="en">Not recommended for pregnant travellers or people with heart conditions, hypertension or asthma.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="posada">
+  <div class="wrap">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span class="eyebrow" style="color:var(--laguna)"><span lang="es">Dónde dormir</span><span lang="en">Where to stay</span></span>
+      <h2><span lang="es">Hospédate en Posada Rossy</span><span lang="en">Stay at Posada Rossy</span></h2>
+      <p class="lead"><span lang="es">Duerme con nosotros la noche antes del tour y te recogemos en la puerta. Habitaciones sencillas y cálidas, con baño compartido.</span><span lang="en">Stay with us the night before your tour and we pick you up at the door. Simple, warm rooms with shared bathroom.</span></p>
+      <div><a class="btn btn-line" href="/"><span lang="es">Ver la posada</span><span lang="en">See the guesthouse</span></a></div>
+    </div>
+    <div class="rooms">
+      <div class="room"><span lang="es">Individual, por noche</span><span lang="en">Single, per night</span><b>80 Bs</b></div>
+      <div class="room"><span lang="es">Pareja, por noche</span><span lang="en">Double, per night</span><b>120 Bs</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span lang="es">Preguntas frecuentes</span><span lang="en">FAQ</span></span>
+      <h2><span lang="es">Antes de reservar</span><span lang="en">Before you book</span></h2>
+    </div>
+    <div class="faq">
+      <details><summary><span lang="es">¿Tengo que pagar algo por adelantado?</span><span lang="en">Do I pay anything in advance?</span></summary><p><span lang="es">No. Reservas por WhatsApp y pagas el día del tour, en efectivo, antes de salir.</span><span lang="en">No. Book on WhatsApp and pay in cash on the day, before departure.</span></p></details>
+      <details><summary><span lang="es">¿Aceptan tarjeta?</span><span lang="en">Do you take cards?</span></summary><p><span lang="es">Por ahora no. Aceptamos efectivo en dólares o bolivianos, y QR para cuentas de bancos bolivianos. Hay cajeros en Uyuni, pero no en la ruta.</span><span lang="en">Not yet. We take cash in US dollars or bolivianos, and QR for Bolivian bank accounts. Uyuni has ATMs, but there are none on the route.</span></p></details>
+      <details><summary><span lang="es">¿Qué pasa si cambio de planes?</span><span lang="en">What if my plans change?</span></summary><p><span lang="es">Avísanos por WhatsApp lo antes posible, idealmente 24 horas antes, para liberar tu cupo o cambiar la fecha.</span><span lang="en">Message us on WhatsApp as early as you can, ideally 24 hours before, so we can free your seat or move your date.</span></p></details>
+      <details><summary><span lang="es">¿Qué diferencia hay entre compartido y privado?</span><span lang="en">Shared or private: what's the difference?</span></summary><p><span lang="es">En el compartido viajas con otros turistas, hasta 6 por vehículo. En el privado el vehículo es solo para tu grupo y puedes ajustar los tiempos de cada parada.</span><span lang="en">Shared means joining other travellers, up to 6 per vehicle. Private means the vehicle is only for your group and you can adjust the time at each stop.</span></p></details>
+      <details><summary><span lang="es">¿Y si llueve?</span><span lang="en">What if it rains?</span></summary><p><span lang="es">El tour sale igual y la lluvia trae el efecto espejo. Si el agua cierra algún camino, el guía ajusta la ruta. Los tours de estrellas no salen con cielo nublado ni en luna llena; en ese caso te ofrecemos otra fecha.</span><span lang="en">Tours still run, and rain brings the mirror effect. If water closes a road, the guide adjusts the route. Stargazing tours don't run under cloud or a full moon; we'll offer you another date.</span></p></details>
+      <details><summary><span lang="es">¿Pueden ir niños?</span><span lang="en">Can children come?</span></summary><p><span lang="es">Sí al Full Day y a los tours de atardecer y estrellas. Para el de 3 días, consúltanos por la altura y el frío.</span><span lang="en">Yes for the Full Day and the sunset and stargazing tours. For the 3-day tour, ask us first because of altitude and cold.</span></p></details>
+    </div>
+  </div>
+</section>
+
+<section class="aliados" id="aliados">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:24px">
+      <span class="eyebrow"><span lang="es">Agencias aliadas</span><span lang="en">Partner agencies</span></span>
+      <h2 style="font-size:clamp(34px,5vw,52px)"><span lang="es">Operamos con agencias de Uyuni</span><span lang="en">We work with local Uyuni operators</span></h2>
+      <p class="lead"><span lang="es">Tus tours salen con operadoras locales que conocen la ruta y el altiplano.</span><span lang="en">Your tours run with local operators who know the route and the high plateau.</span></p>
+    </div>
+    <div class="partners">
+      <div class="partner logo" style="background:#0E95BD"><img src="img/logo-nomadex.webp" width="640" height="201" alt="NOMADEX Bolivia, Nómade Expediciones" loading="lazy"></div>
+      <div class="partner"><b>Charito Cielo Tours</b><span>Uyuni · Bolivia</span></div>
+      <div class="partner logo" style="background:#4C84B4;padding:10px"><img src="img/logo-arbol.webp" width="320" height="283" alt="Expediciones Árbol de Piedra, agencia de viajes y turismo" loading="lazy" style="max-width:150px"></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <b>Posada Rossy · Tours</b>
+      <span>Calle Fernando Alonso, entre Sucre y Camacho · Uyuni, Potosí, Bolivia</span>
+      <span><span lang="es">Tours operados por nuestras agencias aliadas:</span><span lang="en">Tours operated by our partner agencies:</span> Charito Cielo Tours · Expediciones Árbol de Piedra · NOMADEX BOLIVIA</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <span>WhatsApp: <span class="num-f"></span></span>
+      <a href="https://www.rossyuyuni.com" target="_blank" rel="noopener">rossyuyuni.com</a>
+    </div>
+    <p style="flex-basis:100%;font-size:13px;margin:0"><span lang="es">Fotos: viajeros de Posada Rossy; </span><span lang="en">Photos: Posada Rossy travellers; </span>Pakutaso (pakutaso.com); Wikimedia Commons (Isla Incahuasi, Laguna Colorada), licencia CC BY-SA.</p>
+  </div>
+</footer>
+
+<a class="btn btn-wa fab" href="#reservar" aria-label="WhatsApp"><svg width="22" height="22"><use href="#i-wa"/></svg><span lang="es">Reservar</span><span lang="en">Book</span></a>
+
+<script>
+(function(){
+  // Número de WhatsApp en formato internacional, sin + ni espacios. Reemplazar antes de publicar.
+  var WHATSAPP = "59157297275";
+  var WA_SHOW = "+591 57297275";
+
+  var TOURS = {
+    fullday:{es:"Full Day Salar de Uyuni",en:"Uyuni Salt Flat Full Day",time:"10:30",
+      opts:[{id:"sin",es:"Sin Isla Incahuasi",en:"Without Incahuasi Island",usd:40,bs:300},
+            {id:"isla",es:"Con Isla Incahuasi",en:"With Incahuasi Island",usd:50,bs:380},
+            {id:"ingles",es:"Con isla y guía en inglés",en:"With island and English guide",usd:70,bs:500,english:true}],
+      priv:[260,140,95,75,60,60],privEn:80},
+    tres:{es:"Salar y Lagunas, 3 días",en:"Salt Flat & Lagoons, 3 days",time:"10:30",
+      opts:[{id:"es",es:"Chofer en español",en:"Spanish-speaking driver",usd:210,bs:1800},
+            {id:"en",es:"Guía en inglés",en:"English guide",usd:250,bs:2000,english:true}],
+      priv:[1150,620,440,340,290,290],privEn:110},
+    atardecer:{es:"Atardecer con estrellas",en:"Sunset & stargazing",time:"16:30 – 20:00",
+      opts:[{id:"es",es:"Guía en español",en:"Spanish guide",usd:45,bs:400},
+            {id:"en",es:"Guía en inglés (solo privado)",en:"English guide (private only)",usd:null,bs:null,english:true,privOnly:true}],
+      priv:[180,100,70,70,55,55],privEn:40},
+    amanecer:{es:"Estrellas y amanecer",en:"Stars & sunrise",time:"03:30 – 07:00",
+      opts:[{id:"es",es:"Guía en español",en:"Spanish guide",usd:45,bs:400},
+            {id:"en",es:"Guía en inglés (solo privado)",en:"English guide (private only)",usd:null,bs:null,english:true,privOnly:true}],
+      priv:[180,100,70,70,55,55],privEn:40}
+  };
+
+  var lang = "es";
+  try{ var saved = localStorage.getItem("rossy-lang"); if(saved==="es"||saved==="en") lang = saved; else lang = (navigator.language||"es").toLowerCase().indexOf("es")===0 ? "es":"en"; }catch(e){ lang = (navigator.language||"es").toLowerCase().indexOf("es")===0 ? "es":"en"; }
+
+  var $ = function(id){return document.getElementById(id)};
+  var fTour=$("f-tour"), fOpt=$("f-opt"), fDate=$("f-date"), fName=$("f-name"), fHotel=$("f-hotel"), fPax=$("f-pax");
+  var pax = 2;
+
+  var fmt = function(n){ return n.toLocaleString(lang==="es"?"es-BO":"en-US"); };
+
+  function fillTours(){
+    var cur = fTour.value || "fullday";
+    fTour.innerHTML = "";
+    Object.keys(TOURS).forEach(function(k){
+      var o=document.createElement("option"); o.value=k; o.textContent=TOURS[k][lang]+" · "+TOURS[k].time; fTour.appendChild(o);
+    });
+    fTour.value = cur;
+  }
+  function fillOpts(keep){
+    var t = TOURS[fTour.value], cur = keep ? fOpt.value : null;
+    fOpt.innerHTML = "";
+    t.opts.forEach(function(op){
+      var o=document.createElement("option"); o.value=op.id;
+      o.textContent = op[lang] + (op.usd ? " · US$ "+op.usd+" / "+fmt(op.bs)+" Bs" : "");
+      fOpt.appendChild(o);
+    });
+    if(cur && t.opts.some(function(x){return x.id===cur})) fOpt.value = cur;
+    else fOpt.value = t.opts.length>1 && fTour.value==="fullday" ? "isla" : t.opts[0].id;
+  }
+  function mode(){ return $("f-private").checked ? "private":"shared"; }
+
+  function update(){
+    var t = TOURS[fTour.value];
+    var op = t.opts.filter(function(x){return x.id===fOpt.value})[0] || t.opts[0];
+    if(op.privOnly && mode()==="shared"){ $("f-private").checked = true; }
+    var m = mode();
+    var usd=null, bs=null, note="";
+    if(m==="shared"){
+      usd = op.usd*pax; bs = op.bs*pax;
+      note = lang==="es" ? "Compartido: US$ "+op.usd+" ("+fmt(op.bs)+" Bs) por persona." : "Shared: US$ "+op.usd+" ("+fmt(op.bs)+" Bs) per person.";
+    } else if(pax<=6){
+      var pp = t.priv[pax-1];
+      usd = pp*pax + (op.english ? t.privEn : 0);
+      note = lang==="es" ? "Privado: US$ "+pp+" por persona"+(op.english?" + US$ "+t.privEn+" por el guía en inglés":"")+"." : "Private: US$ "+pp+" per person"+(op.english?" + US$ "+t.privEn+" for the English guide":"")+".";
+    } else {
+      note = lang==="es" ? "Más de 6 personas: te cotizamos por WhatsApp un segundo vehículo." : "More than 6 people: we'll quote a second vehicle on WhatsApp.";
+    }
+    $("f-hint").textContent = note;
+    $("s-usd").textContent = usd!==null ? "US$ "+fmt(usd) : (lang==="es"?"A cotizar":"On request");
+    $("s-bs").textContent = bs!==null ? fmt(bs)+" Bs" : (m==="private" && usd!==null ? (lang==="es"?"Pago en dólares o su equivalente en Bs":"Pay in US$ or the Bs equivalent") : "");
+
+    var d = fDate.value ? new Date(fDate.value+"T12:00:00").toLocaleDateString(lang==="es"?"es-BO":"en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric"}) : (lang==="es"?"(por definir)":"(to be decided)");
+    var L = lang==="es" ? {
+      hi:"Hola, quiero reservar un tour:", tour:"Tour", opt:"Opción", mode:"Modalidad", shared:"Compartido", priv:"Privado", date:"Fecha", pax:"Personas", name:"Nombre", hotel:"Alojamiento en Uyuni", est:"Precio estimado", q:"¿Tienen cupo? Gracias."
+    } : {
+      hi:"Hello, I'd like to book a tour:", tour:"Tour", opt:"Option", mode:"Type", shared:"Shared", priv:"Private", date:"Date", pax:"Travellers", name:"Name", hotel:"Hotel in Uyuni", est:"Estimated price", q:"Is there availability? Thank you."
+    };
+    var price = usd!==null ? "US$ "+fmt(usd)+(bs!==null?" ("+fmt(bs)+" Bs)":"") : (lang==="es"?"a cotizar":"on request");
+    var msg = L.hi+"\n"+
+      "• "+L.tour+": "+t[lang]+" ("+t.time+")\n"+
+      "• "+L.opt+": "+op[lang]+"\n"+
+      "• "+L.mode+": "+(m==="shared"?L.shared:L.priv)+"\n"+
+      "• "+L.date+": "+d+"\n"+
+      "• "+L.pax+": "+pax+"\n"+
+      (fName.value.trim() ? "• "+L.name+": "+fName.value.trim()+"\n" : "")+
+      (fHotel.value.trim() ? "• "+L.hotel+": "+fHotel.value.trim()+"\n" : "")+
+      "• "+L.est+": "+price+"\n\n"+L.q;
+    $("s-msg").textContent = msg;
+    $("s-wa").href = "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(msg);
+    $("s-status").textContent = "";
+  }
+
+  function setLang(l){
+    lang = l;
+    document.body.classList.toggle("en", l==="en");
+    document.documentElement.lang = l;
+    $("lang-es").setAttribute("aria-pressed", l==="es"); $("lang-en").setAttribute("aria-pressed", l==="en");
+    fName.placeholder = l==="es" ? "Ej.: Ana Pérez" : "e.g. Anna Smith";
+    fHotel.placeholder = l==="es" ? "Ej.: Posada Rossy" : "e.g. Posada Rossy";
+    try{ localStorage.setItem("rossy-lang", l); }catch(e){}
+    fillTours(); fillOpts(true); update();
+  }
+
+  $("lang-es").addEventListener("click", function(){ setLang("es"); });
+  $("lang-en").addEventListener("click", function(){ setLang("en"); });
+  fTour.addEventListener("change", function(){ fillOpts(false); update(); });
+  [fOpt, fDate, fName, fHotel].forEach(function(el){ el.addEventListener("input", update); el.addEventListener("change", update); });
+  $("f-shared").addEventListener("change", function(){
+    var t=TOURS[fTour.value], op=t.opts.filter(function(x){return x.id===fOpt.value})[0];
+    if(op && op.privOnly){ fOpt.value = t.opts[0].id; }
+    update();
+  });
+  $("f-private").addEventListener("change", update);
+  $("pax-minus").addEventListener("click", function(){ if(pax>1){ pax--; fPax.textContent=pax; update(); } });
+  $("pax-plus").addEventListener("click", function(){ if(pax<12){ pax++; fPax.textContent=pax; update(); } });
+  $("bk").addEventListener("submit", function(e){ e.preventDefault(); });
+
+  document.querySelectorAll(".pick").forEach(function(b){
+    b.addEventListener("click", function(){
+      fTour.value = b.getAttribute("data-tour"); fillOpts(false); update();
+      document.getElementById("reservar").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto":"smooth"});
+      setTimeout(function(){ try{ fTour.focus({preventScroll:true}); }catch(e){} }, 400);
+    });
+  });
+
+  $("s-copy").addEventListener("click", function(){
+    var txt = $("s-msg").textContent;
+    var ok = function(){ $("s-status").textContent = lang==="es" ? "Mensaje copiado. Pégalo en WhatsApp al "+WA_SHOW+"." : "Message copied. Paste it into WhatsApp to "+WA_SHOW+"."; };
+    var fallback = function(){
+      var r=document.createRange(); r.selectNodeContents($("s-msg")); var s=getSelection(); s.removeAllRanges(); s.addRange(r);
+      $("s-status").textContent = lang==="es" ? "Texto seleccionado: cópialo con Ctrl+C o mantén presionado." : "Text selected: copy it with Ctrl+C or long-press.";
+    };
+    try{ navigator.clipboard.writeText(txt).then(ok, fallback); }catch(e){ fallback(); }
+  });
+
+  var today = new Date(); var iso = new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().slice(0,10);
+  fDate.min = iso;
+  $("s-num").textContent = WA_SHOW;
+  document.querySelectorAll(".num-f").forEach(function(el){ el.textContent = WA_SHOW; });
+
+  setLang(lang);
+
+  // Efectos de movimiento
+  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var top = document.querySelector(".top"), media = document.querySelector(".hero-media"), heroEl = document.querySelector(".hero");
+  var ticking = false;
+  function onScroll(){
+    if(ticking) return; ticking = true;
+    requestAnimationFrame(function(){
+      var y = window.scrollY || 0;
+      top.classList.toggle("scrolled", y > 24);
+      if(!reduce && media && y < heroEl.offsetHeight){ media.style.transform = "translate3d(0," + (y*0.28).toFixed(1) + "px,0)"; }
+      ticking = false;
+    });
+  }
+  window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
+
+  if(!reduce && "IntersectionObserver" in window){
+    var targets = document.querySelectorAll(".sec-head, .tour, .persp figure, .luz-row figure, .gal button, .steps li, .paybox, .form, .summary, .rates > div, .panel, .room, .faq details, .posada .wrap > div");
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ var t=e.target; t.classList.remove("pre"); io.unobserve(t); setTimeout(function(){ t.style.setProperty("--d","0s"); }, 1400); } });
+    }, {rootMargin:"0px 0px -8% 0px", threshold:0.08});
+    targets.forEach(function(el){
+      el.classList.add("rv");
+      if(el.getBoundingClientRect().top > window.innerHeight){
+        var sib = [].slice.call(el.parentElement.children).indexOf(el);
+        el.style.setProperty("--d", Math.min(sib,5)*0.08 + "s");
+        el.classList.add("pre"); io.observe(el);
+      }
+    });
+  }
+
+  // Estrellas que titilan en la sección nocturna
+  (function(){
+    var c = $("stars"); if(!c || !c.getContext) return;
+    var ctx = c.getContext("2d"), stars = [], w = 0, h = 0, run = false, dpr = Math.min(window.devicePixelRatio||1, 2);
+    function size(){
+      w = c.offsetWidth; h = c.offsetHeight; c.width = w*dpr; c.height = h*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+      var n = Math.round(w*h/5200); stars = [];
+      for(var i=0;i<n;i++) stars.push({x:Math.random()*w, y:Math.random()*h, r:Math.random()*1.2+.2, p:Math.random()*6.28, s:Math.random()*1.5+.4});
+    }
+    function draw(t){
+      ctx.clearRect(0,0,w,h);
+      for(var i=0;i<stars.length;i++){ var st=stars[i]; var a = reduce ? .7 : .35 + .65*Math.abs(Math.sin(st.p + t/1000*st.s));
+        ctx.globalAlpha = a; ctx.fillStyle = "#fff"; ctx.beginPath(); ctx.arc(st.x, st.y, st.r, 0, 6.283); ctx.fill(); }
+      if(run && !reduce) requestAnimationFrame(draw);
+    }
+    size(); draw(0);
+    window.addEventListener("resize", function(){ size(); if(!run) draw(0); });
+    if(!reduce && "IntersectionObserver" in window){
+      new IntersectionObserver(function(es){ var v = es[0].isIntersecting; if(v && !run){ run = true; requestAnimationFrame(draw); } else if(!v){ run = false; } }).observe(c);
+    }
+  })();
+
+  // Galería ampliada
+  var lb=$("lb"), items=[].slice.call(document.querySelectorAll("#gal button")), idx=0;
+  function show(i){
+    idx=(i+items.length)%items.length; var b=items[idx], im=b.querySelector("img");
+    $("lb-img").src=b.getAttribute("data-src"); $("lb-img").alt=im.alt;
+    var cap=b.querySelector(".cap > span"); var vis=[].slice.call(cap.querySelectorAll("[lang]")).filter(function(s){return s.getAttribute("lang")===lang})[0];
+    $("lb-cap").textContent=(vis||cap).textContent;
+  }
+  items.forEach(function(b,i){ b.addEventListener("click",function(){ show(i); try{ lb.showModal(); }catch(e){ lb.setAttribute("open",""); } }); });
+  $("lb-prev").addEventListener("click",function(){show(idx-1)});
+  $("lb-next").addEventListener("click",function(){show(idx+1)});
+  $("lb-close").addEventListener("click",function(){ lb.close ? lb.close() : lb.removeAttribute("open"); });
+  lb.addEventListener("click",function(e){ if(e.target===lb){ lb.close(); } });
+  lb.addEventListener("keydown",function(e){ if(e.key==="ArrowLeft")show(idx-1); if(e.key==="ArrowRight")show(idx+1); });
+})();
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TravelAgency","name":"Posada Rossy Tours","url":"https://www.rossyuyuni.com/tours","address":{"@type":"PostalAddress","addressLocality":"Uyuni","addressRegion":"Potosí","addressCountry":"BO"},"priceRange":"US$ 40 – US$ 250",
+"makesOffer":[
+{"@type":"Offer","name":"Full Day Salar de Uyuni","price":"40","priceCurrency":"USD"},
+{"@type":"Offer","name":"Salar y Lagunas 3 días","price":"210","priceCurrency":"USD"},
+{"@type":"Offer","name":"Atardecer con estrellas","price":"45","priceCurrency":"USD"},
+{"@type":"Offer","name":"Estrellas y amanecer","price":"45","priceCurrency":"USD"}]}
+</script>
+</body>
+</html>
