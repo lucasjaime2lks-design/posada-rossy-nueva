@@ -19,7 +19,7 @@
 <meta name="theme-color" content="#16264B">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Figtree:wght@400;500;600;700&family=Josefin+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: horizonte del salar arriba; luego tours en grilla, reserva en dos columnas (formulario + resumen), información en bandas. */
 :root{
@@ -293,6 +293,10 @@ tr:last-child td{border-bottom:0}
 .partner span{font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .partner.logo{border:0;padding:14px 22px}
 .partner.logo img{width:100%;max-width:280px;height:auto;display:block}
+.partner .cct{display:flex;font-size:inherit;color:inherit;letter-spacing:0;text-transform:none;flex-direction:column;align-items:flex-start;gap:4px;font-family:"Josefin Sans",var(--body);text-align:left}
+.partner .cct b{font-family:inherit;font-size:34px;font-weight:700;letter-spacing:.06em;line-height:.9;color:#fff;text-transform:none}
+.partner .cct i{font-style:normal;font-size:12px;font-weight:600;letter-spacing:.4em;color:#F2B54A}
+.partner .cct small{font-size:9px;letter-spacing:.3em;color:#B9C6DD}
 footer{background:var(--sky);color:var(--on-sky-muted);font-size:15px}
 footer .wrap{padding-block:40px 110px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
 footer b{color:var(--on-sky);font-family:var(--display);font-size:24px;text-transform:uppercase}
@@ -748,7 +752,10 @@ footer a{color:var(--on-sky)}
     </div>
     <div class="partners">
       <div class="partner logo" style="background:#0E95BD"><img src="img/logo-nomadex.webp" width="640" height="201" alt="NOMADEX Bolivia, Nómade Expediciones" loading="lazy"></div>
-      <div class="partner"><b>Charito Cielo Tours</b><span>Uyuni · Bolivia</span></div>
+      <div class="partner logo" style="background:#13214A;flex-direction:row;gap:14px" role="img" aria-label="Charito Cielo Tours, Uyuni, Bolivia">
+        <svg width="78" height="78" viewBox="0 0 100 100" aria-hidden="true"><polyline points="75.7,19.4 36.3,12.4 10.6,43.1 24.3,80.6 70,84.6" fill="none" stroke="#8FC3EA" stroke-width="1.6" stroke-linejoin="round"/><path d="M75.7 9.4Q75.7 19.4 85.7 19.4Q75.7 19.4 75.7 29.4Q75.7 19.4 65.7 19.4Q75.7 19.4 75.7 9.4Z" fill="#F2B54A"/><path d="M36.3 7.4Q36.3 12.4 41.3 12.4Q36.3 12.4 36.3 17.4Q36.3 12.4 31.3 12.4Q36.3 12.4 36.3 7.4Z" fill="#fff"/><path d="M10.6 38.1Q10.6 43.1 15.6 43.1Q10.6 43.1 10.6 48.1Q10.6 43.1 5.6 43.1Q10.6 43.1 10.6 38.1Z" fill="#fff"/><path d="M24.3 75.6Q24.3 80.6 29.3 80.6Q24.3 80.6 24.3 85.6Q24.3 80.6 19.3 80.6Q24.3 80.6 24.3 75.6Z" fill="#fff"/><path d="M70 79.6Q70 84.6 75 84.6Q70 84.6 70 89.6Q70 84.6 65 84.6Q70 84.6 70 79.6Z" fill="#fff"/><circle cx="56" cy="40" r="1.4" fill="#8FC3EA"/><circle cx="48" cy="62" r="1" fill="#8FC3EA"/></svg>
+        <span class="cct" aria-hidden="true"><b>CHARITO</b><i>CIELO TOURS</i><small>UYUNI · BOLIVIA</small></span>
+      </div>
       <div class="partner logo" style="background:#4C84B4;padding:10px"><img src="img/logo-arbol.webp" width="320" height="283" alt="Expediciones Árbol de Piedra, agencia de viajes y turismo" loading="lazy" style="max-width:150px"></div>
     </div>
   </div>
