@@ -333,6 +333,12 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
 .hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.4s ease}
 .hero.has-video .hero-media video{opacity:1}
 .hero.has-video .credit{opacity:0}
+/* Videos reales de los tours */
+.vids{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:820px){.vids{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:82%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;scrollbar-width:none}.vids::-webkit-scrollbar{display:none}}
+.vid{margin:0;position:relative;border-radius:var(--r);overflow:hidden;background:var(--sky);aspect-ratio:16/10;scroll-snap-align:start}
+.vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.vid figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 14px 12px;background:linear-gradient(transparent,rgba(8,14,34,.8));color:#fff;font-weight:600;font-size:16px;pointer-events:none}
 /* Título que entra palabra por palabra */
 .hero h1 .w{display:inline-block;animation:wordIn .9s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*110ms + .1s)}
 @keyframes wordIn{from{transform:translateY(.55em) rotate(2deg);opacity:0;filter:blur(6px)}to{transform:none;opacity:1;filter:none}}
@@ -527,6 +533,21 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
         </div>
       </article>
 
+    </div>
+  </div>
+</section>
+
+<section id="videos" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span lang="es">Videos reales de nuestros tours</span><span lang="en">Real videos from our tours</span></span>
+      <h2><span lang="es">Así se vive el salar</span><span lang="en">This is what it feels like</span></h2>
+      <p class="lead"><span lang="es">Grabados por viajeros en el Salar de Uyuni con efecto espejo, sin filtros.</span><span lang="en">Filmed by travellers on the Uyuni Salt Flat with the mirror effect, no filters.</span></p>
+    </div>
+    <div class="vids" tabindex="0" aria-label="Videos de los tours">
+      <figure class="vid"><video muted loop playsinline preload="none" poster="img/clip-espejo.webp" data-src="img/clip-espejo.mp4" aria-label="Grupo de viajeros reflejado en el efecto espejo del Salar de Uyuni"></video><figcaption><span lang="es">Efecto espejo</span><span lang="en">Mirror effect</span></figcaption></figure>
+      <figure class="vid"><video muted loop playsinline preload="none" poster="img/clip-grupo.webp" data-src="img/clip-grupo.mp4" aria-label="Viajeros tomados de la mano sobre el salar inundado"></video><figcaption><span lang="es">El grupo sobre el cielo</span><span lang="en">The group on the sky</span></figcaption></figure>
+      <figure class="vid"><video muted loop playsinline preload="none" poster="img/clip-atardecer.webp" data-src="img/clip-atardecer.mp4" aria-label="Atardecer reflejado en el Salar de Uyuni"></video><figcaption><span lang="es">Atardecer en el salar</span><span lang="en">Sunset on the salt flat</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -1026,7 +1047,7 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
   window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
 
   if(!reduce && "IntersectionObserver" in window){
-    var targets = document.querySelectorAll(".sec-head, .tour, .persp figure, .luz-row figure, .gal button, .steps li, .paybox, .form, .summary, .rates > div, .panel, .room, .faq details, .posada .wrap > div");
+    var targets = document.querySelectorAll(".sec-head, .tour, .persp figure, .luz-row figure, .gal button, .vid, .steps li, .paybox, .form, .summary, .rates > div, .panel, .room, .faq details, .posada .wrap > div");
     var io = new IntersectionObserver(function(es){
       es.forEach(function(e){ if(e.isIntersecting){ var t=e.target; t.classList.remove("pre"); io.unobserve(t); setTimeout(function(){ t.style.setProperty("--d","0s"); }, 1400); } });
     }, {rootMargin:"0px 0px -8% 0px", threshold:0.08});
@@ -1269,6 +1290,23 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
       if(v && !on && !stop){ on = true; row.style.scrollSnapType = "none"; pos = row.scrollLeft; requestAnimationFrame(drift); }
       else if(!v){ on = false; }
     }, {threshold:.3}).observe(row);
+  }
+
+  // 10. Videos reales: se cargan y reproducen solo cuando se ven
+  var vids = $$(".vid video");
+  if(vids.length){
+    if(reduce || conn.saveData || !("IntersectionObserver" in window)){
+      vids.forEach(function(v){ v.controls = true; v.src = v.getAttribute("data-src"); });
+    } else {
+      var vio = new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          var v = e.target;
+          if(e.isIntersecting){ if(!v.src) v.src = v.getAttribute("data-src"); var q = v.play(); if(q && q.catch) q.catch(function(){}); }
+          else v.pause();
+        });
+      }, {threshold:.4});
+      vids.forEach(function(v){ vio.observe(v); });
+    }
   }
 
   // 9. Pulso en el total cuando cambia el precio
