@@ -51,7 +51,8 @@ html,body{margin:0}
 *{box-sizing:border-box}
 img{height:auto;max-width:100%}
 html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+@keyframes fadeOnly{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-media img{animation:none}.hero .inner > *,.facts .fact,.hero .cue{animation-name:fadeOnly!important}.rv.pre{transform:none}.tour.tilting,.tour:hover{transform:none}.tour .art img,.persp figure img,.luz-row img{transform:none!important}}
 body{background:var(--salt);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
 body.en [lang="es"], body:not(.en) [lang="en"]{display:none!important}
 a{color:var(--flamingo)}
@@ -322,6 +323,24 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRFC960VC3"></script>
 <style>
+/* Portada v4: señal en vivo, indicador para bajar, pausa del video */
+.hero-top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px}
+.hero .live{display:inline-flex;align-items:center;gap:9px;padding:7px 14px 7px 12px;border-radius:999px;background:rgba(10,18,40,.55);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);font:600 14px var(--body);color:#fff}
+.hero .live i{width:9px;height:9px;border-radius:50%;background:#2BD576;box-shadow:0 0 0 0 rgba(43,213,118,.7);animation:livePulse 1.8s ease-out infinite}
+@keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(43,213,118,.7)}80%,100%{box-shadow:0 0 0 10px rgba(43,213,118,0)}}
+.hero h1 .w{background:linear-gradient(100deg,#fff 0%,#fff 38%,#FFD889 50%,#fff 62%,#fff 100%);background-size:300% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:wordIn .9s cubic-bezier(.2,.7,.2,1) both,sheen 6s ease-in-out infinite;animation-delay:calc(var(--i,0)*110ms + .1s),calc(var(--i,0)*120ms + 1.8s)}
+@keyframes sheen{0%{background-position:100% 0}45%,100%{background-position:-50% 0}}
+.hero .cue{position:absolute;left:50%;bottom:26px;z-index:2;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:2px;color:#fff;text-decoration:none;font:500 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;opacity:.9;animation:cueIn 1s 1.2s both}
+.hero .cue svg{animation:cueBob 1.8s ease-in-out infinite}
+@keyframes cueIn{from{opacity:0}to{opacity:.9}}
+@keyframes cueBob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+.hero-pause{position:absolute;left:max(16px,env(safe-area-inset-left,0px));bottom:22px;z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(10,18,40,.55);color:#fff;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.hero-pause .i-play{display:none}.hero-pause.is-paused .i-play{display:block}.hero-pause.is-paused .i-pause{display:none}
+.hero-pause:hover{background:rgba(10,18,40,.8)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.hero .credit{display:none}
+@media (max-width:600px){.hero .cue{bottom:18px}.hero-pause{bottom:14px}}
+@media (prefers-reduced-motion:reduce){.hero h1 .w{animation:fadeOnly .9s both,sheen 6s ease-in-out infinite;animation-delay:calc(var(--i,0)*110ms + .1s),calc(var(--i,0)*120ms + 1.8s)}.hero .cue svg{animation:none}}
 /* ===== Movimiento e interacción (v3) ===== */
 /* Barra de avance de lectura */
 .prog{position:absolute;left:0;right:0;bottom:-3px;height:3px;transform-origin:0 50%;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--gold),var(--flamingo));pointer-events:none}
@@ -415,7 +434,7 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
   <span class="credit" aria-hidden="true"><span lang="es">Efecto espejo frente al volcán Tunupa</span><span lang="en">Mirror effect by Tunupa volcano</span></span>
   <div class="wrap">
     <div class="inner">
-      <span class="coords">20°08′S · 67°29′W · 3.656 m</span>
+      <div class="hero-top"><span class="live"><i aria-hidden="true"></i><span lang="es">Salidas todos los días · 10:30</span><span lang="en">Departures every day · 10:30</span></span><span class="coords">20°08′S · 67°29′W · 3.656 m</span></div>
       <h1><span lang="es">Tours al Salar de Uyuni</span><span lang="en">Uyuni Salt Flat Tours</span></h1>
       <p class="sub"><span lang="es">Full Day desde 350 Bs (US$ 35) por persona. Reservas por WhatsApp y pagas en efectivo al iniciar el tour, sin adelantos. Te recogemos en tu alojamiento.</span><span lang="en">Full Day from Bs 350 (US$ 35) per person. Book on WhatsApp and pay in cash when your tour starts, no deposit. We pick you up at your hotel.</span></p>
       <div class="ctas">
@@ -424,6 +443,8 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
       </div>
     </div>
   </div>
+  <a class="cue" href="#tours" aria-label="Bajar a los tours"><span lang="es">Desliza</span><span lang="en">Scroll</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+  <button type="button" class="hero-pause" id="hero-pause" hidden aria-pressed="false"><svg class="i-pause" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z" fill="currentColor"/></svg><svg class="i-play" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z" fill="currentColor"/></svg><span class="sr"><span lang="es">Pausar o reproducir el video</span><span lang="en">Pause or play the video</span></span></button>
 </section>
 
 <div class="facts">
@@ -1047,7 +1068,7 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
   }
   window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
 
-  if(!reduce && "IntersectionObserver" in window){
+  if("IntersectionObserver" in window){
     var targets = document.querySelectorAll(".sec-head, .tour, .persp figure, .luz-row figure, .gal button, .vid, .steps li, .paybox, .form, .summary, .rates > div, .panel, .room, .faq details, .posada .wrap > div");
     var io = new IntersectionObserver(function(es){
       es.forEach(function(e){ if(e.isIntersecting){ var t=e.target; t.classList.remove("pre"); io.unobserve(t); setTimeout(function(){ t.style.setProperty("--d","0s"); }, 1400); } });
@@ -1073,13 +1094,13 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
     }
     function draw(t){
       ctx.clearRect(0,0,w,h);
-      for(var i=0;i<stars.length;i++){ var st=stars[i]; var a = reduce ? .7 : .35 + .65*Math.abs(Math.sin(st.p + t/1000*st.s));
+      for(var i=0;i<stars.length;i++){ var st=stars[i]; var a = .35 + .65*Math.abs(Math.sin(st.p + t/1000*st.s*(reduce?.5:1)));
         ctx.globalAlpha = a; ctx.fillStyle = "#fff"; ctx.beginPath(); ctx.arc(st.x, st.y, st.r, 0, 6.283); ctx.fill(); }
-      if(run && !reduce) requestAnimationFrame(draw);
+      if(run) requestAnimationFrame(draw);
     }
     size(); draw(0);
     window.addEventListener("resize", function(){ size(); if(!run) draw(0); });
-    if(!reduce && "IntersectionObserver" in window){
+    if("IntersectionObserver" in window){
       new IntersectionObserver(function(es){ var v = es[0].isIntersecting; if(v && !run){ run = true; requestAnimationFrame(draw); } else if(!v){ run = false; } }).observe(c);
     }
   })();
@@ -1172,27 +1193,41 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
     words.forEach(function(w,i){ var e=document.createElement("span"); e.className="w"; e.style.setProperty("--i",i); e.textContent=w; sp.appendChild(e); if(i<words.length-1) sp.appendChild(document.createTextNode(" ")); });
   });
 
-  // 3. Video del salar en la portada (no se carga con ahorro de datos ni con movimiento reducido)
+  // 3. Video del salar en la portada: arranca apenas carga la página (no se carga con ahorro de datos o conexión 2G).
+  //    Se reproduce también con "movimiento reducido", pero con botón para pausarlo; la pausa se recuerda.
   var hero = document.querySelector(".hero"), media = document.querySelector(".hero-media");
   var conn = navigator.connection || {};
-  if(hero && media && !reduce && !conn.saveData && !/(^|-)2g$/.test(conn.effectiveType||"")){
-    var startVideo = function(){
-      var v = document.createElement("video");
-      v.muted = true; v.loop = true; v.playsInline = true; v.autoplay = true; v.preload = "auto";
-      v.setAttribute("muted",""); v.setAttribute("playsinline",""); v.setAttribute("aria-hidden","true"); v.tabIndex = -1;
-      v.src = innerWidth >= 900 ? "/salar-720.mp4" : "img/hero-480.mp4";
-      v.addEventListener("playing", function(){ hero.classList.add("has-video"); }, {once:true});
-      media.appendChild(v);
-      var p = v.play(); if(p && p.catch) p.catch(function(){});
-      if("IntersectionObserver" in window){
-        new IntersectionObserver(function(es){ if(es[0].isIntersecting){ var q=v.play(); if(q&&q.catch) q.catch(function(){}); } else v.pause(); }).observe(hero);
-      }
+  var heroBtn = document.getElementById("hero-pause");
+  if(hero && media && !conn.saveData && !/(^|-)2g$/.test(conn.effectiveType||"")){
+    var paused = false; try{ paused = localStorage.getItem("rossy-hero-video") === "pausa"; }catch(e){}
+    var v = document.createElement("video");
+    v.muted = true; v.loop = true; v.playsInline = true; v.preload = "auto";
+    v.setAttribute("muted",""); v.setAttribute("playsinline",""); v.setAttribute("aria-hidden","true"); v.tabIndex = -1;
+    v.poster = "img/hero.webp";
+    var wide = innerWidth * Math.min(window.devicePixelRatio||1, 2);
+    v.src = wide >= 2200 && (conn.effectiveType||"4g") === "4g" ? "/salar-1080.mp4" : (innerWidth >= 900 ? "/salar-720.mp4" : "img/hero-480.mp4");
+    v.addEventListener("playing", function(){ hero.classList.add("has-video"); });
+    media.appendChild(v);
+    var play = function(){ var q = v.play(); if(q && q.catch) q.catch(function(){}); };
+    var setBtn = function(){
+      if(!heroBtn) return;
+      heroBtn.hidden = false; heroBtn.setAttribute("aria-pressed", paused ? "true" : "false");
+      heroBtn.classList.toggle("is-paused", paused);
     };
-    if(document.readyState==="complete") setTimeout(startVideo, 300); else addEventListener("load", function(){ setTimeout(startVideo, 300); });
+    if(!paused) play(); else { v.addEventListener("loadeddata", function(){ hero.classList.add("has-video"); }, {once:true}); }
+    setBtn();
+    if(heroBtn) heroBtn.addEventListener("click", function(){
+      paused = !paused; try{ localStorage.setItem("rossy-hero-video", paused ? "pausa" : "play"); }catch(e){}
+      if(paused) v.pause(); else play(); setBtn();
+    });
+    if("IntersectionObserver" in window){
+      new IntersectionObserver(function(es){ if(es[0].isIntersecting){ if(!paused) play(); } else v.pause(); }).observe(hero);
+    }
+    document.addEventListener("visibilitychange", function(){ if(document.hidden) v.pause(); else if(!paused) play(); });
   }
 
   // 4. Precios que cuentan al aparecer
-  if(!reduce && "IntersectionObserver" in window){
+  if("IntersectionObserver" in window){
     var cntIO = new IntersectionObserver(function(es){
       es.forEach(function(e){
         if(!e.isIntersecting) return; cntIO.unobserve(e.target);
@@ -1227,7 +1262,7 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
   }
 
   // 6. Fotos que rotan en cada tarjeta
-  if(!reduce && "IntersectionObserver" in window){
+  if("IntersectionObserver" in window){
     $$(".tour .art[data-slides]").forEach(function(art, n){
       var first = art.querySelector("img"), srcs = art.getAttribute("data-slides").split(","), extra = [], dots = document.createElement("span");
       dots.className = "dots"; dots.setAttribute("aria-hidden","true");
@@ -1312,7 +1347,7 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
 
   // 9. Pulso en el total cuando cambia el precio
   var tot = document.getElementById("s-usd");
-  if(tot && !reduce && "MutationObserver" in window){
+  if(tot && "MutationObserver" in window){
     new MutationObserver(function(){ tot.classList.remove("bump"); void tot.offsetWidth; tot.classList.add("bump"); }).observe(tot, {childList:true, characterData:true, subtree:true});
   }
 })();
