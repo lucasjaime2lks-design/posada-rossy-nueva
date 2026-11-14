@@ -16,9 +16,12 @@
 <meta property="og:site_name" content="Posada Rossy">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://www.rossyuyuni.com/">
-<link rel="icon" href="fotos/logo-96.jpg">
-<link rel="apple-touch-icon" href="fotos/logo-320.jpg">
-<link rel="preload" as="image" href="fotos/salar-espejo-1000.webp" imagesrcset="fotos/salar-espejo-1000.webp 1000w, fotos/salar-espejo-2000.webp 2000w" imagesizes="100vw" fetchpriority="high">
+<link rel="alternate" hreflang="es" href="https://www.rossyuyuni.com/">
+<link rel="alternate" hreflang="en" href="https://www.rossyuyuni.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://www.rossyuyuni.com/">
+<link rel="icon" href="/fotos/logo-96.jpg">
+<link rel="apple-touch-icon" href="/fotos/logo-320.jpg">
+<link rel="preload" as="image" href="/fotos/salar-espejo-1000.webp" imagesrcset="/fotos/salar-espejo-1000.webp 1000w, /fotos/salar-espejo-2000.webp 2000w" imagesizes="100vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Figtree:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
@@ -84,8 +87,8 @@ nav a:hover{color:#fff}
 nav a:hover::after{transform:scaleX(1)}
 .bar-right{display:flex;align-items:center;gap:10px}
 .lang{display:flex;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:3px}
-.lang button{background:none;border:0;color:#fff;font-weight:700;font-size:.78rem;padding:6px 11px;border-radius:999px;cursor:pointer;min-width:40px;min-height:34px}
-.lang button[aria-pressed="true"]{background:#fff;color:var(--navy)}
+.lang button,.lang a{display:grid;place-items:center;text-decoration:none;background:none;border:0;color:#fff;font-weight:700;font-size:.78rem;padding:6px 11px;border-radius:999px;cursor:pointer;min-width:40px;min-height:34px}
+.lang button[aria-pressed="true"],.lang a[aria-current="true"]{background:#fff;color:var(--navy)}
 .bar .btn{min-height:42px;padding:9px 18px;font-size:.9rem}
 /* Menú móvil */
 .menu-btn{display:none;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.1);cursor:pointer;position:relative;flex:none;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
@@ -100,13 +103,13 @@ nav a:hover::after{transform:scaleX(1)}
 .menu li{border-bottom:1px solid rgba(242,214,142,.14);transform:translateY(18px);opacity:0;transition:transform .5s var(--ease), opacity .5s var(--ease)}
 .menu.open li{transform:none;opacity:1}
 .menu.open li:nth-child(2){transition-delay:.05s}.menu.open li:nth-child(3){transition-delay:.1s}.menu.open li:nth-child(4){transition-delay:.15s}.menu.open li:nth-child(5){transition-delay:.2s}.menu.open li:nth-child(6){transition-delay:.25s}.menu.open li:nth-child(7){transition-delay:.3s}
-.menu a:not(.btn){display:flex;align-items:center;justify-content:space-between;min-height:58px;text-decoration:none;font-family:var(--display);font-size:1.7rem;font-weight:500}
-.menu a:not(.btn)::after{content:"→";position:static;height:auto;background:none;transform:none;font-family:var(--body);font-size:1.1rem;color:var(--gold-hi);transition:transform .3s var(--ease)}
-.menu a:not(.btn){color:#fff}
-.menu a:not(.btn):hover::after{transform:translateX(6px)}
+.menu nav a{display:flex;align-items:center;justify-content:space-between;min-height:58px;text-decoration:none;font-family:var(--display);font-size:1.7rem;font-weight:500}
+.menu nav a::after{content:"→";position:static;height:auto;background:none;transform:none;font-family:var(--body);font-size:1.1rem;color:var(--gold-hi);transition:transform .3s var(--ease)}
+.menu nav a{color:#fff}
+.menu nav a:hover::after{transform:translateX(6px)}
 .menu-foot{display:grid;gap:14px}
 .lang-m{justify-self:start}
-.lang-m button{min-width:84px}
+.lang-m button,.lang-m a{min-width:84px}
 .menu-foot .btn{width:100%}
 .menu-num{font-size:.85rem;color:#9aa4c2;text-align:center}
 @media (max-width:920px){nav{display:none}.menu nav{display:block}.menu-btn{display:block}.bar-right>.lang{display:none}}
@@ -157,7 +160,7 @@ nav a:hover::after{transform:scaleX(1)}
 .hours div{display:flex;justify-content:space-between;gap:16px}
 .hours b{color:var(--ink);font-variant-numeric:tabular-nums}
 .prices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-.price{--mx:50%;--my:0%;position:relative;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px;display:grid;gap:18px;grid-template-rows:auto auto 1fr auto;transition:transform .35s var(--ease), box-shadow .35s var(--ease);isolation:isolate;overflow:hidden}
+.price{--mx:50%;--my:0%;position:relative;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px;display:grid;gap:18px;grid-template-rows:auto auto auto 1fr auto;transition:transform .35s var(--ease), box-shadow .35s var(--ease);isolation:isolate;overflow:hidden}
 .price::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(420px circle at var(--mx) var(--my),rgba(214,164,70,.16),transparent 60%);opacity:0;transition:opacity .3s}
 .price:hover{transform:translateY(-6px);box-shadow:0 22px 50px rgba(15,28,72,.14)}
 .price:hover::before{opacity:1}
@@ -302,7 +305,7 @@ dialog.lb::backdrop{background:rgba(6,10,26,.94);backdrop-filter:blur(6px)}
 /* Tours */
 .tours{background:var(--paper);border-bottom:1px solid var(--line)}
 .tour-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.tour{background:var(--salt);border:1px solid var(--line);border-radius:20px;padding:24px;display:grid;gap:12px;grid-template-rows:auto auto auto 1fr auto;align-content:start;transition:transform .3s var(--ease), border-color .25s, box-shadow .3s var(--ease)}
+.tour{background:var(--salt);border:1px solid var(--line);border-radius:20px;padding:24px;display:grid;gap:12px;grid-template-rows:auto auto auto auto 1fr auto;overflow:hidden;align-content:start;transition:transform .3s var(--ease), border-color .25s, box-shadow .3s var(--ease)}
 .tour:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:0 18px 40px rgba(15,28,72,.1)}
 .tour .when{font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-lo)}
 .tour h3{font-size:1.35rem}
@@ -386,6 +389,56 @@ body.has-cookies .wa-float{bottom:calc(150px + env(safe-area-inset-bottom,0px))}
 .wa-float{transition:transform .25s var(--ease), opacity .3s, visibility .3s}
 .wa-float svg{width:30px;height:30px}
 
+/* Cifras bajo la portada */
+.stats{background:var(--night);color:#fff;border-top:1px solid rgba(242,214,142,.14)}
+.stats ul{list-style:none;margin:0;padding:26px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.stats li{display:grid;gap:2px;align-content:start;padding-inline:18px;border-left:1px solid rgba(242,214,142,.18)}
+.stats li:first-child{border-left:0;padding-left:0}
+.stats b{justify-self:start;font-family:var(--display);font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.1;font-weight:600;font-variant-numeric:tabular-nums;background:linear-gradient(135deg,var(--gold-hi),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stats li>span{font-size:.88rem;color:#b9c1d8}
+@media (max-width:700px){.stats ul{grid-template-columns:1fr 1fr;gap:20px 12px}.stats li:nth-child(3){border-left:0;padding-left:0}}
+
+/* Foto en tarjetas de precio y de tour */
+.price-ph{margin:-30px -30px 0;aspect-ratio:16/10;overflow:hidden;position:relative}
+.price-ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.price-ph::after{content:"";position:absolute;inset:auto 0 0;height:45%;background:linear-gradient(180deg,transparent,rgba(10,19,51,.32));pointer-events:none}
+.price:hover .price-ph img{transform:scale(1.06)}
+.price .tag{z-index:1;box-shadow:0 4px 14px rgba(10,19,51,.3)}
+.tour-ph{margin:-24px -24px 4px;aspect-ratio:16/10;overflow:hidden}
+.tour-ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.tour:hover .tour-ph img{transform:scale(1.07)}
+.inc-no{margin:12px 0 6px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+/* Video de los tours */
+.reel{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:center;margin-top:64px;padding:clamp(24px,4vw,48px);border-radius:28px;background:radial-gradient(700px 360px at 100% 0%,rgba(214,164,70,.2),transparent 60%),linear-gradient(160deg,var(--navy-2),var(--night));color:#fff;overflow:hidden}
+.phone{position:relative;width:min(270px,64vw);aspect-ratio:9/16;border-radius:30px;overflow:hidden;background:#000;box-shadow:0 0 0 6px rgba(255,255,255,.08),0 30px 70px rgba(0,0,0,.5);justify-self:center}
+.phone video{width:100%;height:100%;object-fit:cover;display:block}
+.play{position:absolute;inset:0;display:grid;place-items:center;border:0;padding:0;background:linear-gradient(180deg,rgba(10,19,51,.05),rgba(10,19,51,.45));cursor:pointer;color:var(--night)}
+.play span{position:relative;width:74px;height:74px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold-hi),var(--gold));box-shadow:0 10px 30px rgba(0,0,0,.4);transition:transform .3s var(--ease)}
+.play span::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--gold-hi);animation:ping 2.8s ease-out infinite}
+.play:hover span{transform:scale(1.08)}
+.play svg{width:28px;height:28px;margin-left:4px}
+.phone.playing .play{display:none}
+.reel-text{display:grid;gap:16px;justify-items:start}
+.reel p{color:#cdd3e6;max-width:46ch}
+.reel .kicker{color:var(--gold-hi)}
+.reel h3{font-size:clamp(1.7rem,3.4vw,2.6rem)}
+.reel h3 em{font-style:italic;color:var(--gold-hi)}
+@media (max-width:760px){.reel{grid-template-columns:1fr}.reel-text{justify-items:stretch}.reel .btn{width:100%}}
+
+/* Cinta de fotos del Salar */
+.mq{margin-top:56px}
+.mq-title{font-family:var(--body);font-size:1.02rem;font-weight:700;letter-spacing:0}
+.mq-view{overflow:hidden;margin-top:16px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mq-track{display:flex;gap:12px;width:max-content;animation:mq 60s linear infinite}
+.mq-view:hover .mq-track{animation-play-state:paused}
+.mq-track img{height:clamp(170px,22vw,240px);width:auto;max-width:none;border-radius:var(--r)}
+@keyframes mq{to{transform:translateX(calc(-50% - 6px))}}
+
+@media (prefers-reduced-motion:reduce){
+  .mq-view{overflow-x:auto;-webkit-mask-image:none;mask-image:none}
+}
+
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -394,6 +447,9 @@ body.has-cookies .wa-float{bottom:calc(150px + env(safe-area-inset-bottom,0px))}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LodgingBusiness","name":"Posada Rossy","description":"Hospedaje familiar en Uyuni con ducha caliente 24 h, WiFi y cocina compartida. Tours al Salar de Uyuni.","url":"https://www.rossyuyuni.com/","image":["https://www.rossyuyuni.com/fotos/fachada-900.jpg","https://www.rossyuyuni.com/fotos/hab-wiphala-1-1400.jpg","https://www.rossyuyuni.com/fotos/hab-roja-2-1400.jpg"],"logo":"https://www.rossyuyuni.com/fotos/logo-320.jpg","telephone":"+59174256578","priceRange":"80–120 Bs","currenciesAccepted":"BOB","checkinTime":"15:00","checkoutTime":"12:00","address":{"@type":"PostalAddress","streetAddress":"Calle Fernando Alonso, entre Sucre y Camacho","addressLocality":"Uyuni","addressRegion":"Potosí","addressCountry":"BO"},"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"WiFi gratis","value":true},{"@type":"LocationFeatureSpecification","name":"Agua caliente 24 horas","value":true},{"@type":"LocationFeatureSpecification","name":"Cocina compartida","value":true}],"hasMap":"https://share.google/DSJWHsci904OV4xo0"}
+</script>
+<script type="application/ld+json" id="ld-faq">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Las habitaciones tienen baño privado?","acceptedAnswer":{"@type":"Answer","text":"No. Los baños son compartidos y la ducha tiene agua caliente las 24 horas con calefón a gas."}},{"@type":"Question","name":"¿Puedo llegar antes de las 15:00 o muy tarde?","acceptedAnswer":{"@type":"Answer","text":"Escríbenos tu hora de llegada por WhatsApp. Si la habitación está lista, puedes entrar antes; y si llegas tarde, te esperamos."}},{"@type":"Question","name":"¿Qué precio tienen las habitaciones para 3 o más personas?","acceptedAnswer":{"@type":"Answer","text":"Tenemos habitaciones con dos y tres camas. El precio depende de cuántos son y cuántas noches se quedan; consúltanos por WhatsApp."}},{"@type":"Question","name":"¿El precio incluye desayuno?","acceptedAnswer":{"@type":"Answer","text":"No. No servimos comidas, pero puedes usar la cocina compartida para preparar tu desayuno o tu cena."}},{"@type":"Question","name":"¿Cómo reservo?","acceptedAnswer":{"@type":"Answer","text":"Escríbenos por WhatsApp con tu fecha de llegada, noches y número de personas. Te confirmamos disponibilidad y el precio final. También estamos en Booking, Airbnb, Agoda y Expedia."}}]}
 </script>
 <!-- Google Analytics con consentimiento: no guarda cookies hasta que el visitante acepta -->
 <script>
@@ -421,7 +477,7 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
 <header id="top">
   <div class="wrap bar">
     <a class="brand" href="#inicio" aria-label="Posada Rossy, inicio">
-      <img src="fotos/logo-96.webp" width="44" height="44" alt="">
+      <img src="/fotos/logo-96.webp" width="44" height="44" alt="">
       <span><b>Posada Rossy</b><small data-es="Hospedaje en Uyuni" data-en="Guesthouse in Uyuni">Hospedaje en Uyuni</small></span>
     </a>
     <nav aria-label="Principal">
@@ -435,8 +491,8 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
     </nav>
     <div class="bar-right">
       <div class="lang" role="group" aria-label="Idioma / Language">
-        <button type="button" id="lang-es" aria-pressed="true">ES</button>
-        <button type="button" id="lang-en" aria-pressed="false">EN</button>
+        <a id="lang-es" href="/" hreflang="es" lang="es" aria-label="Español" aria-current="true">ES</a>
+        <a id="lang-en" href="/en/" hreflang="en" lang="en" aria-label="English" aria-current="false">EN</a>
       </div>
       <a class="btn btn-gold wa" href="https://wa.me/59174256578" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-es="Reservar" data-en="Book">Reservar</span></a>
       <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span><span></span><span></span></button>
@@ -459,8 +515,8 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
   </nav>
   <div class="menu-foot">
     <div class="lang lang-m" role="group" aria-label="Idioma / Language">
-      <button type="button" data-set-lang="es" aria-pressed="true">Español</button>
-      <button type="button" data-set-lang="en" aria-pressed="false">English</button>
+      <a data-set-lang="es" href="/" hreflang="es" lang="es" aria-current="true">Español</a>
+      <a data-set-lang="en" href="/en/" hreflang="en" lang="en" aria-current="false">English</a>
     </div>
     <a class="btn btn-gold wa" href="https://wa.me/59174256578" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-es="Reservar por WhatsApp" data-en="Book on WhatsApp">Reservar por WhatsApp</span></a>
     <p class="menu-num">WhatsApp +591 74256578 · <span data-es="Entrada 15:00 · Salida 12:00" data-en="Check-in 15:00 · Check-out 12:00">Entrada 15:00 · Salida 12:00</span></p>
@@ -470,11 +526,11 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
 <main id="main">
   <section class="hero" id="inicio">
     <div class="hero-bg">
-      <img src="fotos/salar-espejo-2000.webp" srcset="fotos/salar-espejo-1000.webp 1000w, fotos/salar-espejo-2000.webp 2000w" sizes="100vw" width="2000" height="1333" fetchpriority="high" alt="Viajeros tomados de la mano sobre el espejo del Salar de Uyuni al atardecer" data-es-alt="Viajeros tomados de la mano sobre el espejo del Salar de Uyuni al atardecer" data-en-alt="Travellers holding hands on the Uyuni Salt Flats mirror at sunset">
+      <img src="/fotos/salar-espejo-2000.webp" srcset="/fotos/salar-espejo-1000.webp 1000w, /fotos/salar-espejo-2000.webp 2000w" sizes="100vw" width="2000" height="1333" fetchpriority="high" alt="Viajeros tomados de la mano sobre el espejo del Salar de Uyuni al atardecer" data-es-alt="Viajeros tomados de la mano sobre el espejo del Salar de Uyuni al atardecer" data-en-alt="Travellers holding hands on the Uyuni Salt Flats mirror at sunset">
     </div>
     <div class="wrap">
       <div class="hero-text">
-        <p class="badge rise"><b>80 Bs</b><span>por noche · hospedaje familiar en Uyuni</span></p>
+        <p class="badge rise"><b>80 Bs</b><span data-es="por noche · hospedaje familiar en Uyuni" data-en="per night · family guesthouse in Uyuni">por noche · hospedaje familiar en Uyuni</span></p>
         <h1 class="rise d1" data-es-html="Después del Salar, <br><em>ducha caliente y cama abrigada.</em>" data-en-html="After the Salt Flats, <br><em>a hot shower and a warm bed.</em>">Después del Salar, <br><em>ducha caliente y cama abrigada.</em></h1>
         <p class="lead rise d2" data-es="Habitaciones privadas desde 80 Bs, agua caliente las 24 horas, baño compartido y alguien de Uyuni que te orienta sobre tours, buses y trenes." data-en="Private rooms from 80 Bs, hot water 24 hours a day, a shared bathroom and a local host who helps you with tours, buses and trains.">Habitaciones privadas desde 80 Bs, agua caliente las 24 horas, baño compartido y alguien de Uyuni que te orienta sobre tours, buses y trenes.</p>
         <div class="hero-cta rise d3">
@@ -513,6 +569,17 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
     </div>
   </section>
 
+  <section class="stats" aria-label="Posada Rossy en cifras" data-es-aria="Posada Rossy en cifras" data-en-aria="Posada Rossy in numbers">
+    <div class="wrap">
+      <ul>
+        <li><b><span class="cnt" data-to="80">80</span> Bs</b><span data-es="habitación individual por noche" data-en="single room per night">habitación individual por noche</span></li>
+        <li><b><span class="cnt" data-to="24">24</span> h</b><span data-es="ducha con agua caliente" data-en="hot shower">ducha con agua caliente</span></li>
+        <li><b><span class="cnt" data-to="9" data-dec="1">9,0</span></b><span data-es="de 10 en Booking" data-en="out of 10 on Booking">de 10 en Booking</span></li>
+        <li><b><span class="cnt" data-to="10">10</span> min</b><span data-es="a pie del centro de Uyuni" data-en="on foot from downtown Uyuni">a pie del centro de Uyuni</span></li>
+      </ul>
+    </div>
+  </section>
+
   <section class="sec" id="tarifas">
     <div class="wrap rates">
       <div class="rv">
@@ -529,6 +596,7 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
       </div>
       <div class="prices">
         <article class="price rv">
+          <figure class="price-ph"><img src="/fotos/hab-individual-700.webp" srcset="/fotos/hab-individual-700.webp 700w, /fotos/hab-individual-1400.webp 1400w" sizes="(max-width:620px) 100vw, 380px" width="700" height="523" loading="lazy" decoding="async" alt="Habitación individual con cama de una plaza, velador con lámpara y alfombra" data-es-alt="Habitación individual con cama de una plaza, velador con lámpara y alfombra" data-en-alt="Single room with a single bed, nightstand with lamp and a rug"></figure>
           <h3 data-es="Individual" data-en="Single">Individual</h3>
           <div class="amount"><b>80</b><span data-es="Bs / noche · 1 persona" data-en="Bs / night · 1 guest">Bs / noche · 1 persona</span></div>
           <ul>
@@ -541,6 +609,7 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
         </article>
         <article class="price feature rv">
           <span class="tag" data-es="Más pedida" data-en="Most booked">Más pedida</span>
+          <figure class="price-ph"><img src="/fotos/hab-wiphala-1-700.webp" srcset="/fotos/hab-wiphala-1-700.webp 700w, /fotos/hab-wiphala-1-1400.webp 1400w" sizes="(max-width:620px) 100vw, 380px" width="700" height="525" loading="lazy" decoding="async" alt="Habitación con cama de dos plazas y la wiphala en la pared" data-es-alt="Habitación con cama de dos plazas y la wiphala en la pared" data-en-alt="Room with a double bed and the wiphala flag on the wall"></figure>
           <h3 data-es="Pareja" data-en="Couple">Pareja</h3>
           <div class="amount"><b>120</b><span data-es="Bs / noche · 2 personas" data-en="Bs / night · 2 guests">Bs / noche · 2 personas</span></div>
           <ul>
@@ -561,7 +630,7 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
 
   <div class="showcase">
     <section class="expand">
-      <div class="expand-media"><img src="fotos/hab-wiphala-1-1400.webp" srcset="fotos/hab-wiphala-1-700.webp 700w, fotos/hab-wiphala-1-1400.webp 1400w" sizes="100vw" width="1400" height="1050" loading="lazy" decoding="async" alt="Habitación con cama de dos plazas y cama de una plaza, con la wiphala en la pared" data-es-alt="Habitación con cama de dos plazas y cama de una plaza, con la wiphala en la pared" data-en-alt="Room with a double and a single bed, with the wiphala flag on the wall"></div>
+      <div class="expand-media"><img src="/fotos/hab-wiphala-1-1400.webp" srcset="/fotos/hab-wiphala-1-700.webp 700w, /fotos/hab-wiphala-1-1400.webp 1400w" sizes="100vw" width="1400" height="1050" loading="lazy" decoding="async" alt="Habitación con cama de dos plazas y cama de una plaza, con la wiphala en la pared" data-es-alt="Habitación con cama de dos plazas y cama de una plaza, con la wiphala en la pared" data-en-alt="Room with a double and a single bed, with the wiphala flag on the wall"></div>
       <div class="wrap expand-cap">
         <span class="num" data-es="01 · Habitaciones" data-en="01 · Rooms">01 · Habitaciones</span>
         <h2 data-es-html="Camas <em>abrigadas</em> para las noches del altiplano" data-en-html="<em>Warm</em> beds for cold highland nights">Camas <em>abrigadas</em> para las noches del altiplano</h2>
@@ -569,7 +638,7 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
       </div>
     </section>
     <section class="expand">
-      <div class="expand-media"><img src="fotos/hab-roja-2-1400.webp" srcset="fotos/hab-roja-2-700.webp 700w, fotos/hab-roja-2-1400.webp 1400w" sizes="100vw" width="1400" height="1050" loading="lazy" decoding="async" alt="Habitación con dos camas de dos plazas, velador y lámpara" data-es-alt="Habitación con dos camas de dos plazas, velador y lámpara" data-en-alt="Room with two double beds, nightstand and lamp"></div>
+      <div class="expand-media"><img src="/fotos/hab-roja-2-1400.webp" srcset="/fotos/hab-roja-2-700.webp 700w, /fotos/hab-roja-2-1400.webp 1400w" sizes="100vw" width="1400" height="1050" loading="lazy" decoding="async" alt="Habitación con dos camas de dos plazas, velador y lámpara" data-es-alt="Habitación con dos camas de dos plazas, velador y lámpara" data-en-alt="Room with two double beds, nightstand and lamp"></div>
       <div class="wrap expand-cap">
         <span class="num" data-es="02 · Para dos o para grupos" data-en="02 · For two or for groups">02 · Para dos o para grupos</span>
         <h2 data-es-html="Espacio para <em>viajar juntos</em>" data-en-html="Room to <em>travel together</em>">Espacio para <em>viajar juntos</em></h2>
@@ -577,7 +646,7 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
       </div>
     </section>
     <section class="expand">
-      <div class="expand-media"><img src="fotos/bano-1-1400.webp" srcset="fotos/bano-1-700.webp 700w, fotos/bano-1-1400.webp 1400w" sizes="100vw" width="1400" height="1050" loading="lazy" decoding="async" alt="Baño compartido con lavamanos, espejo y repisa" data-es-alt="Baño compartido con lavamanos, espejo y repisa" data-en-alt="Shared bathroom with sink, mirror and shelf"></div>
+      <div class="expand-media"><img src="/fotos/bano-1-1400.webp" srcset="/fotos/bano-1-700.webp 700w, /fotos/bano-1-1400.webp 1400w" sizes="100vw" width="1400" height="1050" loading="lazy" decoding="async" alt="Baño compartido con lavamanos, espejo y repisa" data-es-alt="Baño compartido con lavamanos, espejo y repisa" data-en-alt="Shared bathroom with sink, mirror and shelf"></div>
       <div class="wrap expand-cap">
         <span class="num" data-es="03 · Baño compartido" data-en="03 · Shared bathroom">03 · Baño compartido</span>
         <h2 data-es-html="Agua caliente <em>las 24 horas</em>" data-en-html="Hot water <em>24 hours a day</em>">Agua caliente <em>las 24 horas</em></h2>
@@ -604,53 +673,58 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
       </div>
 
       <div class="grid" id="grid">
-        <button type="button" class="tile big rv" data-cat="hab" data-full="fotos/hab-wiphala-1-1400.webp">
-          <img src="fotos/hab-wiphala-1-700.webp" srcset="fotos/hab-wiphala-1-700.webp 700w, fotos/hab-wiphala-1-1400.webp 1400w" sizes="(max-width:520px) 100vw, 50vw" width="700" height="525" loading="lazy" decoding="async" alt="">
+        <button type="button" class="tile big rv" data-cat="hab" data-full="/fotos/hab-wiphala-1-1400.webp">
+          <img src="/fotos/hab-wiphala-1-700.webp" srcset="/fotos/hab-wiphala-1-700.webp 700w, /fotos/hab-wiphala-1-1400.webp 1400w" sizes="(max-width:520px) 100vw, 50vw" width="700" height="525" loading="lazy" decoding="async" alt="">
           <span class="chip" data-es="Habitación" data-en="Room">Habitación</span>
           <span class="cap" data-es="Cama de dos plazas y cama de una plaza, con la wiphala en la pared" data-en="Double bed and single bed, with the wiphala flag on the wall">Cama de dos plazas y cama de una plaza, con la wiphala en la pared</span>
         </button>
-        <button type="button" class="tile rv" data-cat="hab" data-full="fotos/hab-wiphala-2-1400.webp">
-          <img src="fotos/hab-wiphala-2-700.webp" width="700" height="525" loading="lazy" decoding="async" alt="">
+        <button type="button" class="tile rv" data-cat="hab" data-full="/fotos/hab-wiphala-2-1400.webp">
+          <img src="/fotos/hab-wiphala-2-700.webp" width="700" height="525" loading="lazy" decoding="async" alt="">
           <span class="chip" data-es="Habitación" data-en="Room">Habitación</span>
           <span class="cap" data-es="La misma habitación, con sofá, televisor y toallas" data-en="Same room, with sofa, TV and towels">La misma habitación, con sofá, televisor y toallas</span>
         </button>
-        <button type="button" class="tile rv" data-cat="bano" data-full="fotos/bano-1-1400.webp">
-          <img src="fotos/bano-1-700.webp" width="700" height="525" loading="lazy" decoding="async" alt="">
+        <button type="button" class="tile rv" data-cat="hab" data-full="/fotos/hab-individual-1400.webp">
+          <img src="/fotos/hab-individual-700.webp" width="700" height="523" loading="lazy" decoding="async" alt="">
+          <span class="chip" data-es="Individual" data-en="Single">Individual</span>
+          <span class="cap" data-es="Habitación individual con cama de una plaza, velador y lámpara" data-en="Single room with a single bed, nightstand and lamp">Habitación individual con cama de una plaza, velador y lámpara</span>
+        </button>
+        <button type="button" class="tile rv" data-cat="bano" data-full="/fotos/bano-1-1400.webp">
+          <img src="/fotos/bano-1-700.webp" width="700" height="525" loading="lazy" decoding="async" alt="">
           <span class="chip" data-es="Baño" data-en="Bathroom">Baño</span>
           <span class="cap" data-es="Baño compartido con lavamanos, espejo y repisa" data-en="Shared bathroom with sink, mirror and shelf">Baño compartido con lavamanos, espejo y repisa</span>
         </button>
-        <button type="button" class="tile wide rv" data-cat="hab" data-full="fotos/hab-roja-2-1400.webp">
-          <img src="fotos/hab-roja-2-700.webp" srcset="fotos/hab-roja-2-700.webp 700w, fotos/hab-roja-2-1400.webp 1400w" sizes="(max-width:520px) 100vw, 50vw" width="700" height="525" loading="lazy" decoding="async" alt="">
-          <span class="chip" data-es="Habitación" data-en="Room">Habitación</span>
-          <span class="cap" data-es="Dos camas de dos plazas con velador y lámpara" data-en="Two double beds with nightstand and lamp">Dos camas de dos plazas con velador y lámpara</span>
-        </button>
-        <button type="button" class="tile rv" data-cat="hab" data-full="fotos/hab-roja-1-1400.webp">
-          <img src="fotos/hab-roja-1-700.webp" width="700" height="525" loading="lazy" decoding="async" alt="">
+        <button type="button" class="tile rv" data-cat="hab" data-full="/fotos/hab-roja-1-1400.webp">
+          <img src="/fotos/hab-roja-1-700.webp" width="700" height="525" loading="lazy" decoding="async" alt="">
           <span class="chip" data-es="Habitación" data-en="Room">Habitación</span>
           <span class="cap" data-es="Vista lateral, con escritorio y silla" data-en="Side view, with desk and chair">Vista lateral, con escritorio y silla</span>
         </button>
-        <button type="button" class="tile rv" data-cat="hab" data-full="fotos/hab-azul-2-1400.webp">
-          <img src="fotos/hab-azul-2-700.webp" width="700" height="525" loading="lazy" decoding="async" alt="">
+        <button type="button" class="tile wide rv" data-cat="hab" data-full="/fotos/hab-roja-2-1400.webp">
+          <img src="/fotos/hab-roja-2-700.webp" srcset="/fotos/hab-roja-2-700.webp 700w, /fotos/hab-roja-2-1400.webp 1400w" sizes="(max-width:520px) 100vw, 50vw" width="700" height="525" loading="lazy" decoding="async" alt="">
+          <span class="chip" data-es="Habitación" data-en="Room">Habitación</span>
+          <span class="cap" data-es="Dos camas de dos plazas con velador y lámpara" data-en="Two double beds with nightstand and lamp">Dos camas de dos plazas con velador y lámpara</span>
+        </button>
+        <button type="button" class="tile rv" data-cat="hab" data-full="/fotos/hab-azul-2-1400.webp">
+          <img src="/fotos/hab-azul-2-700.webp" width="700" height="525" loading="lazy" decoding="async" alt="">
           <span class="chip" data-es="Habitación" data-en="Room">Habitación</span>
           <span class="cap" data-es="Habitación amplia con dos camas de dos plazas" data-en="Spacious room with two double beds">Habitación amplia con dos camas de dos plazas</span>
         </button>
-        <button type="button" class="tile wide rv" data-cat="cocina" data-full="fotos/cocina-1400.webp">
-          <img src="fotos/cocina-700.webp" srcset="fotos/cocina-700.webp 700w, fotos/cocina-1400.webp 1400w" sizes="(max-width:520px) 100vw, 50vw" width="700" height="446" loading="lazy" decoding="async" alt="">
-          <span class="chip" data-es="Cocina" data-en="Kitchen">Cocina</span>
-          <span class="cap" data-es="Cocina compartida con mesón, utensilios y mesas" data-en="Shared kitchen with counter, utensils and tables">Cocina compartida con mesón, utensilios y mesas</span>
-        </button>
-        <button type="button" class="tile rv" data-cat="hab" data-full="fotos/hab-azul-1-1400.webp">
-          <img src="fotos/hab-azul-1-700.webp" width="700" height="525" loading="lazy" decoding="async" alt="">
+        <button type="button" class="tile rv" data-cat="hab" data-full="/fotos/hab-azul-1-1400.webp">
+          <img src="/fotos/hab-azul-1-700.webp" width="700" height="525" loading="lazy" decoding="async" alt="">
           <span class="chip" data-es="Habitación" data-en="Room">Habitación</span>
           <span class="cap" data-es="La misma habitación, con sofá para descansar" data-en="Same room, with a sofa to relax">La misma habitación, con sofá para descansar</span>
         </button>
-        <button type="button" class="tile rv" data-cat="fachada" data-full="fotos/fachada-900.webp">
-          <img src="fotos/fachada-600.webp" width="600" height="800" loading="lazy" decoding="async" alt="">
+        <button type="button" class="tile wide rv" data-cat="cocina" data-full="/fotos/cocina-1400.webp">
+          <img src="/fotos/cocina-700.webp" srcset="/fotos/cocina-700.webp 700w, /fotos/cocina-1400.webp 1400w" sizes="(max-width:520px) 100vw, 50vw" width="700" height="446" loading="lazy" decoding="async" alt="">
+          <span class="chip" data-es="Cocina" data-en="Kitchen">Cocina</span>
+          <span class="cap" data-es="Cocina compartida con mesón, utensilios y mesas" data-en="Shared kitchen with counter, utensils and tables">Cocina compartida con mesón, utensilios y mesas</span>
+        </button>
+        <button type="button" class="tile rv" data-cat="fachada" data-full="/fotos/fachada-900.webp">
+          <img src="/fotos/fachada-600.webp" width="600" height="800" loading="lazy" decoding="async" alt="">
           <span class="chip" data-es="Fachada" data-en="Front">Fachada</span>
           <span class="cap" data-es="La entrada, con el letrero Posada Rossy en la vereda" data-en="The entrance, with the Posada Rossy sign on the sidewalk">La entrada, con el letrero Posada Rossy en la vereda</span>
         </button>
-        <button type="button" class="tile rv" data-cat="bano" data-full="fotos/bano-2-1400.webp">
-          <img src="fotos/bano-2-700.webp" width="700" height="525" loading="lazy" decoding="async" alt="">
+        <button type="button" class="tile rv" data-cat="bano" data-full="/fotos/bano-2-1400.webp">
+          <img src="/fotos/bano-2-700.webp" width="700" height="525" loading="lazy" decoding="async" alt="">
           <span class="chip" data-es="Baño" data-en="Bathroom">Baño</span>
           <span class="cap" data-es="Baño compartido y calefón a gas para el agua caliente" data-en="Shared bathroom and gas water heater for hot water">Baño compartido y calefón a gas para el agua caliente</span>
         </button>
@@ -662,7 +736,7 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
   <section class="evening">
     <div class="evening-grid">
       <figure>
-        <img src="fotos/salar-atardecer-1000.webp" srcset="fotos/salar-atardecer-1000.webp 1000w, fotos/salar-atardecer-2000.webp 2000w" sizes="(max-width:880px) 100vw, 50vw" width="1000" height="667" loading="lazy" decoding="async" alt="Viajera sentada sobre la sal del Salar mirando la puesta de sol" data-es-alt="Viajera sentada sobre la sal del Salar mirando la puesta de sol" data-en-alt="Traveller sitting on the salt crust watching the sunset">
+        <img src="/fotos/salar-atardecer-1000.webp" srcset="/fotos/salar-atardecer-1000.webp 1000w, /fotos/salar-atardecer-2000.webp 2000w" sizes="(max-width:880px) 100vw, 50vw" width="1000" height="667" loading="lazy" decoding="async" alt="Viajera sentada sobre la sal del Salar mirando la puesta de sol" data-es-alt="Viajera sentada sobre la sal del Salar mirando la puesta de sol" data-en-alt="Traveller sitting on the salt crust watching the sunset">
       </figure>
       <div class="evening-text">
         <p class="kicker" data-es="Tu tarde en Uyuni" data-en="Your evening in Uyuni">Tu tarde en Uyuni</p>
@@ -718,7 +792,7 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
           <footer><b>Maksim</b> · Airbnb · <span data-es="septiembre 2026" data-en="September 2026">septiembre 2026</span></footer>
         </article>
         <article class="rev rv">
-          <div class="score" role="img" aria-label="9,0 de 10 en Booking"><b>9,0</b><span data-es="/ 10 en Booking" data-en="/ 10 on Booking">/ 10 en Booking</span></div>
+          <div class="score" role="img" aria-label="9,0 de 10 en Booking" data-es-aria="9,0 de 10 en Booking" data-en-aria="9.0 out of 10 on Booking"><b data-es="9,0" data-en="9.0">9,0</b><span data-es="/ 10 en Booking" data-en="/ 10 on Booking">/ 10 en Booking</span></div>
           <blockquote data-es="“Me alojé allí durante 3 noches. Y como persona que prefiere una habitación privada, este lugar era perfecto para mí.”" data-en="“I stayed there for 3 nights. As someone who prefers a private room, this place was perfect for me.”">“Me alojé allí durante 3 noches. Y como persona que prefiere una habitación privada, este lugar era perfecto para mí.”</blockquote>
           <p class="hl" data-es="Le gustó: buen precio para una habitación privada · ambiente tranquilo" data-en="Liked: good price for a private room · quiet atmosphere">Le gustó: buen precio para una habitación privada · ambiente tranquilo</p>
           <footer><b>Kotaro</b> · Booking · <span data-es="marzo 2026 · traducido del inglés" data-en="March 2026">marzo 2026 · traducido del inglés</span></footer>
@@ -735,7 +809,7 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
           <footer><b>Cléo</b> · Airbnb · <span data-es="julio 2026 · traducido del francés" data-en="July 2026 · translated from French">julio 2026 · traducido del francés</span></footer>
         </article>
         <article class="rev rv">
-          <div class="score" role="img" aria-label="9,0 de 10 en Booking"><b>9,0</b><span data-es="/ 10 en Booking" data-en="/ 10 on Booking">/ 10 en Booking</span></div>
+          <div class="score" role="img" aria-label="9,0 de 10 en Booking" data-es-aria="9,0 de 10 en Booking" data-en-aria="9.0 out of 10 on Booking"><b data-es="9,0" data-en="9.0">9,0</b><span data-es="/ 10 en Booking" data-en="/ 10 on Booking">/ 10 en Booking</span></div>
           <blockquote data-es="“Muy buen personal, muy amable.”" data-en="“Very good staff, very kind.”">“Muy buen personal, muy amable.”</blockquote>
           <footer><b>Léo</b> · Booking · <span data-es="marzo 2026 · traducido del francés" data-en="March 2026 · translated from French">marzo 2026 · traducido del francés</span></footer>
         </article>
@@ -753,7 +827,7 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
   </section>
 
   <section class="band" aria-labelledby="primera-vez">
-    <div class="bg" id="parallax"><img src="fotos/incahuasi-2000.webp" srcset="fotos/incahuasi-1000.webp 1000w, fotos/incahuasi-2000.webp 2000w" sizes="100vw" width="2000" height="1125" loading="lazy" decoding="async" alt="Cactus gigantes de la Isla Incahuasi con el Salar de Uyuni al fondo" data-es-alt="Cactus gigantes de la Isla Incahuasi con el Salar de Uyuni al fondo" data-en-alt="Giant cacti on Incahuasi Island with the Uyuni Salt Flats behind"></div>
+    <div class="bg" id="parallax"><img src="/fotos/incahuasi-2000.webp" srcset="/fotos/incahuasi-1000.webp 1000w, /fotos/incahuasi-2000.webp 2000w" sizes="100vw" width="2000" height="1125" loading="lazy" decoding="async" alt="Cactus gigantes de la Isla Incahuasi con el Salar de Uyuni al fondo" data-es-alt="Cactus gigantes de la Isla Incahuasi con el Salar de Uyuni al fondo" data-en-alt="Giant cacti on Incahuasi Island with the Uyuni Salt Flats behind"></div>
     <div class="wrap">
       <div class="band-text">
         <p class="kicker" data-es="Isla Incahuasi · Salar de Uyuni" data-en="Incahuasi Island · Uyuni Salt Flats">Isla Incahuasi · Salar de Uyuni</p>
@@ -773,36 +847,81 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
       </div>
       <div class="tour-grid">
         <article class="tour rv">
+          <figure class="tour-ph"><img src="/tours/img/fullday.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Tres viajeros saltando sobre la sal del Salar de Uyuni" data-es-alt="Tres viajeros saltando sobre la sal del Salar de Uyuni" data-en-alt="Three travellers jumping on the salt of the Uyuni Salt Flats"></figure>
           <p class="when" data-es="Salida 10:30" data-en="Departs 10:30">Salida 10:30</p>
           <h3 data-es="Full Day" data-en="Full Day">Full Day</h3>
           <ul><li><span data-es="Sin isla" data-en="Without island">Sin isla</span><b>350 Bs</b></li><li><span data-es="Con Isla Incahuasi" data-en="With Incahuasi Island">Con Isla Incahuasi</span><b>400 Bs</b></li><li><span data-es="Con guía en inglés" data-en="With English guide">Con guía en inglés</span><b>650 Bs</b></li></ul>
-          <details class="inc"><summary data-es="Qué incluye" data-en="What's included">Qué incluye</summary><p class="route" data-es="Cementerio de Trenes, Colchani, Monumento al Dakar, Museo de Sal, Isla Incahuasi (opcional) y atardecer en el Salar." data-en="Train Cemetery, Colchani, Dakar Monument, Salt Museum, Incahuasi Island (optional) and sunset on the Salt Flats.">Cementerio de Trenes, Colchani, Monumento al Dakar, Museo de Sal, Isla Incahuasi (opcional) y atardecer en el Salar.</p><ul><li class="y" data-es="Transporte en 4x4" data-en="4x4 transport">Transporte en 4x4</li><li class="y" data-es="Chofer que habla español" data-en="Spanish-speaking driver">Chofer que habla español</li><li class="y" data-es="Almuerzo" data-en="Lunch">Almuerzo</li><li class="y" data-es="Botas de goma en época de lluvia" data-en="Rubber boots in the rainy season">Botas de goma en época de lluvia</li><li class="n" data-es="Entrada a la Isla Incahuasi (30 Bs)" data-en="Incahuasi Island entry (30 Bs)">Entrada a la Isla Incahuasi (30 Bs)</li><li class="n" data-es="Agua y bebidas" data-en="Water and drinks">Agua y bebidas</li></ul></details>
+          <details class="inc"><summary data-es="Qué incluye" data-en="What's included">Qué incluye</summary><p class="route" data-es="Cementerio de Trenes, Colchani, Monumento al Dakar, Museo de Sal, Isla Incahuasi (opcional) y atardecer en el Salar." data-en="Train Cemetery, Colchani, Dakar Monument, Salt Museum, Incahuasi Island (optional) and sunset on the Salt Flats.">Cementerio de Trenes, Colchani, Monumento al Dakar, Museo de Sal, Isla Incahuasi (opcional) y atardecer en el Salar.</p><ul><li class="y" data-es="Transporte en 4x4" data-en="4x4 transport">Transporte en 4x4</li><li class="y" data-es="Chofer que habla español" data-en="Spanish-speaking driver">Chofer que habla español</li><li class="y" data-es="Almuerzo" data-en="Lunch">Almuerzo</li><li class="y" data-es="Botas de goma en época de lluvia" data-en="Rubber boots in the rainy season">Botas de goma en época de lluvia</li></ul><p class="inc-no" data-es="No incluye" data-en="Not included">No incluye</p><ul><li class="n" data-es="Entrada a la Isla Incahuasi (30 Bs)" data-en="Incahuasi Island entry (30 Bs)">Entrada a la Isla Incahuasi (30 Bs)</li><li class="n" data-es="Agua y bebidas" data-en="Water and drinks">Agua y bebidas</li></ul></details>
           <a class="link-wa wa" data-msg="t_full" href="https://wa.me/59174256578" target="_blank" rel="noopener" data-es="Reservar este tour →" data-en="Book this tour →">Reservar este tour →</a>
         </article>
         <article class="tour rv">
+          <figure class="tour-ph"><img src="/tours/img/tres-dias.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Laguna de color turquesa con un volcán nevado al fondo" data-es-alt="Laguna de color turquesa con un volcán nevado al fondo" data-en-alt="Turquoise lagoon with a snow-capped volcano behind"></figure>
           <p class="when" data-es="3 días · salida 10:30" data-en="3 days · departs 10:30">3 días · salida 10:30</p>
           <h3 data-es="Salar y lagunas" data-en="Salt Flats and lagoons">Salar y lagunas</h3>
           <ul><li><span data-es="Con chofer en español" data-en="Spanish-speaking driver">Con chofer en español</span><b>2.000 Bs</b></li><li><span data-es="Con guía en inglés" data-en="With English guide">Con guía en inglés</span><b>2.400 Bs</b></li></ul>
-          <details class="inc"><summary data-es="Qué incluye" data-en="What's included">Qué incluye</summary><p class="route" data-es="Día 1: Salar e Isla Incahuasi. Día 2: lagunas altiplánicas, Árbol de Piedra y Laguna Colorada. Día 3: géiseres, aguas termales, Laguna Verde y regreso a Uyuni." data-en="Day 1: Salt Flats and Incahuasi Island. Day 2: high-altitude lagoons, Stone Tree and Laguna Colorada. Day 3: geysers, hot springs, Laguna Verde and return to Uyuni.">Día 1: Salar e Isla Incahuasi. Día 2: lagunas altiplánicas, Árbol de Piedra y Laguna Colorada. Día 3: géiseres, aguas termales, Laguna Verde y regreso a Uyuni.</p><ul><li class="y" data-es="Transporte en 4x4 (hasta 6 personas)" data-en="4x4 transport (up to 6 people)">Transporte en 4x4 (hasta 6 personas)</li><li class="y" data-es="Chofer que habla español" data-en="Spanish-speaking driver">Chofer que habla español</li><li class="y" data-es="Desayuno, almuerzo y cena" data-en="Breakfast, lunch and dinner">Desayuno, almuerzo y cena</li><li class="y" data-es="2 noches en alojamiento básico" data-en="2 nights in basic lodging">2 noches en alojamiento básico</li><li class="n" data-es="Entradas a parques (unos 210 Bs)" data-en="Park entries (about 210 Bs)">Entradas a parques (unos 210 Bs)</li><li class="n" data-es="Saco de dormir y baños en ruta" data-en="Sleeping bag and roadside toilets">Saco de dormir y baños en ruta</li></ul></details>
+          <details class="inc"><summary data-es="Qué incluye" data-en="What's included">Qué incluye</summary><p class="route" data-es="Día 1: Salar e Isla Incahuasi. Día 2: lagunas altiplánicas, Árbol de Piedra y Laguna Colorada. Día 3: géiseres, aguas termales, Laguna Verde y regreso a Uyuni." data-en="Day 1: Salt Flats and Incahuasi Island. Day 2: high-altitude lagoons, Stone Tree and Laguna Colorada. Day 3: geysers, hot springs, Laguna Verde and return to Uyuni.">Día 1: Salar e Isla Incahuasi. Día 2: lagunas altiplánicas, Árbol de Piedra y Laguna Colorada. Día 3: géiseres, aguas termales, Laguna Verde y regreso a Uyuni.</p><ul><li class="y" data-es="Transporte en 4x4 (hasta 6 personas)" data-en="4x4 transport (up to 6 people)">Transporte en 4x4 (hasta 6 personas)</li><li class="y" data-es="Chofer que habla español" data-en="Spanish-speaking driver">Chofer que habla español</li><li class="y" data-es="Desayuno, almuerzo y cena" data-en="Breakfast, lunch and dinner">Desayuno, almuerzo y cena</li><li class="y" data-es="2 noches en alojamiento básico" data-en="2 nights in basic lodging">2 noches en alojamiento básico</li></ul><p class="inc-no" data-es="No incluye" data-en="Not included">No incluye</p><ul><li class="n" data-es="Entradas a parques (unos 210 Bs)" data-en="Park entries (about 210 Bs)">Entradas a parques (unos 210 Bs)</li><li class="n" data-es="Saco de dormir y baños en ruta" data-en="Sleeping bag and roadside toilets">Saco de dormir y baños en ruta</li></ul></details>
           <a class="link-wa wa" data-msg="t_3d" href="https://wa.me/59174256578" target="_blank" rel="noopener" data-es="Reservar este tour →" data-en="Book this tour →">Reservar este tour →</a>
         </article>
         <article class="tour rv">
+          <figure class="tour-ph"><img src="/tours/img/atardecer.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Camioneta 4x4 sobre el Salar inundado al atardecer" data-es-alt="Camioneta 4x4 sobre el Salar inundado al atardecer" data-en-alt="4x4 on the flooded Salt Flats at sunset"></figure>
           <p class="when" data-es="16:30 – 20:00" data-en="16:30 – 20:00">16:30 – 20:00</p>
           <h3 data-es="Atardecer con estrellas" data-en="Sunset and stars">Atardecer con estrellas</h3>
           <ul><li><span data-es="Por persona" data-en="Per person">Por persona</span><b>450 Bs</b></li></ul>
-          <details class="inc"><summary data-es="Qué incluye" data-en="What's included">Qué incluye</summary><p class="route" data-es="Salida al Salar para ver la puesta de sol y, al oscurecer, el cielo lleno de estrellas." data-en="Trip to the Salt Flats to watch the sunset and, after dark, the starry sky.">Salida al Salar para ver la puesta de sol y, al oscurecer, el cielo lleno de estrellas.</p><ul><li class="y" data-es="Transporte en 4x4" data-en="4x4 transport">Transporte en 4x4</li><li class="y" data-es="Chofer que habla español" data-en="Spanish-speaking driver">Chofer que habla español</li><li class="y" data-es="Botas de goma en época de lluvia" data-en="Rubber boots in the rainy season">Botas de goma en época de lluvia</li><li class="n" data-es="Ropa abrigada (lleva la tuya: hace mucho frío)" data-en="Warm clothing (bring yours: it gets very cold)">Ropa abrigada (lleva la tuya: hace mucho frío)</li></ul></details>
+          <details class="inc"><summary data-es="Qué incluye" data-en="What's included">Qué incluye</summary><p class="route" data-es="Salida al Salar para ver la puesta de sol y, al oscurecer, el cielo lleno de estrellas." data-en="Trip to the Salt Flats to watch the sunset and, after dark, the starry sky.">Salida al Salar para ver la puesta de sol y, al oscurecer, el cielo lleno de estrellas.</p><ul><li class="y" data-es="Transporte en 4x4" data-en="4x4 transport">Transporte en 4x4</li><li class="y" data-es="Chofer que habla español" data-en="Spanish-speaking driver">Chofer que habla español</li><li class="y" data-es="Botas de goma en época de lluvia" data-en="Rubber boots in the rainy season">Botas de goma en época de lluvia</li></ul><p class="inc-no" data-es="No incluye" data-en="Not included">No incluye</p><ul><li class="n" data-es="Ropa abrigada (lleva la tuya: hace mucho frío)" data-en="Warm clothing (bring yours: it gets very cold)">Ropa abrigada (lleva la tuya: hace mucho frío)</li></ul></details>
           <a class="link-wa wa" data-msg="t_sunset" href="https://wa.me/59174256578" target="_blank" rel="noopener" data-es="Reservar este tour →" data-en="Book this tour →">Reservar este tour →</a>
         </article>
         <article class="tour rv">
+          <figure class="tour-ph"><img src="/tours/img/estrellas.webp" width="900" height="1200" loading="lazy" decoding="async" alt="Viajero con espirales de luz de colores, de noche en el Salar" data-es-alt="Viajero con espirales de luz de colores, de noche en el Salar" data-en-alt="Traveller with colourful light spirals, at night on the Salt Flats"></figure>
           <p class="when" data-es="3:30 – 7:00" data-en="3:30 – 7:00">3:30 – 7:00</p>
           <h3 data-es="Estrellas y amanecer" data-en="Stars and sunrise">Estrellas y amanecer</h3>
           <ul><li><span data-es="Por persona" data-en="Per person">Por persona</span><b>450 Bs</b></li></ul>
-          <details class="inc"><summary data-es="Qué incluye" data-en="What's included">Qué incluye</summary><p class="route" data-es="Salida de madrugada para ver las estrellas y luego el amanecer sobre el Salar." data-en="Pre-dawn trip to see the stars and then sunrise over the Salt Flats.">Salida de madrugada para ver las estrellas y luego el amanecer sobre el Salar.</p><ul><li class="y" data-es="Transporte en 4x4" data-en="4x4 transport">Transporte en 4x4</li><li class="y" data-es="Chofer que habla español" data-en="Spanish-speaking driver">Chofer que habla español</li><li class="y" data-es="Botas de goma en época de lluvia" data-en="Rubber boots in the rainy season">Botas de goma en época de lluvia</li><li class="n" data-es="Ropa abrigada (lleva la tuya: hace mucho frío)" data-en="Warm clothing (bring yours: it gets very cold)">Ropa abrigada (lleva la tuya: hace mucho frío)</li></ul></details>
+          <details class="inc"><summary data-es="Qué incluye" data-en="What's included">Qué incluye</summary><p class="route" data-es="Salida de madrugada para ver las estrellas y luego el amanecer sobre el Salar." data-en="Pre-dawn trip to see the stars and then sunrise over the Salt Flats.">Salida de madrugada para ver las estrellas y luego el amanecer sobre el Salar.</p><ul><li class="y" data-es="Transporte en 4x4" data-en="4x4 transport">Transporte en 4x4</li><li class="y" data-es="Chofer que habla español" data-en="Spanish-speaking driver">Chofer que habla español</li><li class="y" data-es="Botas de goma en época de lluvia" data-en="Rubber boots in the rainy season">Botas de goma en época de lluvia</li></ul><p class="inc-no" data-es="No incluye" data-en="Not included">No incluye</p><ul><li class="n" data-es="Ropa abrigada (lleva la tuya: hace mucho frío)" data-en="Warm clothing (bring yours: it gets very cold)">Ropa abrigada (lleva la tuya: hace mucho frío)</li></ul></details>
           <a class="link-wa wa" data-msg="t_sunrise" href="https://wa.me/59174256578" target="_blank" rel="noopener" data-es="Reservar este tour →" data-en="Book this tour →">Reservar este tour →</a>
         </article>
       </div>
       <p class="tour-note" data-es="Tours operados por Charito Cielo Tours, operadora de turismo receptivo de Uyuni. Compartidos o privados. Entre enero y abril, por las lluvias, el recorrido puede cambiar. Pregúntanos el precio para grupos." data-en="Tours operated by Charito Cielo Tours, an inbound tour operator in Uyuni. Shared or private. From January to April, because of the rains, the route may change. Ask us for group prices.">Tours operados por Charito Cielo Tours, operadora de turismo receptivo de Uyuni. Compartidos o privados. Entre enero y abril, por las lluvias, el recorrido puede cambiar. Pregúntanos el precio para grupos.</p>
-      <p style="text-align:center;margin-top:28px"><a class="btn btn-navy" href="/tours/" data-es="Ver fotos, detalles y precios en dólares →" data-en="See photos, details and US$ prices →">Ver fotos, detalles y precios en dólares →</a></p>
+      <div class="reel rv">
+        <div class="phone" id="phone">
+          <video id="reel-v" playsinline preload="none" poster="/video/tours-salar-30s.webp" aria-label="Video de 30 segundos de los tours al Salar de Uyuni" data-es-aria="Video de 30 segundos de los tours al Salar de Uyuni" data-en-aria="30-second video of the Uyuni Salt Flats tours"><source src="/video/tours-salar-30s.mp4" type="video/mp4"></video>
+          <button type="button" class="play" id="reel-play" aria-label="Reproducir el video" data-es-aria="Reproducir el video" data-en-aria="Play the video"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 4.5v15l13-7.5Z"/></svg></span></button>
+        </div>
+        <div class="reel-text">
+          <p class="kicker" data-es="Video · 30 segundos" data-en="Video · 30 seconds">Video · 30 segundos</p>
+          <h3 data-es-html="Mira el Salar <em>antes de venir</em>" data-en-html="See the Salt Flats <em>before you come</em>">Mira el Salar <em>antes de venir</em></h3>
+          <p data-es="El efecto espejo, los atardeceres y las fotos de perspectiva, en medio minuto. El video tiene sonido y está en español." data-en="The mirror effect, the sunsets and the perspective photos, in half a minute. The video has sound and is in Spanish.">El efecto espejo, los atardeceres y las fotos de perspectiva, en medio minuto. El video tiene sonido y está en español.</p>
+          <a class="btn btn-gold wa" data-msg="tour" href="https://wa.me/59174256578" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-es="Preguntar por los tours" data-en="Ask about the tours">Preguntar por los tours</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mq">
+      <div class="wrap"><h3 class="mq-title" data-es="Fotos de perspectiva, de luces y de las lagunas" data-en="Perspective, light-painting and lagoon photos">Fotos de perspectiva, de luces y de las lagunas</h3></div>
+      <div class="mq-view">
+        <div class="mq-track">
+          <img src="/tours/img/persp-dinos.webp" width="1000" height="750" loading="lazy" decoding="async" alt="Viajeros posando entre dos dinosaurios de juguete en el Salar" data-es-alt="Viajeros posando entre dos dinosaurios de juguete en el Salar" data-en-alt="Travellers posing between two toy dinosaurs on the Salt Flats">
+          <img src="/tours/img/luz-corazon.webp" width="800" height="1067" loading="lazy" decoding="async" alt="Pareja dentro de un corazón dibujado con luz, de noche en el Salar" data-es-alt="Pareja dentro de un corazón dibujado con luz, de noche en el Salar" data-en-alt="Couple inside a heart drawn with light, at night on the Salt Flats">
+          <img src="/tours/img/persp-saltos.webp" width="1000" height="562" loading="lazy" decoding="async" alt="Grupo saltando sobre la sal blanca" data-es-alt="Grupo saltando sobre la sal blanca" data-en-alt="Group jumping on the white salt">
+          <img src="/tours/img/luz-grupo.webp" width="800" height="1067" loading="lazy" decoding="async" alt="Grupo de viajeros con espirales de luz de colores bajo las estrellas" data-es-alt="Grupo de viajeros con espirales de luz de colores bajo las estrellas" data-en-alt="Group of travellers with colourful light spirals under the stars">
+          <img src="/tours/img/persp-botellas.webp" width="1000" height="750" loading="lazy" decoding="async" alt="Foto de perspectiva con dos botellas gigantes" data-es-alt="Foto de perspectiva con dos botellas gigantes" data-en-alt="Perspective photo with two giant bottles">
+          <img src="/tours/img/g-colorada.webp" width="1000" height="667" loading="lazy" decoding="async" alt="Flamencos en la Laguna Colorada" data-es-alt="Flamencos en la Laguna Colorada" data-en-alt="Flamingos at Laguna Colorada">
+          <img src="/tours/img/luz-azul.webp" width="800" height="1067" loading="lazy" decoding="async" alt="Dibujo de luz azul reflejado en el agua del Salar" data-es-alt="Dibujo de luz azul reflejado en el agua del Salar" data-en-alt="Blue light painting reflected on the water of the Salt Flats">
+          <img src="/tours/img/persp-godzilla.webp" width="1000" height="750" loading="lazy" decoding="async" alt="Viajera frente a un dinosaurio de juguete en foto de perspectiva" data-es-alt="Viajera frente a un dinosaurio de juguete en foto de perspectiva" data-en-alt="Traveller facing a toy dinosaur in a perspective photo">
+          <img src="/tours/img/g-incahuasi.webp" width="1000" height="667" loading="lazy" decoding="async" alt="Cactus de la Isla Incahuasi con el Salar al fondo" data-es-alt="Cactus de la Isla Incahuasi con el Salar al fondo" data-en-alt="Cacti on Incahuasi Island with the Salt Flats behind">
+          <img src="/tours/img/persp-dinos.webp" width="1000" height="750" loading="lazy" decoding="async" alt="" aria-hidden="true">
+          <img src="/tours/img/luz-corazon.webp" width="800" height="1067" loading="lazy" decoding="async" alt="" aria-hidden="true">
+          <img src="/tours/img/persp-saltos.webp" width="1000" height="562" loading="lazy" decoding="async" alt="" aria-hidden="true">
+          <img src="/tours/img/luz-grupo.webp" width="800" height="1067" loading="lazy" decoding="async" alt="" aria-hidden="true">
+          <img src="/tours/img/persp-botellas.webp" width="1000" height="750" loading="lazy" decoding="async" alt="" aria-hidden="true">
+          <img src="/tours/img/g-colorada.webp" width="1000" height="667" loading="lazy" decoding="async" alt="" aria-hidden="true">
+          <img src="/tours/img/luz-azul.webp" width="800" height="1067" loading="lazy" decoding="async" alt="" aria-hidden="true">
+          <img src="/tours/img/persp-godzilla.webp" width="1000" height="750" loading="lazy" decoding="async" alt="" aria-hidden="true">
+          <img src="/tours/img/g-incahuasi.webp" width="1000" height="667" loading="lazy" decoding="async" alt="" aria-hidden="true">
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <p style="text-align:center;margin-top:40px"><a class="btn btn-navy" href="/tours/" data-es="Ver fotos, detalles y precios en dólares →" data-en="See photos, details and US$ prices →">Ver fotos, detalles y precios en dólares →</a></p>
     </div>
   </section>
 
@@ -819,7 +938,7 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
       </div>
       <div class="loc-media rv">
         <figure class="facade">
-          <img src="fotos/fachada-900.webp" srcset="fotos/fachada-600.webp 600w, fotos/fachada-900.webp 900w" sizes="(max-width:880px) 100vw, 520px" width="900" height="1200" loading="lazy" decoding="async" alt="Fachada de Posada Rossy: edificio de ladrillo con azulejos azules y letrero Posada Rossy en la vereda" data-es-alt="Fachada de Posada Rossy: edificio de ladrillo con azulejos azules y letrero Posada Rossy en la vereda" data-en-alt="Posada Rossy front: brick building with blue tiles and a Posada Rossy sign on the sidewalk">
+          <img src="/fotos/fachada-900.webp" srcset="/fotos/fachada-600.webp 600w, /fotos/fachada-900.webp 900w" sizes="(max-width:880px) 100vw, 520px" width="900" height="1200" loading="lazy" decoding="async" alt="Fachada de Posada Rossy: edificio de ladrillo con azulejos azules y letrero Posada Rossy en la vereda" data-es-alt="Fachada de Posada Rossy: edificio de ladrillo con azulejos azules y letrero Posada Rossy en la vereda" data-en-alt="Posada Rossy front: brick building with blue tiles and a Posada Rossy sign on the sidewalk">
           <figcaption data-es="Busca el edificio de ladrillo con azulejos azules y el letrero «Posada Rossy» en la vereda." data-en="Look for the brick building with blue tiles and the “Posada Rossy” sign on the sidewalk.">Busca el edificio de ladrillo con azulejos azules y el letrero «Posada Rossy» en la vereda.</figcaption>
         </figure>
       <figure class="mapcard">
@@ -866,6 +985,10 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
           <p data-es="Tenemos habitaciones con dos y tres camas. El precio depende de cuántos son y cuántas noches se quedan; consúltanos por WhatsApp." data-en="We have rooms with two and three beds. The price depends on how many of you there are and how many nights; ask us on WhatsApp.">Tenemos habitaciones con dos y tres camas. El precio depende de cuántos son y cuántas noches se quedan; consúltanos por WhatsApp.</p>
         </details>
         <details>
+          <summary data-es="¿El precio incluye desayuno?" data-en="Is breakfast included?">¿El precio incluye desayuno?</summary>
+          <p data-es="No. No servimos comidas, pero puedes usar la cocina compartida para preparar tu desayuno o tu cena." data-en="No. We don't serve meals, but you can use the shared kitchen to make your own breakfast or dinner.">No. No servimos comidas, pero puedes usar la cocina compartida para preparar tu desayuno o tu cena.</p>
+        </details>
+        <details>
           <summary data-es="¿Cómo reservo?" data-en="How do I book?">¿Cómo reservo?</summary>
           <p data-es="Escríbenos por WhatsApp con tu fecha de llegada, noches y número de personas. Te confirmamos disponibilidad y el precio final. También estamos en Booking, Airbnb, Agoda y Expedia." data-en="Message us on WhatsApp with your arrival date, nights and number of guests. We confirm availability and the final price. We're also on Booking, Airbnb, Agoda and Expedia.">Escríbenos por WhatsApp con tu fecha de llegada, noches y número de personas. Te confirmamos disponibilidad y el precio final. También estamos en Booking, Airbnb, Agoda y Expedia.</p>
         </details>
@@ -880,7 +1003,7 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
         <p data-es="Escríbenos tu fecha de llegada y cuántas personas son. Te confirmamos disponibilidad por WhatsApp." data-en="Send us your arrival date and how many people. We'll confirm availability on WhatsApp.">Escríbenos tu fecha de llegada y cuántas personas son. Te confirmamos disponibilidad por WhatsApp.</p>
         <a class="btn btn-gold wa" href="https://wa.me/59174256578" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-es="Escribir mi fecha de llegada" data-en="Send my arrival date">Escribir mi fecha de llegada</span></a>
       </div>
-      <img class="final-logo" src="fotos/logo-320.webp" width="320" height="320" loading="lazy" decoding="async" alt="Logo de Posada Rossy, hospedaje en Uyuni">
+      <img class="final-logo" src="/fotos/logo-320.webp" width="320" height="320" loading="lazy" decoding="async" alt="Logo de Posada Rossy, hospedaje en Uyuni">
     </div>
   </section>
 </main>
@@ -888,7 +1011,7 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
 <footer class="site">
   <div class="wrap foot">
     <div style="display:flex;align-items:center;gap:12px">
-      <img src="fotos/logo-96.webp" width="40" height="40" alt="" style="border-radius:50%">
+      <img src="/fotos/logo-96.webp" width="40" height="40" alt="" style="border-radius:50%">
       <div><b style="color:#fff">Posada Rossy</b><br><span data-es="Descansa, disfruta y vive Uyuni." data-en="Rest, enjoy and live Uyuni.">Descansa, disfruta y vive Uyuni.</span></div>
     </div>
     <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px">
@@ -961,21 +1084,14 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
       var k = a.getAttribute("data-room") || a.getAttribute("data-msg") || "base";
       a.href = wa(MSG[l][k]);
     });
-    document.getElementById("lang-es").setAttribute("aria-pressed", l==="es");
-    document.getElementById("lang-en").setAttribute("aria-pressed", l==="en");
-    document.querySelectorAll("[data-set-lang]").forEach(function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-set-lang")===l); });
-    badge(); estimate();
+    document.querySelectorAll("[data-"+l+"-aria]").forEach(function(el){ el.setAttribute("aria-label", el.getAttribute("data-"+l+"-aria")); });
+    document.querySelectorAll("#lang-es,#lang-en,[data-set-lang]").forEach(function(a){ a.setAttribute("aria-current", a.getAttribute("hreflang")===l); });
+    estimate();
     mbtn.setAttribute("aria-label", menu.classList.contains("open") ? (l==="en"?"Close menu":"Cerrar menú") : (l==="en"?"Open menu":"Abrir menú"));
     document.querySelector(".wa-float").setAttribute("aria-label", l==="en" ? "Message us on WhatsApp" : "Escribir por WhatsApp");
     document.querySelectorAll(".stars").forEach(function(x){ x.setAttribute("aria-label", l==="en" ? "5 out of 5 stars" : "5 de 5 estrellas"); });
     try{ localStorage.setItem("rossy-lang", l); }catch(e){}
   }
-  function badge(){
-    var s = document.querySelector(".badge span");
-    s.textContent = lang==="en" ? "per night · family guesthouse in Uyuni" : "por noche · hospedaje familiar en Uyuni";
-  }
-  document.getElementById("lang-es").onclick = function(){ setLang("es"); };
-  document.getElementById("lang-en").onclick = function(){ setLang("en"); };
 
   /* Reserva rápida */
   var d = document.getElementById("q-date"), n = document.getElementById("q-nights"), p = document.getElementById("q-people");
@@ -1012,7 +1128,6 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
   mbtn.addEventListener("click", function(){ setMenu(!menu.classList.contains("open")); });
   menu.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ setMenu(false); }); });
   document.addEventListener("keydown", function(e){ if (e.key==="Escape" && menu.classList.contains("open")){ setMenu(false); mbtn.focus(); } });
-  menu.querySelectorAll("[data-set-lang]").forEach(function(b){ b.addEventListener("click", function(){ setLang(b.getAttribute("data-set-lang")); }); });
 
   /* Header sólido al bajar */
   var header = document.getElementById("top");
@@ -1093,6 +1208,46 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
     });
   });
 
+  /* Cifras que cuentan al aparecer */
+  var cnts = [].slice.call(document.querySelectorAll(".cnt"));
+  function fmt(v, dec){ return dec ? v.toFixed(dec).replace(".", lang==="en" ? "." : ",") : String(Math.round(v)); }
+  function paint(el, v){ el.textContent = fmt(v, +el.getAttribute("data-dec")||0); }
+  function count(el){
+    var to = +el.getAttribute("data-to"), t0 = null, dur = 1300;
+    function step(ts){ if (t0===null) t0 = ts; var k = Math.min((ts-t0)/dur,1); paint(el, to*(1-Math.pow(1-k,3))); if (k<1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  if (!still && "IntersectionObserver" in window){
+    var cio = new IntersectionObserver(function(es){ es.forEach(function(en){ if (en.isIntersecting){ count(en.target); cio.unobserve(en.target); } }); }, {threshold:.6});
+    cnts.forEach(function(el){ cio.observe(el); });
+  }
+
+  /* Tarjetas de precio que se inclinan con el cursor (solo con ratón) */
+  if (!still && matchMedia("(hover:hover) and (pointer:fine)").matches){
+    document.querySelectorAll(".price").forEach(function(c){
+      c.addEventListener("pointermove", function(e){
+        var r = c.getBoundingClientRect(), x = (e.clientX-r.left)/r.width-.5, y = (e.clientY-r.top)/r.height-.5;
+        c.style.transform = "perspective(900px) rotateX("+(-y*5).toFixed(2)+"deg) rotateY("+(x*6).toFixed(2)+"deg) translateY(-6px)";
+      });
+      c.addEventListener("pointerleave", function(){ c.style.transform = ""; });
+    });
+  }
+
+  /* Video de los tours: se descarga solo al tocar reproducir */
+  var rv = document.getElementById("reel-v"), rp = document.getElementById("reel-play"), ph = document.getElementById("phone");
+  if (rv && rp){
+    rp.addEventListener("click", function(){
+      ph.classList.add("playing"); rv.controls = true;
+      var pr = rv.play(); if (pr && pr.catch) pr.catch(function(){});
+      rv.focus();
+      if (window.gtag) gtag("event","ver_video",{video:"tours_30s", idioma:lang});
+    });
+    rv.addEventListener("ended", function(){ ph.classList.remove("playing"); rv.controls = false; rv.load(); });
+    if ("IntersectionObserver" in window){
+      new IntersectionObserver(function(es){ if (!es[0].isIntersecting && !rv.paused) rv.pause(); }, {threshold:.1}).observe(ph);
+    }
+  }
+
   /* Filtros de galería */
   var tiles = [].slice.call(document.querySelectorAll(".tile"));
   document.querySelectorAll("[data-filter]").forEach(function(b){
@@ -1142,8 +1297,8 @@ gtag("js",new Date());gtag("config","G-JRFC960VC3");
     try { navigator.clipboard.writeText("+59174256578").then(done, select); } catch(e){ select(); }
   });
 
-  var saved = "es"; try{ saved = localStorage.getItem("rossy-lang") || "es"; }catch(e){}
-  setLang(saved==="en" ? "en" : "es");
+  setLang(document.documentElement.lang==="en" ? "en" : "es");
+  cnts.forEach(function(el){ paint(el, +el.getAttribute("data-to")); });
 })();
 
   /* Aviso de cookies y medición de clics */
